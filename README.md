@@ -1,2 +1,2 @@
-# gurumatcha-site-v1
-gotta have a website
+# test-blog
+the way i can test features on my blog in a seperate repo

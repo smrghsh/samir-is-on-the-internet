@@ -1,26 +1,15 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>self-narrative exercise</title>
-    <!--oh WOW inspect element, what're you gonna do next, check the console-->
-<!--weird html wizardry that makes it break less-->
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- import the webpage's framework, skeleton, can't say enough about how dope this one is-->
-<!-- open source web dev comin in clutchhh-->
-<link rel="stylesheet" href="/style/normalize.css" />
-<link rel="stylesheet" href="/style/skeleton.css" />
-<!-- import the webpage's stylesheet -->
-<link rel="stylesheet" href="/style/style.css" />
-<script src="./js/script.js" defer></script>
+    {% include head.html %}
 </head>
 <body>
 
 <div class="container">
-    <nav class="row" style="padding-bottom: 11.11%">
-    <a href="/index.html">🏠 return to home</a>
-</nav>
+    {% include homenav.html %}
     <div class="row">
         <div class="one-third column">
             <img src="./images/goodpicture.jpeg" class="u-max-full-width">

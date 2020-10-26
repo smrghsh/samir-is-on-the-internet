@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <title>self-narrative exercise</title>
-    <!-- import the webpage's framework, skeleton, can't say enough about how dope this one is-->
-
-    <link rel="stylesheet" href="./normalize.css" />
-    <link rel="stylesheet" href="./skeleton.css" />
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="./style.css" />
-
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
+    <!--oh WOW inspect element, what're you gonna do next, check the console-->
+<!--weird html wizardry that makes it break less-->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- import the webpage's framework, skeleton, can't say enough about how dope this one is-->
+<!-- open source web dev comin in clutchhh-->
+<link rel="stylesheet" href="/style/normalize.css" />
+<link rel="stylesheet" href="/style/skeleton.css" />
+<!-- import the webpage's stylesheet -->
+<link rel="stylesheet" href="/style/style.css" />
+<script src="./js/script.js" defer></script>
 </head>
 <body>
 
 <div class="container">
-    <nav class="row">
-        <a href="./index.html">🏠 return to home</a>
-    </nav>
+    <nav class="row" style="padding-bottom: 11.11%">
+    <a href="/index.html">🏠 return to home</a>
+</nav>
     <div class="row">
-        <div class="one-third column" style="margin-top: 11.11%">
-            <img src="./goodpicture.jpeg" class="u-max-full-width">
+        <div class="one-third column">
+            <img src="./images/goodpicture.jpeg" class="u-max-full-width">
         </div>
-        <div class="two-thirds column" style="margin-top: 11.11%">
-            <p>Samir Ghosh is a coder and polymath who serves as Assistant Director for the <a href="https://polymathic.usc.edu/ahmanson-lab">Ahmanson Lab at USC</a>. Over there, he manages a makerspace, teaches workshops, and produces impactful VR, AR, and hardware projects with professors and students from many fields. Some of these projects have received contributions from organizations such as the Vatican, the California Science Center, and the LA Times.</p>
-            <p>Previously, he worked as a software assistant to the fashion designer <a href="http://behnazfarahi.com/">Behnaz Farahi</a>, whose internationally exhibited work features advanced manufacturing techniques and custom wearable technology. At Intel, he worked with supercomputers and server farms, creating cybersecurity and management tools that have scaled to hundreds of thousands of servers in multiple locations.</p>
-            <p>Currently he is contributing machine learning and data processing for a research project with an ophthalmologist that analyzes a patient's retinal health data to detect neurodegenerative disease.</p>
-            <p>For his undergraduate education, he went to USC, where he received bachelors degrees in computational linguistics and cognitive science. During his time there, he lived at an environmentally friendly co-op, and grew a technology+arts organization to over a hundred members.</p>
-            <p>He teaches guitar and tutors students impacted by educational changes due to COVID-19, donating the proceeds to causes he cares about. His hobbies include open-water swimming, yoga, streaming, and attending to his <a href="cats.html">two adopted cats.</a></p>
-            <p>He thinks writing about himself in third person is very awkward.</p>
-
-        </div>
+        <div class="two-thirds column" >
+        <p>Samir Ghosh is a coder and polymath who serves as Assistant Director for the <a href="https://polymathic.usc.edu/ahmanson-lab">Ahmanson Lab at USC</a>. Over there, he manages a makerspace, teaches workshops, and produces impactful VR, AR, and hardware projects with professors and students from many fields. Some of these projects have received contributions from organizations such as the Vatican, the California Science Center, and the LA Times.</p>
+        <p>Previously, he worked as a software assistant to the fashion designer <a href="http://behnazfarahi.com/">Behnaz Farahi</a>, whose internationally exhibited work features advanced manufacturing techniques and custom wearable technology. At Intel, he worked with supercomputers and server farms, creating cybersecurity and management tools that have scaled to hundreds of thousands of servers in multiple locations.</p>
+        <p>Currently he is contributing machine learning and data processing for a research project with an ophthalmologist that analyzes a patient's retinal health data to detect neurodegenerative disease.</p>
+        <p>For his undergraduate education, he went to USC, where he received bachelors degrees in computational linguistics and cognitive science. During his time there, he lived at an environmentally friendly co-op, and grew a technology+arts organization to over a hundred members.</p>
+        <p>He teaches guitar and tutors students impacted by educational changes due to COVID-19, donating the proceeds to causes he cares about. His hobbies include open-water swimming, yoga, streaming, and attending to his <a href="cats.html">two adopted cats.</a></p>
+        <p>He thinks writing about himself in third person is very awkward.</p>
 
     </div>
-    <div class="row">
-        <button id="academicEmail" onclick="document.querySelector('#academicEmail').textContent ='samirgho@usc.edu'">
+
+</div>
+<div class="row">
+    <button id="academicEmail" onclick="document.querySelector('#academicEmail').textContent ='samirgho@usc.edu'">
             Email (academic)
         </button>
         <button id="personalEmail" onclick="document.querySelector('#personalEmail').textContent ='mail@samir.tech'">

@@ -16,7 +16,7 @@ function setup() {
     background(255);
 
     frameRate(30);
-    agentCount = map(windowWidth,300,1920,20,100,true)
+    agentCount = map(windowWidth,300,1920,20,agentCount,true)
     for (var i = 0; i < agentCount; i++){
         agents[i] = new agent();
     }

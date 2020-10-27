@@ -19,7 +19,7 @@ Every academic semester, I teach a workshop series spanning topics in 3D printin
 
 These workshops students of various technical levels and academic backgrounds, so they are designed to be engaging for both newcomers and veterans. I have a belief that with proper planning, I can create content that teaches everyone something new, provides hands-on experience, and sparks critical discussion. 
 
-These workshops aim to be hands-on and to teach the skills quickly so the participant can spend a majority of the workshop working independently and creatively. This often means teaching external skills to the topic such as how to debug or to learnsomeone else's open source code. A part of practicality is also being prepared for students who already have experience, so I prepare advanced or contemporary techniques in case we blitz through the workshop faster than expected.
+These workshops aim to be hands-on and to teach the skills quickly so the participant can spend a majority of the workshop working independently and creatively. This often means teaching external skills to the topic such as how to debug or to learn from someone else's open source code. A part of practicality is also being prepared for students who already have experience, so I prepare advanced or contemporary techniques in case we blitz through the workshop faster than expected.
 
 
 ## Critical

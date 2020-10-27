@@ -1,7 +1,8 @@
 var agents = [];
+var maxAgentCount = 90;
 var agentCount = 90;
 var maxOpacity = 12;
-var minOpacity = 5;
+var minOpacity = 0;
 var redEffect = 10;
 var backgroundShade = 255;
 var ySpeedVariation = 3.5;
@@ -16,7 +17,7 @@ function setup() {
     background(255);
 
     frameRate(30);
-    agentCount = map(windowWidth,300,1920,20,100,true)
+    agentCount = map(windowWidth,300,1920,20,maxAgentCount,true)
     for (var i = 0; i < agentCount; i++){
         agents[i] = new agent();
     }

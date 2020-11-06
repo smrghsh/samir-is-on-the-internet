@@ -22,16 +22,6 @@
         Work/Portfolio
       </button>
       </a>
-<!--      <a href="./resources.html"-->
-<!--      ><button>-->
-<!--        Nifty Resources-->
-<!--      </button>-->
-<!--      </a>-->
-<!--      <a href="./blog.html"-->
-<!--      ><button>-->
-<!--        Blog-->
-<!--      </button>-->
-<!--      </a>-->
       <a href="./cats.html"
       ><button>
         Cat Photos
@@ -40,13 +30,15 @@
     </nav>
     <section class="row" style="padding-bottom: 20vh">
       <div class="two-thirds column" style="margin-top: 11.11%">
+<!--        is this too personable? all of my peers seem to present themselves as so serious and cool -->
+<!--        i'll just keep being me, it's gotten me this far, and it feels honest -->
         <h4>You have reached Samir Ghosh's website</h4>
         <p>
           Hope you are well in these times. 🍵
         </p>
         <p>
           Currently working at the Ahmanson Lab at USC, teaching workshops,
-          supporting research and curricula development, and helping student projects
+          supporting research and curricula development, and helping the community
           with our VR and makerspace resources. It's a zoom era but we're getting creative.
         </p>
         <p>
@@ -56,7 +48,7 @@
     </section>
     <section class="row section">
       <div id="projects" class="eleven columns">
-        <h4>Some things I have done</h4>
+        <h4>Some of my favorite projects</h4>
       </div>
     </section>
     {% for post in site.posts reversed%}
@@ -74,21 +66,6 @@
     </section>
     {% endif %}
     {% endfor %}
-<!--    <div class="row section">-->
-<!--      <div class="eleven columns">-->
-<!--        <h4>freshly written blog posts</h4>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    {% for post in site.posts %}-->
-<!--    {% unless post.featured %}-->
-<!--    <div class="row feature">-->
-<!--      <div class="eleven columns" >-->
-<!--        <h3>{{ post.title }}</h3>-->
-<!--        <p>{{post.desc}}</p>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    {% endunless %}-->
-<!--    {% endfor %}-->
   </main>
 {% include footer.html %}
   </body>

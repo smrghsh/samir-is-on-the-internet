@@ -2,3 +2,7 @@
 
 # Build settings
 markdown: kramdown
+
+#project cards
+collections:
+  projects:

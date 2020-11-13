@@ -7,67 +7,213 @@
     {% include head.html %}
     <script src="./js/p5.min.js" defer></script>
     <script src="./sketches/glacier.js" defer></script>
+    <style>
+
+      #content-container {
+        position: absolute;
+        width: inherit;
+        max-width: 2500px;
+        margin: 0 auto;
+
+        display:flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
+      }
+      main {
+        flex: 0 1 0;
+        /*background: rgba(240, 240, 240, 0.3);*/
+        min-width:400px;
+        max-width: 80vw;
+        padding: 2em;
+        margin-right: 2em;
+        margin-bottom: 1em;
+
+      }
+
+      #create {
+        color:purple;
+      }
+      #community {
+        color:darkred;
+      }
+      #share {
+
+        color:green;
+      }
+      #project-container {
+        margin: 1em;
+        flex: 1 .5 0;
+        min-width: 400px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+      .project {
+        display: block;
+        text-decoration: none;
+        color: black;
+        width:90%;
+        margin-bottom: 1em;
+        padding: .2em;
+
+      }
+      .project > p {
+        font-size: .9em;
+      }
+      .project > h2 {
+        font-size: 1.4em;
+      }
+      .project > h2 > .year {
+        font-size:.8em;
+      }
+      .project > h2 > .tag {
+        text-transform: uppercase;
+        font-size:.8em;
+      }
+      .project > h2 > .XR, .art, .science {
+        color:purple;
+
+      }
+      .project > h2 > .teaching {
+        color:green;
+      }
+      .project > h2 > .community {
+        color:darkred;
+      }
+      .project > img {
+        box-shadow: 10px 10px 0px rgba(0,0,0,.15);
+        /*width:inherit;*/
+        /*height: inherit;*/
+        justify-self: center;
+        margin-bottom: .3em;
+      }
+      main {
+        line-height: 1.4em;
+      }
+      h1 {
+        font-size: 2.222em;
+      }
+      a{
+        color:darkblue;
+      }
+      @media (max-width: 1200px) {
+        main {
+          min-width:90vw;
+        }
+        /*#project-container{*/
+        /*  grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));*/
+        /*}*/
+      }
+      @media (max-width: 500px) {
+        main {
+          min-width:90vw;
+        }
+        #project-container{
+          grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+          max-width: 100vw;
+        }
+      }
+    </style>
   </head>
   <body>
-  <!--        is this too personable? all of my peers seem to present themselves as so serious and cool -->
-  <!--        i'll just keep being me, it's gotten me this far, and it feels honest -->
   <div id="sketch-container"style="z-index:-9999;position:absolute;width:100vw;height:100vh;"></div>
-  <main class="container">
-    <nav class="row">
-      <a href="./about.html"
-      ><button>
-        About me + Contact
-      </button>
-      </a>
-      <a href="#projects"
-      ><button>
-        Work/Portfolio
-      </button>
-      </a>
-      <a href="./cats.html"
-      ><button>
-        Cat Photos
-      </button>
-      </a>
-    </nav>
-    <section class="row" style="padding-bottom: 20vh">
-      <div class="two-thirds column" style="margin-top: 11.11%">
+  <div id="content-container">
+    <main>
+      <h1>Hope you are doing well during these times 🍵</h1>
+      <p>I’m <span style="font-size: 1.11111em;">Samir Ghosh</span>, a coder and polymath who works at the <a href="https://polymathic.usc.edu/ahmanson-lab">Ahmanson Lab</a> at USC</p>
+      <p>There, I manage our makerspace resources, teach workshops, and produce technologies for VR/XR experiences and hardware experiments.</p>
+      <p>Some of these projects have collaborated with the LA Times, the Vatican, and the California Science Center. I work with professors, students, and industry professionals from many fields.</p>
+      <p>Previously, I’ve made wearable technology for the fashion designer <a href="http://behnazfarahi.com">Behnaz Farahi</a>, and worked on server farms and supercomputers at Intel. I have an academic background in computational linguistics and cognitive science.</p>
+      <p>My current goals are as follows:</p>
+      <ol>
+        <li id="create">Create technology for scholarly work, scientific endeavors, and creative practice</li>
+        <li id="community">Build self-sustaining communities that share technical skill and have social impact</li>
+        <li id="share">Use my platform as an educator for vocational equity and spark critical thinking on technology issues</li>
+      </ol>
+      <p>I go by the handle gurumatcha in internet communities on Discord, Github, Reddit, and Twitter, so if you see me say hi!</p>
+      <p>USC community, catch me at my open lab hours or at creative code collective.</p>
+      <a href="about.html"><button>“Official” bio + résume + contact info</button></a>
+      <a href="cats.html"><button>Photos of my cats</button></a>
+      <a href="https://github.com/gurumatcha/samir-is-on-the-internet"><button>website source code</button></a>
+    </main>
+    <div id="project-container">
+      {% for project in site.projects %}
+      <div class="project">
 
-        <h4>You have reached Samir Ghosh's website</h4>
-        <p>
-          Hope you are well in these times. 🍵
-        </p>
-        <p>
-          Currently working at the Ahmanson Lab at USC, teaching workshops,
-          supporting research and curricula development, and helping the community
-          with our VR and makerspace resources. It's a zoom era but we're getting creative.
-        </p>
-        <p>
-          I host open lab hours and I'm always there on Discord, so feel free to reach out to me if you'd like to chat!
-        </p>
-      </div>
-    </section>
-    <section class="row section">
-      <div id="projects" class="eleven columns">
-        <h4>Some of my favorite projects</h4>
-      </div>
-    </section>
-    {% for post in site.posts reversed%}
-    {% if post.featured %}
-    <section class="row feature" style="padding-top: 3em;">
-      <div class="four columns">
-        <img src="{{ post.thumbnail }}" class="u-max-full-width">
-      </div>
-      <div class="eight columns" >
-        <h3>{{ post.title }}</h3>
-        <p>{{post.desc}}</p>
-        <a href="{{ post.url }}">read more >></a>
+        <h2>{{ project.title }} <em class="year">{{ project.year }}</em>   <em class="tag {{project.type}}">#{{ project.type }}</em></h2>
+        <img src="{{ project.thumbnail }}">
+        {{ project }}
 
       </div>
-    </section>
-    {% endif %}
-    {% endfor %}
-  </main>
-{% include footer.html %}
+      {% endfor %}
+
+    </div>
+  </div>
+
+<!--  -->
+<!--  -->
+<!--  &lt;!&ndash;        is this too personable? all of my peers seem to present themselves as so serious and cool &ndash;&gt;-->
+<!--  &lt;!&ndash;        i'll just keep being me, it's gotten me this far, and it feels honest &ndash;&gt;-->
+<!--  <div id="sketch-container"style="z-index:-9999;position:absolute;width:100vw;height:100vh;"></div>-->
+<!--  <main class="container">-->
+<!--    <nav class="row">-->
+<!--      <a href="./about.html"-->
+<!--      ><button>-->
+<!--        About me + Contact-->
+<!--      </button>-->
+<!--      </a>-->
+<!--      <a href="#projects"-->
+<!--      ><button>-->
+<!--        Work/Portfolio-->
+<!--      </button>-->
+<!--      </a>-->
+<!--      <a href="./cats.html"-->
+<!--      ><button>-->
+<!--        Cat Photos-->
+<!--      </button>-->
+<!--      </a>-->
+<!--    </nav>-->
+<!--    <section class="row" style="padding-bottom: 20vh">-->
+<!--      <div class="two-thirds column" style="margin-top: 11.11%">-->
+
+<!--        <h4>You have reached Samir Ghosh's website</h4>-->
+<!--        <p>-->
+<!--          Hope you are well in these times. 🍵-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          Currently working at the Ahmanson Lab at USC, teaching workshops,-->
+<!--          supporting research and curricula development, and helping the community-->
+<!--          with our VR and makerspace resources. It's a zoom era but we're getting creative.-->
+<!--        </p>-->
+<!--        <p>-->
+<!--          I host open lab hours and I'm always there on Discord, so feel free to reach out to me if you'd like to chat!-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    <section class="row section">-->
+<!--      <div id="projects" class="eleven columns">-->
+<!--        <h4>Some of my favorite projects</h4>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--    {% for post in site.posts reversed%}-->
+<!--    {% if post.featured %}-->
+<!--    <section class="row feature" style="padding-top: 3em;">-->
+<!--      <div class="four columns">-->
+<!--        <img src="{{ post.thumbnail }}" class="u-max-full-width">-->
+<!--      </div>-->
+<!--      <div class="eight columns" >-->
+<!--        <h3>{{ post.title }}</h3>-->
+<!--        <p>{{post.desc}}</p>-->
+<!--        <a href="{{ post.url }}">read more >></a>-->
+
+<!--      </div>-->
+<!--    </section>-->
+<!--    {% endif %}-->
+<!--    {% endfor %}-->
+<!--  </main>-->
+
   </body>
+<!--  {% include footer.html %}-->
 </html>

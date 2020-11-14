@@ -128,12 +128,13 @@
       }
       @media (max-width: 1200px) {
         #content-container{
-          min-width:90vw;
           max-width:95vw;
         }
         main {
           min-width:90vw;
           max-width:95vw;
+          width:inherit;
+          padding:1em;
         }
         /*#project-container{*/
         /*  grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));*/
@@ -141,12 +142,13 @@
       }
       @media (max-width: 500px) {
         #content-container{
-          min-width:90vw;
-          max-width:95vw;
+          /*min-width:90vw;*/
+          max-width:90vw;
         }
         main {
           min-width:90vw;
           max-width:95vw;
+          padding:1em;
         }
         #project-container{
           grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
@@ -175,6 +177,7 @@
       <a href="about.html"><button>“Official” bio + résume + contact info</button></a>
       <a href="cats.html"><button>Photos of my cats</button></a>
       <a href="https://github.com/gurumatcha/samir-is-on-the-internet"><button>website source code</button></a>
+      <a href="/privacy.html" style="color:white"><button>almost GDPR compliant privacy statement</button></a>
     </main>
     <div id="project-container">
       

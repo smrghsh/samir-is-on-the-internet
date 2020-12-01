@@ -21,11 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0d25a3a3-2aa0-45f1-bf1d-17460692bc78" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_projects/corpuscallosum.md" beforeDir="false" afterPath="$PROJECT_DIR$/_projects/corpuscallosum.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_projects/generativeartathons.md" beforeDir="false" afterPath="$PROJECT_DIR$/_projects/generativeartathons.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_projects/marsVR.md" beforeDir="false" afterPath="$PROJECT_DIR$/_projects/marsVR.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_projects/riverflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/_projects/riverflow.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_projects/virtualgalleryVR.md" beforeDir="false" afterPath="$PROJECT_DIR$/_projects/virtualgalleryVR.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Samir-Ghosh-resume.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Samir-Ghosh-resume.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,12 +58,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="C:\Users\gurumatcha\code\gurumatcha-site-v1" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/thumbnails" />
+      <recent name="C:\Users\gurumatcha\code\gurumatcha-site-v1" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\gurumatcha\code\gurumatcha-site-v1" />
     </key>
   </component>
@@ -94,7 +92,8 @@
       <workItem from="1605238215601" duration="13444000" />
       <workItem from="1605805955488" duration="611000" />
       <workItem from="1605820646193" duration="3000" />
-      <workItem from="1606110037520" duration="245000" />
+      <workItem from="1606110037520" duration="617000" />
+      <workItem from="1606863594132" duration="124000" />
     </task>
     <servers />
   </component>
@@ -130,6 +129,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1500" y="455" key="FileChooserDialogImpl/0.0.3440.1400/3440.0.1920.1040@0.0.3440.1400" timestamp="1603231987789" />
+    <state x="538" y="129" width="604" height="735" key="find.popup" timestamp="1606863712971">
+      <screen x="0" y="23" width="1680" height="947" />
+    </state>
+    <state x="538" y="129" width="604" height="735" key="find.popup/0.23.1680.947@0.23.1680.947" timestamp="1606863712971" />
     <state x="505" y="230" key="search.everywhere.popup" timestamp="1605244865370">
       <screen x="0" y="23" width="1680" height="947" />
     </state>

@@ -1,0 +1,36 @@
+.section {
+    padding-top: 2em;
+    font-weight: lighter;
+    border-bottom: 1px solid dimgrey;
+  }
+  h1, h2, h4 {
+  
+    margin-bottom: .25em;
+  }
+  
+  h3 {
+    color: dimgrey;
+  }
+  
+  .feature {
+    padding-top: 3.14%;
+  }
+  
+  img {
+    width: 100%;
+  }
+  img + em {
+    display: block;
+    width: inherit;
+    text-align: center;
+    margin:auto;
+    color:dimgrey;
+  }
+  
+  .smaller {
+  
+    display: block;
+    margin: auto;
+    padding-top: 1em;
+    max-width:50%;
+  }

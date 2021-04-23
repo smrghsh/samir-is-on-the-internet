@@ -1,170 +1,42 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>🍵samir is on the internet</title>
-    {% include head.html %}
-    <script src="./js/p5.min.js" defer></script>
-    <script src="./sketches/glacier.js" defer></script>
-    <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="skeleton.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
 
-      #content-container {
-        position: absolute;
-        width: inherit;
-        max-width: 2500px;
-        margin: 0 auto;
+    <title>Samir is on the internet!</title>
+</head>
+<body>
+    <canvas id="sketch">
 
-        display:flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        align-content: flex-start;
-        align-items: flex-start;
-      }
-      main {
-        flex: 0 1 0;
-        /*background: rgba(240, 240, 240, 0.3);*/
-        min-width:400px;
-        max-width: 80vw;
-        padding: 2em;
-        margin-right: 2em;
-        margin-bottom: 1em;
+    </canvas>
+    <main class="container">
+        <div class="row">
+            <div class="two-thirds column">
+                <h1>what's up</h1>
+        <p>I’m Samir, I run a makerspace and VR dev facility at USC. It's in a 24/7 library, and we welcome people from all disciplines.</p>
+        <p>These days I've been putting a lot of effort into:</p>
+        <ol>
+            <li>An initiative that brings mind-controlled video games to everyone, including the differently abled</li>
+            <li>Neuroscience research to apply deep learning to clinical data to detect Alzheimer's</li>
+            <li>Revamping my generative art practice to use WebGL and Three.js</li>
+            <li>Grinding on my VR dev skills, because there are so many things I want to make!</li>
+        </ol>
+        <p>Always down to chat and geek out!</p>
+            </div>
+        <div class="one column">
+            <!-- socials and stuff will go here -->
+        </div>
 
-      }
-
-      #create {
-        color:purple;
-      }
-      #community {
-        color:darkred;
-      }
-      #share {
-
-        color:green;
-      }
-      #project-container {
-        margin: 1em;
-        flex: 1 .5 0;
-        min-width: 400px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      }
-      .project {
-        display: block;
-        text-decoration: none;
-        color: black;
-        width:90%;
-        margin-bottom: 1em;
-        padding: .2em;
-
-      }
-      .project > p {
-        font-size: .9em;
-      }
-      .project > h2 {
-        font-size: 1.4em;
-      }
-      .project > h2 > .year {
-        font-size:.8em;
-      }
-      .project > h2 > .tag {
-        text-transform: uppercase;
-        font-size:.8em;
-      }
-      .project > h2 > .XR, .art, .science {
-        color:purple;
-
-      }
-      .project > h2 > .teaching {
-        color:green;
-      }
-      .project > h2 > .community {
-        color:darkred;
-      }
-      .project > img {
-        box-shadow: 10px 10px 0px rgba(0,0,0,.15);
-        /*width:inherit;*/
-        /*height: inherit;*/
-        justify-self: center;
-        margin-bottom: .3em;
-      }
-      main {
-        line-height: 1.4em;
-      }
-      h1 {
-        font-size: 2.222em;
-      }
-      a{
-        color:darkblue;
-      }
-      @media (max-width: 1200px) {
-        #content-container{
-          max-width:95vw;
-        }
-        main {
-          min-width:90vw;
-          max-width:95vw;
-          width:inherit;
-          padding:1em;
-        }
-        /*#project-container{*/
-        /*  grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));*/
-        /*}*/
-      }
-      @media (max-width: 500px) {
-        #content-container{
-          /*min-width:90vw;*/
-          max-width:90vw;
-        }
-        main {
-          min-width:90vw;
-          max-width:95vw;
-          padding:1em;
-        }
-        #project-container{
-          grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
-          max-width:95vw;
-        }
-      }
-    </style>
-  </head>
-  <body>
-<!--  oh look your inspecting the source -->
-<!-- what are you gonna do now, look at the console -->
-
-  <div id="sketch-container"style="z-index:-9999;position:absolute;width:100vw;height:100vh;"></div>
-  <div id="content-container">
-    <main>
-      <h1>Hope you are doing well during these times 🍵</h1>
-      <p>I’m <span style="font-size: 1.11111em;">Samir Ghosh</span>, a coder and polymath who works at the <a href="https://polymathic.usc.edu/ahmanson-lab">Ahmanson Lab</a> at USC</p>
-      <p>There, I manage our makerspace resources, teach workshops, and produce technologies for VR/XR experiences and hardware experiments.</p>
-      <p>Some of these projects have collaborated with the LA Times, the Vatican, and the California Science Center. I work with professors, students, and industry professionals from many fields.</p>
-      <p>Previously, I’ve made wearable technology for the fashion designer <a href="http://behnazfarahi.com">Behnaz Farahi</a>, and worked on server farms and supercomputers at Intel. I have an academic background in computational linguistics and cognitive science.</p>
-      <p>My current goals are as follows:</p>
-      <ol>
-        <li id="create">Bring new technologies to scholarly work, scientific endeavors, and creative practice</li>
-        <li id="community">Build self-sustaining communities that share technical skill and have social impact</li>
-        <li id="share">Use my platform as an educator for vocational equity and spark critical thinking on technology issues</li>
-      </ol>
-      <p>USC community: catch me at my open lab hours or at creative code collective. If you're looking to get involved with our projects and communities, email me!</p>
-      <a href="about.html"><button>“Official” bio + documents + contact</button></a>
-      <a href="cats.html"><button>Photos of my cats</button></a>
-      <a href="https://github.com/gurumatcha/samir-is-on-the-internet"><button>website source code</button></a>
-      <a href="/privacy.html" style="color:white"><button>privacy statement</button></a>
+        
+        </div>
     </main>
-    <div id="project-container">
-      {% for project in site.projects %}
-      <div class="project">
 
-        <h2>{{ project.title }} <em class="year">{{ project.year }}</em>   <em class="tag {{project.type}}">#{{ project.type }}</em></h2>
-        <img src="{{ project.thumbnail }}">
-        {{ project }}
 
-      </div>
-      {% endfor %}
 
-    </div>
-  </div>
-  </body>
+</body>
+
 </html>

@@ -1,3 +1,7 @@
 .idea/
 .jekyll-cache/
 .idea
+
+node_modules/
+bundler/
+.vscode/

@@ -5,11 +5,11 @@
     font-family: sans-serif;
 }
 
-/* html,
+html,
 body
 {
     overflow: hidden;
-} */
+}
 
 .webgl
 {
@@ -19,6 +19,7 @@ body
     position: absolute;
     outline: none;
     z-index: 0;
+    width: 100%;
 }
 .overlay {
     padding: 1em;
@@ -36,9 +37,9 @@ body
 
 }
 .social-icon {
-    width: 1.66em;
+    width: 2em;
     margin: .25em;
-    height: 1.66em;
+    height: 2em;
     opacity: 1;
     
   }
@@ -51,7 +52,7 @@ body
     font-weight: 300;
 }
 main > p {
-    font-size: .8;
+    font-size: 1.2;
     font-weight: 100;
 }
 

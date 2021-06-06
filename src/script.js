@@ -16,7 +16,6 @@ const color2 = new THREE.Color(0x89C2D9)
 const color3 = new THREE.Color(0x04D9C4)
 const color4 = new THREE.Color(0x88E8F2)
 const colors = [color1, color2, color3, color4]
-
 /**
  * Sizes
  */
@@ -24,31 +23,24 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
-
 /**
  * Base
  */
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
-
 // Scene
 const scene = new THREE.Scene()
 scene.background = backgroundColor
-
 const depthQuantity = 24   
 const heightQuantity = 24
 const widthQuantity = 4
-
 const cubeGeometry = new THREE.BoxGeometry(1,1,1);
 var materials = []
 colors.forEach((c)=>{
     materials.push(new THREE.MeshBasicMaterial({color: c, wireframe:false}))
 })
-console.log(materials)
 var cubes = []
-
-
 for(var d = 0; d < depthQuantity; d++){
     for(var h = 0; h < heightQuantity; h++){
         for(var w = 0; w < widthQuantity; w++){
@@ -74,9 +66,7 @@ for(var d = 0; d < depthQuantity; d++){
                 transparent: true
             
             })
-            
             let cube = new THREE.Mesh(cubeGeometry,m);
-            
             cubes.push(cube)
             scene.add(cube)
             cube.position.x = w;
@@ -85,8 +75,6 @@ for(var d = 0; d < depthQuantity; d++){
         }
     }
 }
-
-
 /**
  * Camera
  */
@@ -123,11 +111,6 @@ window.addEventListener('resize', () =>
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
-
-
-
-
-
 /**
  * Animate
  */
@@ -142,13 +125,8 @@ const tick = () =>
             cube.material.uniforms.uTime.value = elapsedTime/10.0 + 15.0;
         }
     )
-    console.log(elapsedTime)
-    // Render
-    // trackPosition+= 0.01
-
     renderer.render(scene, camera)
     window.requestAnimationFrame(tick)
 }
-
 tick()
 

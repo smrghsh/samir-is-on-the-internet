@@ -24,7 +24,7 @@ body
 }
 .overlay {
     /* padding: 1em; */
-    margin: 1em;
+    /* margin: 1em; */
     /* bottom: 0;
     left: 0; */
     
@@ -39,7 +39,8 @@ body
 }
 .social-icon {
     width: 2em;
-    margin: .25em;
+    margin: .25em 0.45em;
+    text-align: center;
     height: 2em;
     opacity: 1;
     
@@ -52,7 +53,7 @@ body
     font-size: 1.2;
     font-weight: 100;
     max-width: inherit;
-    margin: 0.25em 0.25em;;
+    margin: 0.33em 0.85em;;
 }
 
 /*# sourceMappingURL=main.css.map*/

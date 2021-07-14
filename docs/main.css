@@ -49,11 +49,13 @@ body
     opacity: 0.777777;
   }
 
-.overlay > p {
-    font-size: 1.2;
+.overlay > p{
+    font-size: 1.2em;
     font-weight: 100;
     max-width: inherit;
-    margin: 0.33em 0.85em;;
+    /* margin: 0 auto; */
+    margin: 0.33em 0.85em;
 }
+
 
 /*# sourceMappingURL=main.css.map*/

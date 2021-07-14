@@ -21,8 +21,8 @@ const material = new THREE.ShaderMaterial({
     },
     side: THREE.DoubleSide
 });
-var qtyLines = 10
-var linesLength = 100
+var qtyLines = 15
+var linesLength = 110
 var quantityPoints = 100
 for(let i = 0; i < qtyLines; i+=0.2 ){
     const points = [];
@@ -37,7 +37,7 @@ for(let i = 0; i < qtyLines; i+=0.2 ){
 /**
  * Camera
  */
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 11, 100)
 camera.position.z = -2 * qtyLines
 camera.lookAt(0,0,-18)
 camera.position.x = 0

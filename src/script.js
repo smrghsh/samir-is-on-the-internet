@@ -30,7 +30,7 @@ for(let i = 0; i < qtyLines; i+=0.2 ){
         points.push( new THREE.Vector3( j , 0, i) );
     }
     const geometry = new THREE.BufferGeometry().setFromPoints( points );
-    const line = Math.random() > 0.5 ? new THREE.Points( geometry, material ): new THREE.Line( geometry, material );
+    const line = Math.random() > 0.5 && sizes.width > 500 ? new THREE.Points( geometry, material ): new THREE.Line( geometry, material );
     line.rotateZ(i*.5/qtyLines)
     scene.add( line );
 }

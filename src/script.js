@@ -13,21 +13,55 @@ const sizes = {
 }
 const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
-const material = new THREE.ShaderMaterial({
-	vertexShader: staggeredLinesVertexShader,
-    fragmentShader: staggeredLinesFragmentShader,
-    uniforms: {
-        uTime: {value: 0.0}
-    },
-    side: THREE.DoubleSide
-});
-var qtyLines = 15
-var linesLength = 110
-var quantityPoints = 100
-for(let i = 0; i < qtyLines; i+=0.2 ){
-    const points = [];
-    for(let j = -1 * linesLength/2; j < linesLength/2; j+= (linesLength/quantityPoints)){
-        points.push( new THREE.Vector3( j , 0, i) );
+scene.background = backgroundColor
+
+const depthQuantity = 24   
+const heightQuantity = 24
+const widthQuantity = 4
+
+const cubeGeometry = new THREE.BoxGeometry(1,1,1);
+var materials = []
+colors.forEach((c)=>{
+    materials.push(new THREE.MeshBasicMaterial({color: c, wireframe:false}))
+})
+console.log(materials)
+var cubes = []
+
+
+for(var d = 0; d < depthQuantity; d++){
+    for(var h = 0; h < heightQuantity; h++){
+        for(var w = 0; w < widthQuantity; w++){
+            // let m = materials[(Math.floor(Math.random() * materials.length))]
+
+            let m = new THREE.ShaderMaterial({
+                vertexShader: panelVertexShader,
+                fragmentShader: panelFragmentShader,
+                uniforms: {
+                    uTime: {value: 0.0},
+                    uD: {value: d},
+                    uH: {value: h},
+                    uW: {value: w},
+                    uDepthQuantity: {value: depthQuantity},
+                    uHeightQuantity: {value: heightQuantity},
+                    uWidthQuantity: {value: widthQuantity},
+                    color1: {value: color1},
+                    color2: {value: color2},
+                    color3: {value: color3},
+                    color4: {value: color4}
+
+                },
+                transparent: true
+            
+            })
+            
+            let cube = new THREE.Mesh(cubeGeometry,m);
+            
+            cubes.push(cube)
+            scene.add(cube)
+            cube.position.x = w/2;
+            cube.position.y = h;
+            cube.position.z = d;
+        }
     }
     const geometry = new THREE.BufferGeometry().setFromPoints( points );
     const line = Math.random() > 0.5 && sizes.width > 500 ? new THREE.Points( geometry, material ): new THREE.Line( geometry, material );
@@ -37,10 +71,12 @@ for(let i = 0; i < qtyLines; i+=0.2 ){
 /**
  * Camera
  */
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 11, 100)
-camera.position.z = -2 * qtyLines
-camera.lookAt(0,0,-18)
-camera.position.x = 0
+// Base camera
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000)
+
+var trackPosition = -8;
+camera.position.set(trackPosition,heightQuantity/2,depthQuantity/2)
+camera.lookAt(trackPosition+1,heightQuantity/2,depthQuantity/2)
 scene.add(camera)
 /*
  * Renderer

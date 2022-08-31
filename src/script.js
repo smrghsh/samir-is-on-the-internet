@@ -79,7 +79,7 @@ for(var d = 0; d < depthQuantity; d++){
             
             cubes.push(cube)
             scene.add(cube)
-            cube.position.x = w;
+            cube.position.x = w/2;
             cube.position.y = h;
             cube.position.z = d;
         }
@@ -91,9 +91,9 @@ for(var d = 0; d < depthQuantity; d++){
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(10000, sizes.width / sizes.height, 0.1, 1000)
+const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000)
 
-var trackPosition = -20;
+var trackPosition = -8;
 camera.position.set(trackPosition,heightQuantity/2,depthQuantity/2)
 camera.lookAt(trackPosition+1,heightQuantity/2,depthQuantity/2)
 scene.add(camera)

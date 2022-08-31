@@ -1,9 +1,22 @@
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
-import staggeredLinesVertexShader from './shaders/staggeredLines/vertex.glsl'
-import staggeredLinesFragmentShader from './shaders/staggeredLines/fragment.glsl'
+// import * as dat from 'dat.gui'
+import panelVertexShader from './shaders/panel/vertex.glsl'
+import panelFragmentShader from './shaders/panel/fragment.glsl'
 import { Font, SubtractiveBlending } from 'three'
+//Palette
+const backgroundColor = new THREE.Color(0x000000)
+// const color1 = new THREE.Color(0xF3FEB0)
+// const color2 = new THREE.Color(0xFEA443)
+// const color3 = new THREE.Color(0x705E78)
+// const color4 = new THREE.Color(0x812F33)
+const color1 = new THREE.Color(0xD95F69)
+const color2 = new THREE.Color(0x89C2D9)
+const color3 = new THREE.Color(0x04D9C4)
+const color4 = new THREE.Color(0x88E8F2)
+const colors = [color1, color2, color3, color4]
+
 /**
  * Sizes
  */
@@ -11,7 +24,15 @@ const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
+
+/**
+ * Base
+ */
+
+// Canvas
 const canvas = document.querySelector('canvas.webgl')
+
+// Scene
 const scene = new THREE.Scene()
 scene.background = backgroundColor
 
@@ -63,11 +84,9 @@ for(var d = 0; d < depthQuantity; d++){
             cube.position.z = d;
         }
     }
-    const geometry = new THREE.BufferGeometry().setFromPoints( points );
-    const line = Math.random() > 0.5 && sizes.width > 500 ? new THREE.Points( geometry, material ): new THREE.Line( geometry, material );
-    line.rotateZ(i*.5/qtyLines)
-    scene.add( line );
 }
+
+
 /**
  * Camera
  */
@@ -78,7 +97,7 @@ var trackPosition = -8;
 camera.position.set(trackPosition,heightQuantity/2,depthQuantity/2)
 camera.lookAt(trackPosition+1,heightQuantity/2,depthQuantity/2)
 scene.add(camera)
-/*
+/**
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
@@ -86,29 +105,50 @@ const renderer = new THREE.WebGLRenderer({
 })
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+/**
+ * Sizes
+ */
 // Window resizing
 window.addEventListener('resize', () =>
 {
     // Update sizes
     sizes.width = window.innerWidth
     sizes.height = window.innerHeight
+
     // Update camera
     camera.aspect = sizes.width / sizes.height
     camera.updateProjectionMatrix()
+
     // Update renderer
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
+
+
+
+
+
 /**
  * Animate
  */
 const clock = new THREE.Clock()
 const tick = () =>
-{   
-    const elapsedTime = clock.getElapsedTime()
-    material.uniforms.uTime.value = elapsedTime;
+{   const jump = 58 
+    const elapsedTime = clock.getElapsedTime() + jump
+    
+    // Update water
+    cubes.forEach(
+        (cube) =>{
+            cube.material.uniforms.uTime.value = elapsedTime/10.0 + 15.0;
+        }
+    )
+    console.log(elapsedTime)
+    // Render
+    // trackPosition+= 0.01
+
     renderer.render(scene, camera)
     window.requestAnimationFrame(tick)
 }
+
 tick()
 

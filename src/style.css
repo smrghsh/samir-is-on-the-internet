@@ -5,12 +5,11 @@
     font-family: sans-serif;
 }
 
-html,
+/* html,
 body
 {
     overflow: hidden;
-    background-color: black;
-}
+} */
 
 .webgl
 {
@@ -20,11 +19,12 @@ body
     position: absolute;
     outline: none;
     z-index: 0;
-    width: 100%;
 }
 .overlay {
     padding: 1em;
     margin: 2em;
+    /* bottom: 0;
+    left: 0; */
     
     position: absolute;
     outline: none;
@@ -39,10 +39,9 @@ body
 
 }
 .social-icon {
-    width: 2em;
-    margin: .25em 0.45em;
-    text-align: center;
-    height: 2em;
+    width: 1.66em;
+    margin: .25em;
+    height: 1.66em;
     opacity: 1;
     
   }
@@ -50,10 +49,11 @@ body
     opacity: 0.777777;
   }
 
-.overlay > p{
-    font-size: 1.2em;
+  main > h1 {
+    font-size: 1.2;
+    font-weight: 300;
+}
+main > p {
+    font-size: .8;
     font-weight: 100;
-    max-width: inherit;
-    /* margin: 0 auto; */
-    margin: 0.33em 0.85em;
 }

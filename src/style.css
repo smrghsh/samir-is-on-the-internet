@@ -5,11 +5,12 @@
     font-family: sans-serif;
 }
 
-/* html,
+html,
 body
 {
     overflow: hidden;
-} */
+    background-color: black;
+}
 
 .webgl
 {
@@ -22,7 +23,7 @@ body
 }
 .overlay {
     padding: 1em;
-    margin: 2em;
+    margin: 1em;
     /* bottom: 0;
     left: 0; */
     
@@ -35,6 +36,7 @@ body
     max-width: fit-content;
     max-height: fit-content;
     background-color: rgba(0,0,0,0.8);
+    border-radius: 1em;
     /* background: black; */
 
 }

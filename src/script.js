@@ -1,3 +1,4 @@
+import './skeleton.css'
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
@@ -133,7 +134,7 @@ window.addEventListener('resize', () =>
  */
 const clock = new THREE.Clock()
 const tick = () =>
-{   const jump = 58 
+{   const jump = 69 
     const elapsedTime = clock.getElapsedTime() + jump
     
     // Update water

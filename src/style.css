@@ -38,7 +38,14 @@ body
     /* background: black; */
 
 }
-.social-icon {
+a.button {
+    color:white;
+    display: block;
+}
+a.hover {
+    color:white;
+}
+/* .social-icon {
     width: 1.66em;
     margin: .25em;
     height: 1.66em;
@@ -52,7 +59,7 @@ body
   main > h1 {
     font-size: 1.2;
     font-weight: 300;
-}
+} */
 main > p {
     font-size: .8;
     font-weight: 100;

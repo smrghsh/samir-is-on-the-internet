@@ -143,7 +143,6 @@ const tick = () =>
             cube.material.uniforms.uTime.value = elapsedTime/10.0 + 15.0;
         }
     )
-    console.log(elapsedTime)
     // Render
     // trackPosition+= 0.01
 

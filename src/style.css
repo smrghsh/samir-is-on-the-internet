@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Chillax-Light', sans-serif;
+    /* font-family: 'Satoshi-Light', sans-serif; */
 }
 p, a {
     font-family: 'Satoshi-Light', sans-serif;
@@ -16,7 +17,7 @@ html,
 body
 {
     overflow: hidden;
-    background-color: black;
+    background-color: beige;
 }
 
 .webgl
@@ -29,30 +30,32 @@ body
     z-index: 0;
 }
 .overlay {
-    padding: 1em;
-    margin: 1em;
+    /* padding: 1em;
+    margin: 1em; */
     /* bottom: 0;
     left: 0; */
-    
     position: absolute;
     outline: none;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
+    text-align: center;
     /* height: 100%; */
     /* color: white; */
-    max-width: fit-content;
-    max-height: fit-content;
-    background-color: "rgba(0,0,0,0.00001)";
-    border-radius: 1em;
+    /* max-width: fit-content; */
+    /* max-height: fit-content; */
+    /* background-color: "rgba(0,0,0,0.00001)"; */
+    /* border-radius: 1em; */
     /* background: black; */
-
 }
+
+
+/* .overlay > p {
+    max-width: 500px;
+} */
 a.button {
     /* color:white; */
-    display: block;
-}
-a.hover {
-    /* color:white; */
+    background-color: beige;
+    display:block;
 }
 /* .social-icon {
     width: 1.66em;

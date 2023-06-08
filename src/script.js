@@ -95,9 +95,12 @@ for(var d = 0; d < depthQuantity; d++){
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000)
 
 var trackPosition = -8;
-camera.position.set(trackPosition,heightQuantity/2,depthQuantity/2)
+const cameraOrigin = new THREE.Vector3(trackPosition,heightQuantity/2,depthQuantity/2)
+camera.position.set(cameraOrigin.x,cameraOrigin.y,cameraOrigin.z)
 camera.lookAt(trackPosition+1,heightQuantity/2,depthQuantity/2)
 scene.add(camera)
+
+
 /**
  * Renderer
  */
@@ -125,7 +128,16 @@ window.addEventListener('resize', () =>
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
+/**
+ * Mouse
+ */
+const mouse = new THREE.Vector2()
 
+window.addEventListener('mousemove', (event) =>
+{
+    mouse.x = event.clientX / sizes.width * 2 - 1
+    mouse.y = - (event.clientY / sizes.height) * 2 + 1
+})
 
 
 
@@ -134,9 +146,11 @@ window.addEventListener('resize', () =>
  */
 const clock = new THREE.Clock()
 const tick = () =>
-{   const jump = 69 
+{   const jump = 71 
     const elapsedTime = clock.getElapsedTime() + jump
     
+    camera.position.set(cameraOrigin.x ,cameraOrigin.y +mouse.y,cameraOrigin.z+ mouse.x)
+    camera.lookAt(cameraOrigin.x +8,cameraOrigin.y,cameraOrigin.z)
     // Update water
     cubes.forEach(
         (cube) =>{

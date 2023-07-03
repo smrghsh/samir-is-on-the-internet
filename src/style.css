@@ -6,7 +6,11 @@
     margin: 0;
     padding: 0;
     font-family: 'Chillax-Light', sans-serif;
+    color: white;
     /* font-family: 'Satoshi-Light', sans-serif; */
+}
+h1 {
+    font-size: 4em;
 }
 p, a {
     font-family: 'Satoshi-Light', sans-serif;
@@ -17,7 +21,7 @@ html,
 body
 {
     overflow: hidden;
-    background-color: beige;
+    background-color: black;
 }
 
 .webgl
@@ -48,13 +52,16 @@ body
     /* background: black; */
 }
 
+.overlay-text {
+    background-color: rgba(0,0,0,0.2);
 
+}
 /* .overlay > p {
     max-width: 500px;
 } */
 a.button {
     /* color:white; */
-    background-color: beige;
+    background-color: rgba(0,0,0,0.2);
     display:block;
 }
 /* .social-icon {

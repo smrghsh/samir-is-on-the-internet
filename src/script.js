@@ -8,7 +8,7 @@ import modMeshLineVertexShader from './shaders/modMeshLine/vertex.glsl'
 import modMeshLineFragmentShader from './shaders/modMeshLine/fragment.glsl'
 import { Font, SubtractiveBlending } from 'three'
 //Palette
-const backgroundColor = new THREE.Color("beige")
+const backgroundColor = new THREE.Color("black")
 
 
 /**
@@ -134,9 +134,9 @@ const tick = () =>
     let e = clock.getElapsedTime() 
     
     
-    if( material.uniforms.uTime ){
-        material.uniforms.uTime.value = e
-    }
+    // if( material.uniforms.uTime ){
+    //     material.uniforms.uTime.value = e
+    // }
     
 
     renderer.render(scene, camera)

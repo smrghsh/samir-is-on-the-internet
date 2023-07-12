@@ -24,7 +24,7 @@ uniform float amplitude;
 varying vec2 vUV;
 varying vec4 vColor;
 varying float vCounters;
-
+varying vec3 vP;
 vec2 fix(vec4 i, float aspect) {
     vec2 res = i.xy / i.w;
     res.x *= aspect;
@@ -42,12 +42,14 @@ void main() {
 
 
     vec3 p = vec3(position);
+    vP = p;
     float o = PI *offset;
     o += uTime;
     // p.z += o;
-
-    p.y += amplitude * sin(p.z * speed +o);
-    p.x += amplitude * cos(p.z *speed +o);
+    float a = amplitude * cos( p.z) ;
+    float x =(p.z * speed +o);
+    p.y += a * sin(0.8 * x + 2.0 * sin(1.2 *x-2.5)+5.5 );
+    p.x += a * cos(0.2 * x + sin(1.2 *x -2.5) * p.z/10.0);
     //modying position here
     vec4 finalPosition = m * vec4(p, 1.0);
     vec4 prevPos = m * vec4(previous, 1.0);

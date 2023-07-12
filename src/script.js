@@ -7,9 +7,17 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import modMeshLineVertexShader from './shaders/modMeshLine/vertex.glsl'
 import modMeshLineFragmentShader from './shaders/modMeshLine/fragment.glsl'
 import { Font, SubtractiveBlending } from 'three'
+
+
+
+
 //Palette
 // const backgroundColor = new THREE.Color("black")
 const backgroundColor = new THREE.Color("beige")
+
+
+
+
 
 
 /**
@@ -36,6 +44,8 @@ scene.background = backgroundColor
  */
 const axesHelper = new THREE.AxesHelper()
 scene.add(axesHelper)
+
+
 /**
  * Camera
  */
@@ -48,21 +58,20 @@ const controls = new OrbitControls( camera, canvas );
 scene.add(camera)
 
 
-/** DNA */
+/** weave */
 const amplitude = 1.0
-const lineLength = 4
+const lineLength = 8
 const points = [];
 const size = [];
-const thickness = 0.20
-for (let i = -lineLength; i < lineLength; i+=0.02) {
+for (let i = -lineLength; i < lineLength; i+=0.01) {
     
     points.push( new THREE.Vector3( 0, 0, i) );
 }
 const geometry = new MeshLineGeometry()
-geometry.setPoints(points,  (p) =>0.2)
+geometry.setPoints(points,  (p) =>Math.sin(p) / 5)
 const material = new MeshLineMaterial({
     side: THREE.DoubleSide,
-    color: new THREE.Color(0.5,1,0.5)
+    color: new THREE.Color(0.8,.1,0.3)
 })
 //https://stackoverflow.com/questions/59548828/how-to-give-vertex-shader-to-a-geometry-without-changing-the-material-in-threejs
 material.onBeforeCompile = function(info) {
@@ -79,11 +88,14 @@ material.onBeforeCompile = function(info) {
   };
 
 
-for (var i = 0; i < 2*Math.PI; i +=  2*Math.PI/10 ){
+for (var i = 0; i < 2*Math.PI; i +=  2*Math.PI/40 ){
 
     let mesh = new THREE.Mesh(geometry,material)
     mesh.rotation.y += Math.PI/2
     mesh.rotation.z = i
+    mesh.position.y += Math.random() * 0.1
+    mesh.position.z += Math.random() * 0.1
+    mesh.position.x += Math.random() * 0.1
     scene.add(mesh)
     
 }
@@ -135,9 +147,9 @@ const tick = () =>
     let e = clock.getElapsedTime() 
     
     
-    // if( material.uniforms.uTime ){
-    //     material.uniforms.uTime.value = e
-    // }
+    if( material.uniforms.uTime ){
+        material.uniforms.uTime.value = e
+    }
     
 
     renderer.render(scene, camera)

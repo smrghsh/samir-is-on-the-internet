@@ -55,11 +55,11 @@ body
 
 .overlay-text {
     /* background-color: rgba(0,0,0,0.05); */
-    background-color: rgba(245,245,220,0.3);
+    background-color: rgba(245,245,220,0.9);
 
     padding: 1.2em;
     border-radius: 1.2em;
-    /* margin: 1em; */
+    margin: 1em;
 
 
 }

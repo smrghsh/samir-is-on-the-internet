@@ -17,10 +17,14 @@
   varying vec2 vUV;
   varying vec4 vColor;
   varying float vCounters;
+  varying vec3 vP;
+  uniform float uTime;
   
   void main() {
     #include <logdepthbuf_fragment>
     vec4 c = vColor;
+    c.r = sin(vP.z);
+    c.a = 0.8;
     if (useMap == 1.) c *= texture2D(map, vUV * repeat);
     if (useAlphaMap == 1.) c.a *= texture2D(alphaMap, vUV * repeat).a;
     if (c.a < alphaTest) discard;

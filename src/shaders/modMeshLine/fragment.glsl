@@ -24,7 +24,7 @@
     #include <logdepthbuf_fragment>
     vec4 c = vColor;
     c.r = sin(vP.z);
-    c.a = 0.8;
+    c.a = 0.7;
     if (useMap == 1.) c *= texture2D(map, vUV * repeat);
     if (useAlphaMap == 1.) c.a *= texture2D(alphaMap, vUV * repeat).a;
     if (c.a < alphaTest) discard;

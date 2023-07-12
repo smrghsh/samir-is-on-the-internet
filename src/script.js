@@ -51,11 +51,24 @@ scene.add(axesHelper)
  */
 // Base camera
 const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 120)
-camera.position.set(0,0,4)
-camera.lookAt(0,0,0)
+camera.position.set(-1.526809290138386,2.933433136629435, 2.2502940751091676)
+camera.rotation.set(-0.9164283978958037,-0.3916373693287119,-0.46170863682209606)
+// camera.position.set
+// (4,
+//     6,
+//     4)
+// camera.rotation.set(-0.9164283978958037,-0.3916373693287119,-0.46170863682209606)
+// camera.lookAt(0,0,0)
 const controls = new OrbitControls( camera, canvas );
 
 scene.add(camera)
+
+// for debugging purposes
+window.camera = camera
+
+// x: -1.5268092901383867, y: 2.933433136629435, z: 2.2502940751091676 
+// _x: -0.9164283978958037, _y: -0.3916373693287119, _z: -0.46170863682209606
+
 
 
 /** weave */

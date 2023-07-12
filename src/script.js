@@ -8,7 +8,8 @@ import modMeshLineVertexShader from './shaders/modMeshLine/vertex.glsl'
 import modMeshLineFragmentShader from './shaders/modMeshLine/fragment.glsl'
 import { Font, SubtractiveBlending } from 'three'
 //Palette
-const backgroundColor = new THREE.Color("black")
+// const backgroundColor = new THREE.Color("black")
+const backgroundColor = new THREE.Color("beige")
 
 
 /**

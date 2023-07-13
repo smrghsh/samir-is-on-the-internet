@@ -15,11 +15,6 @@ import { Font, SubtractiveBlending } from 'three'
 // const backgroundColor = new THREE.Color("black")
 const backgroundColor = new THREE.Color("beige")
 
-
-
-
-
-
 /**
  * Sizes
  */
@@ -42,8 +37,8 @@ scene.background = backgroundColor
 /**
  * AxesHelper
  */
-const axesHelper = new THREE.AxesHelper()
-scene.add(axesHelper)
+// const axesHelper = new THREE.AxesHelper()
+// scene.add(axesHelper)
 
 
 /**

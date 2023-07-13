@@ -22,13 +22,14 @@ body
 }
 h1 {
     font-size: 4em;
+    margin-top: 0.2em;
 }
 p, a {
     font-family: 'Satoshi-Light', sans-serif;
 }
 math {
-    font-size: 1.1em;
-    padding: 1em;
+
+    /* padding: 1em; */
 }
 .webgl
 {

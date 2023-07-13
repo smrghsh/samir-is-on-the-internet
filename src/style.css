@@ -1,17 +1,36 @@
+@import url('satoshi.css');
+@import url('chillax.css');
+
 *
 {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Chillax-Light', sans-serif;
+    /* color: white; */
+    /* font-family: 'Satoshi-Light', sans-serif; */
 }
 
+/* input {
+    margin-bottom: 0;
+} */
 html,
 body
 {
-    overflow: hidden;
-    background-color: black;
+    /* overflow: hidden; */
+    /* background-color: black; */
+    background-color: beige;
 }
+h1 {
+    font-size: 4em;
+    margin-top: 0.2em;
+}
+p, a {
+    font-family: 'Satoshi-Light', sans-serif;
+}
+math {
 
+    /* padding: 1em; */
+}
 .webgl
 {
     /* position: fixed; */
@@ -22,30 +41,41 @@ body
     z-index: 0;
 }
 .overlay {
-    padding: 1em;
-    margin: 1em;
+    /* padding: 1em;
+    margin: 1em; */
     /* bottom: 0;
     left: 0; */
-    
     position: absolute;
     outline: none;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
+    text-align: center;
     /* height: 100%; */
-    color: white;
-    max-width: fit-content;
-    max-height: fit-content;
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 1em;
+    /* color: white; */
+    /* max-width: fit-content; */
+    /* max-height: fit-content; */
+    /* background-color: "rgba(0,0,0,0.00001)"; */
+    /* border-radius: 1em; */
     /* background: black; */
+}
+
+.overlay-text {
+    /* background-color: rgba(0,0,0,0.05); */
+    background-color: rgba(245,245,220,0.9);
+
+    padding: 1.2em;
+    border-radius: 1.2em;
+    margin: 1em;
+
 
 }
+/* .overlay > p {
+    max-width: 500px;
+} */
 a.button {
-    color:white;
-    display: block;
-}
-a.hover {
-    color:white;
+    /* color:white; */
+    background-color: rgba(0,0,0,0.2);
+    display:block;
 }
 /* .social-icon {
     width: 1.66em;
@@ -65,4 +95,21 @@ a.hover {
 main > p {
     font-size: .8;
     font-weight: 100;
+}
+.slidecontainer {
+    display: flex;
+    justify-content: center;
+	align-items: flex-start;
+    width: 100%;
+    /* max-width: fit-content; */
+    /* width: inherit; */
+    /* height: 4em; */
+}
+.slidecontainer > p, input, em {
+    flex: 0 0 1;
+    /* height: 1em; */
+    line-height: 1em;
+    font-size: 1.5em;
+    margin: .2em;
+    padding: .2em;
 }

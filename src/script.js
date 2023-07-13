@@ -1,22 +1,19 @@
 import './skeleton.css'
 import './style.css'
 import * as THREE from 'three'
+import { MeshLineGeometry, MeshLineMaterial, raycast } from 'meshline'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 // import * as dat from 'dat.gui'
-import panelVertexShader from './shaders/panel/vertex.glsl'
-import panelFragmentShader from './shaders/panel/fragment.glsl'
+import modMeshLineVertexShader from './shaders/modMeshLine/vertex.glsl'
+import modMeshLineFragmentShader from './shaders/modMeshLine/fragment.glsl'
 import { Font, SubtractiveBlending } from 'three'
+
+
+
+
 //Palette
-const backgroundColor = new THREE.Color(0x000000)
-// const color1 = new THREE.Color(0xF3FEB0)
-// const color2 = new THREE.Color(0xFEA443)
-// const color3 = new THREE.Color(0x705E78)
-// const color4 = new THREE.Color(0x812F33)
-const color1 = new THREE.Color(0xD95F69)
-const color2 = new THREE.Color(0x89C2D9)
-const color3 = new THREE.Color(0x04D9C4)
-const color4 = new THREE.Color(0x88E8F2)
-const colors = [color1, color2, color3, color4]
+// const backgroundColor = new THREE.Color("black")
+const backgroundColor = new THREE.Color("beige")
 
 /**
  * Sizes
@@ -37,107 +34,100 @@ const canvas = document.querySelector('canvas.webgl')
 const scene = new THREE.Scene()
 scene.background = backgroundColor
 
-const depthQuantity = 24   
-const heightQuantity = 24
-const widthQuantity = 4
-
-const cubeGeometry = new THREE.BoxGeometry(1,1,1);
-var materials = []
-colors.forEach((c)=>{
-    materials.push(new THREE.MeshBasicMaterial({color: c, wireframe:false}))
-})
-console.log(materials)
-var cubes = []
-
-
-for(var d = 0; d < depthQuantity; d++){
-    for(var h = 0; h < heightQuantity; h++){
-        for(var w = 0; w < widthQuantity; w++){
-            // let m = materials[(Math.floor(Math.random() * materials.length))]
-
-            let m = new THREE.ShaderMaterial({
-                vertexShader: panelVertexShader,
-                fragmentShader: panelFragmentShader,
-                uniforms: {
-                    uTime: {value: 0.0},
-                    uD: {value: d},
-                    uH: {value: h},
-                    uW: {value: w},
-                    uDepthQuantity: {value: depthQuantity},
-                    uHeightQuantity: {value: heightQuantity},
-                    uWidthQuantity: {value: widthQuantity},
-                    color1: {value: color1},
-                    color2: {value: color2},
-                    color3: {value: color3},
-                    color4: {value: color4}
-
-                },
-                transparent: true
-            
-            })
-            
-            let cube = new THREE.Mesh(cubeGeometry,m);
-            
-            cubes.push(cube)
-            scene.add(cube)
-            cube.position.x = w/2;
-            cube.position.y = h;
-            cube.position.z = d;
-        }
-    }
-}
+/**
+ * AxesHelper
+ */
+// const axesHelper = new THREE.AxesHelper()
+// scene.add(axesHelper)
 
 
 /**
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height, 0.1, 1000)
+const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 120)
+camera.position.set(-1.526809290138386,2.933433136629435, 2.2502940751091676)
+camera.rotation.set(-0.9164283978958037,-0.3916373693287119,-0.46170863682209606)
+// camera.position.set
+// (4,
+//     6,
+//     4)
+// camera.rotation.set(-0.9164283978958037,-0.3916373693287119,-0.46170863682209606)
+// camera.lookAt(0,0,0)
+const controls = new OrbitControls( camera, canvas );
 
-var trackPosition = -8;
-const cameraOrigin = new THREE.Vector3(trackPosition,heightQuantity/2,depthQuantity/2)
-camera.position.set(cameraOrigin.x,cameraOrigin.y,cameraOrigin.z)
-camera.lookAt(trackPosition+1,heightQuantity/2,depthQuantity/2)
 scene.add(camera)
 
+// for debugging purposes
+window.camera = camera
+
+// x: -1.5268092901383867, y: 2.933433136629435, z: 2.2502940751091676 
+// _x: -0.9164283978958037, _y: -0.3916373693287119, _z: -0.46170863682209606
+
+
+
+/** weave */
 
 /**
- * Renderer
+ * Parameterization
  */
-const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
+
+//a
+var amplitude = 1.0
+
+
+const lineLength = 8
+const points = [];
+const size = [];
+for (let i = -lineLength; i < lineLength; i+=0.01) {
+    
+    points.push( new THREE.Vector3( 0, 0, i) );
+}
+const geometry = new MeshLineGeometry()
+geometry.setPoints(points,  (p) =>Math.sin(p) / 5)
+const material = new MeshLineMaterial({
+    side: THREE.DoubleSide,
+    color: new THREE.Color(0.8,.1,0.3)
 })
-renderer.setSize(sizes.width, sizes.height)
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-/**
- * Sizes
- */
-// Window resizing
-window.addEventListener('resize', () =>
-{
-    // Update sizes
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
+//https://stackoverflow.com/questions/59548828/how-to-give-vertex-shader-to-a-geometry-without-changing-the-material-in-threejs
+material.onBeforeCompile = function(info) {
+    console.log(info.fragmentShader)
+    info.vertexShader = modMeshLineVertexShader
+    info.fragmentShader = modMeshLineFragmentShader
+    info.uniforms.uTime = { value: 0.0 };
+    info.uniforms.offset = { value: 0.0 };
+    info.uniforms.speed = { value: 1.0 };
 
-    // Update camera
-    camera.aspect = sizes.width / sizes.height
-    camera.updateProjectionMatrix()
+    info.uniforms.amplitude = { value: 1.0 };
+    info.uniforms.b = { value: 0.8 };
+    info.uniforms.c = { value: 0.8 };
+    info.uniforms.d = { value: 0.8 };
+    info.uniforms.e = { value: 0.8 };
+    info.uniforms.f = { value: 0.8 }; //offset
+    console.log(info.uniforms)
+    // change info.vertexShader, info.fragmentShader, and/or info.uniforms here
+    // console.log(info.vertexShader)
+  };
 
-    // Update renderer
-    renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-})
 
-/**
- * Mouse
- */
-const mouse = new THREE.Vector2()
+for (var i = 0; i < 2*Math.PI; i +=  2*Math.PI/40 ){
 
-window.addEventListener('mousemove', (event) =>
-{
-    mouse.x = event.clientX / sizes.width * 2 - 1
-    mouse.y = - (event.clientY / sizes.height) * 2 + 1
-})
+    let mesh = new THREE.Mesh(geometry,material)
+    mesh.rotation.y += Math.PI/2
+    mesh.rotation.z = i
+    mesh.position.y += Math.random() * 0.1
+    mesh.position.z += Math.random() * 0.1
+    mesh.position.x += Math.random() * 0.1
+    scene.add(mesh)
+    
+}
+// const mesh = new THREE.Mesh(geometry,material)
+// scene.add(mesh)
+// mesh.rotation.y += Math.PI/2
+
+
+
+
 
 
 
@@ -146,19 +136,14 @@ window.addEventListener('mousemove', (event) =>
  */
 const clock = new THREE.Clock()
 const tick = () =>
-{   const jump = 71 
-    const elapsedTime = clock.getElapsedTime() + jump
+{  
+    let e = clock.getElapsedTime() 
     
-    camera.position.set(cameraOrigin.x ,cameraOrigin.y +mouse.y,cameraOrigin.z+ mouse.x)
-    camera.lookAt(cameraOrigin.x +8,cameraOrigin.y,cameraOrigin.z)
-    // Update water
-    cubes.forEach(
-        (cube) =>{
-            cube.material.uniforms.uTime.value = elapsedTime/10.0 + 15.0;
-        }
-    )
-    // Render
-    // trackPosition+= 0.01
+    
+    if( material.uniforms.uTime ){
+        material.uniforms.uTime.value = e
+    }
+
 
     renderer.render(scene, camera)
     window.requestAnimationFrame(tick)

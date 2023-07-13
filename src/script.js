@@ -72,7 +72,15 @@ window.camera = camera
 
 
 /** weave */
-const amplitude = 1.0
+
+/**
+ * Parameterization
+ */
+
+//a
+var amplitude = 1.0
+
+
 const lineLength = 8
 const points = [];
 const size = [];
@@ -94,7 +102,13 @@ material.onBeforeCompile = function(info) {
     info.uniforms.uTime = { value: 0.0 };
     info.uniforms.offset = { value: 0.0 };
     info.uniforms.speed = { value: 1.0 };
+
     info.uniforms.amplitude = { value: 1.0 };
+    info.uniforms.b = { value: 0.8 };
+    info.uniforms.c = { value: 0.8 };
+    info.uniforms.d = { value: 0.8 };
+    info.uniforms.e = { value: 0.8 };
+    info.uniforms.f = { value: 0.8 }; //offset
     console.log(info.uniforms)
     // change info.vertexShader, info.fragmentShader, and/or info.uniforms here
     // console.log(info.vertexShader)
@@ -148,6 +162,56 @@ window.addEventListener('resize', () =>
 })
 
 
+// sliders
+/*
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function() {
+  output.innerHTML = this.value;
+} 
+*/
+
+var aSlider = document.getElementById("a")
+aSlider.oninput = function() {
+    if( material.uniforms.amplitude ){
+        material.uniforms.amplitude.value = this.value
+    }
+} 
+
+var bSlider = document.getElementById("b")
+bSlider.oninput = function() {
+    if( material.uniforms.b ){
+        material.uniforms.b.value = this.value
+    }
+} 
+
+var cSlider = document.getElementById("c")
+cSlider.oninput = function() {
+    if( material.uniforms.c ){
+        material.uniforms.c.value = this.value
+    }
+} 
+var dSlider = document.getElementById("d")
+dSlider.oninput = function() {
+    if( material.uniforms.d ){
+        material.uniforms.d.value = this.value
+    }
+} 
+var eSlider = document.getElementById("e")
+eSlider.oninput = function() {
+    if( material.uniforms.e ){
+        material.uniforms.e.value = this.value
+    }
+} 
+var fSlider = document.getElementById("f")
+fSlider.oninput = function() {
+    if( material.uniforms.f ){
+        material.uniforms.f.value = this.value
+    }
+} 
 
 
 
@@ -163,7 +227,6 @@ const tick = () =>
     if( material.uniforms.uTime ){
         material.uniforms.uTime.value = e
     }
-    
 
     renderer.render(scene, camera)
     window.requestAnimationFrame(tick)

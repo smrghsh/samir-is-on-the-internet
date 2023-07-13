@@ -20,6 +20,11 @@ uniform float uTime;
 uniform float speed;
 uniform float offset;
 uniform float amplitude;
+uniform float b;
+uniform float c;
+uniform float d;
+uniform float e;
+uniform float f;
 
 varying vec2 vUV;
 varying vec4 vColor;
@@ -48,8 +53,8 @@ void main() {
     // p.z += o;
     float a = amplitude * cos( p.z) ;
     float x =(p.z * speed +o);
-    p.y += a * sin(0.8 * x + 2.0 * sin(1.2 *x-2.5)+5.5 );
-    p.x += a * cos(0.2 * x + sin(1.2 *x -2.5) * p.z/10.0);
+    p.y += a * sin(b * x + c * sin(d * x - e) + f );
+    p.x += a * cos(b * x + c * sin(d * x - e) * p.z/10.0);
     //modying position here
     vec4 finalPosition = m * vec4(p, 1.0);
     vec4 prevPos = m * vec4(previous, 1.0);

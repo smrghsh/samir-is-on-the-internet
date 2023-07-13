@@ -9,22 +9,27 @@
     /* color: white; */
     /* font-family: 'Satoshi-Light', sans-serif; */
 }
+
+/* input {
+    margin-bottom: 0;
+} */
+html,
+body
+{
+    /* overflow: hidden; */
+    /* background-color: black; */
+    background-color: beige;
+}
 h1 {
     font-size: 4em;
 }
 p, a {
     font-family: 'Satoshi-Light', sans-serif;
 }
-
-
-html,
-body
-{
-    overflow: hidden;
-    /* background-color: black; */
-    background-color: beige;
+math {
+    font-size: 1.1em;
+    padding: 1em;
 }
-
 .webgl
 {
     /* position: fixed; */
@@ -89,4 +94,21 @@ a.button {
 main > p {
     font-size: .8;
     font-weight: 100;
+}
+.slidecontainer {
+    display: flex;
+    justify-content: center;
+	align-items: flex-start;
+    width: 100%;
+    /* max-width: fit-content; */
+    /* width: inherit; */
+    /* height: 4em; */
+}
+.slidecontainer > p, input, em {
+    flex: 0 0 1;
+    /* height: 1em; */
+    line-height: 1em;
+    font-size: 1.5em;
+    margin: .2em;
+    padding: .2em;
 }

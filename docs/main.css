@@ -33,7 +33,7 @@
   width: 100%;
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
   box-sizing: border-box; }
 .column,
 .columns {
@@ -49,7 +49,7 @@
 }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) {
+@media (min-width: 780px) {
   .container {
     width: 80%; }
   .column,
@@ -124,8 +124,9 @@ body {
   font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  /* font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  /* color: white;  */
+}
 
 
 /* Typography
@@ -417,20 +418,323 @@ there.
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
 
+/**
+ * @license
+ *
+ * Font Family: Satoshi
+ * Designed by: Deni Anggara
+ * URL: https://www.fontshare.com/fonts/satoshi
+ * © 2023 Indian Type Foundry
+ *
+ * Font Styles:
+ * Satoshi Variable(Variable font)
+ * Satoshi Variable Italic(Variable font)
+ * Satoshi Light
+ * Satoshi Light Italic
+ * Satoshi Regular
+ * Satoshi Italic
+ * Satoshi Medium
+ * Satoshi Medium Italic
+ * Satoshi Bold
+ * Satoshi Bold Italic
+ * Satoshi Black
+ * Satoshi Black Italic
+ *
+*/
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+  font-family: 'Satoshi-Variable';
+  src: url(assets/fonts/353a66cdd8922bb63107b51bb4ebc47f.woff2) format('woff2'),
+       url(assets/fonts/4db206aaad2132de9db7c2ed26b55b88.woff) format('woff'),
+       url(assets/fonts/536fda9b164542087fc736ce08d382d0.ttf) format('truetype');
+       font-weight: 300 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 900.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 900.0)
+
+*/
+
+@font-face {
+  font-family: 'Satoshi-VariableItalic';
+  src: url(assets/fonts/9d501e440d7109a57c882c57a9285d57.woff2) format('woff2'),
+       url(assets/fonts/fe877592580e0a941b9ed0d2995aea8d.woff) format('woff'),
+       url(assets/fonts/9519fea9567e2405bc08c2a383630289.ttf) format('truetype');
+       font-weight: 300 900;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Light';
+  src: url(assets/fonts/df8f06167ee6fd05a1312732d4e9ea50.woff2) format('woff2'),
+       url(assets/fonts/67e7fa77f107df3491b6c74c9d09a41e.woff) format('woff'),
+       url(assets/fonts/22ef061781b1162ac317c35b1b821110.ttf) format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-LightItalic';
+  src: url(assets/fonts/540a6dd2e29f70e154776e4d0dfbaa38.woff2) format('woff2'),
+       url(assets/fonts/9473bef147f48d191d0d6bfd04f39a14.woff) format('woff'),
+       url(assets/fonts/bdeb9dc94481cdcc43dd3e98c9f87bc6.ttf) format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url(assets/fonts/9ec05085c4cd2966eba82346dcfd9bea.woff2) format('woff2'),
+       url(assets/fonts/ca3da5fd2b609836ef69e0f6e677450c.woff) format('woff'),
+       url(assets/fonts/fe762acc7e97cb6128058a93523585f0.ttf) format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Italic';
+  src: url(assets/fonts/f4acf4adbba9bcd2c75cc012be3f0e0e.woff2) format('woff2'),
+       url(assets/fonts/a7000aa1c017eec578681948611f7460.woff) format('woff'),
+       url(assets/fonts/89c785539a22fa0dfa0f5e129c4f5a9b.ttf) format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Medium';
+  src: url(assets/fonts/1ffe968245568e8ba1e766cec2c0075d.woff2) format('woff2'),
+       url(assets/fonts/2419b46c96ed15331ba205aa3b103eb8.woff) format('woff'),
+       url(assets/fonts/759562088ba19068aef82baee40e2ab5.ttf) format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-MediumItalic';
+  src: url(assets/fonts/6be6d51d5fc7402ee45f6c343e607baa.woff2) format('woff2'),
+       url(assets/fonts/cb8316e39642de8a12d54a60366bb476.woff) format('woff'),
+       url(assets/fonts/5db9ec801a311bdf187ba0e401b05d12.ttf) format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Bold';
+  src: url(assets/fonts/a0e6d25529eab537426cc73a2199dd85.woff2) format('woff2'),
+       url(assets/fonts/a875ff682ee232938607cd70a2997cd9.woff) format('woff'),
+       url(assets/fonts/137a52d9f47dd71c6247397651ccbf6f.ttf) format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-BoldItalic';
+  src: url(assets/fonts/99235b175b514139aed0e14900656fcc.woff2) format('woff2'),
+       url(assets/fonts/d6da0f2020393863d72091bd133bd446.woff) format('woff'),
+       url(assets/fonts/95e24575ceb54c131b6befcb1df1d776.ttf) format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-Black';
+  src: url(assets/fonts/b5013d854bb5a8e48651144002dcc6a7.woff2) format('woff2'),
+       url(assets/fonts/4261d202e1e9410db1bfa7a19ab6c372.woff) format('woff'),
+       url(assets/fonts/464354ba5a06467ecac56ec6be8e083b.ttf) format('truetype');
+       font-weight: 900;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Satoshi-BlackItalic';
+  src: url(assets/fonts/d456cea1fae27f7d469433631ff713b2.woff2) format('woff2'),
+       url(assets/fonts/048e5edd452be6c1321441275bb898d0.woff) format('woff'),
+       url(assets/fonts/6688ad1e9589e67518294867a239fdae.ttf) format('truetype');
+       font-weight: 900;
+       font-display: swap;
+       font-style: italic;
+}
+
+
+/**
+ * @license
+ *
+ * Font Family: Chillax
+ * Designed by: Manushi Parikh
+ * URL: https://www.fontshare.com/fonts/chillax
+ * © 2023 Indian Type Foundry
+ *
+ * Font Styles:
+ * Chillax Variable(Variable font)
+ * Chillax Extralight
+ * Chillax Light
+ * Chillax Regular
+ * Chillax Medium
+ * Chillax Semibold
+ * Chillax Bold
+ *
+*/
+
+
+/**
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 700.0;
+*
+* available axes:
+
+* 'wght' (range from 200.0 to 700.0)
+
+*/
+
+@font-face {
+  font-family: 'Chillax-Variable';
+  src: url(assets/fonts/9cf7581f93eb915d1c88025e9131961c.woff2) format('woff2'),
+       url(assets/fonts/3099c20bf00a8648845318258cee0fd2.woff) format('woff'),
+       url(assets/fonts/35be36f56031260cf4351816193d520b.ttf) format('truetype');
+       font-weight: 200 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Extralight';
+  src: url(assets/fonts/278406f9c9c8fe7d844ddc799e25c29f.woff2) format('woff2'),
+       url(assets/fonts/6ef90e26b8015b53dfc5e7c8f4b5a3f5.woff) format('woff'),
+       url(assets/fonts/a4056cb2af95b3ceffc136be84f38389.ttf) format('truetype');
+       font-weight: 200;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Light';
+  src: url(assets/fonts/af355b9bf98e3e002af33e36e462f99d.woff2) format('woff2'),
+       url(assets/fonts/6a1a75dde2f5a782f2f8a25563e6bdb0.woff) format('woff'),
+       url(assets/fonts/f7f01b60a17a04b97f7a47c0224baf36.ttf) format('truetype');
+       font-weight: 300;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Regular';
+  src: url(assets/fonts/ba523d3ce8c8545f9d2053d0a129d8b4.woff2) format('woff2'),
+       url(assets/fonts/69ecbaec7d22215aa562f8f803c028ee.woff) format('woff'),
+       url(assets/fonts/50d2215815ebd5becebc8cc933f007fa.ttf) format('truetype');
+       font-weight: 400;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Medium';
+  src: url(assets/fonts/0676d0c351cc36f9d624491786f5fdd0.woff2) format('woff2'),
+       url(assets/fonts/529ac682ffbed5b0db056ca6cca4d172.woff) format('woff'),
+       url(assets/fonts/bd1fdefdb415380f3f52b5a0f8d32955.ttf) format('truetype');
+       font-weight: 500;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Semibold';
+  src: url(assets/fonts/a8a0c9fc2aa3e9bfa853db0d9aa06351.woff2) format('woff2'),
+       url(assets/fonts/8bb570e93f1e8cc0c286cdc3ebd124b2.woff) format('woff'),
+       url(assets/fonts/852911bb88ac3582fb3d97fc0ddec8fc.ttf) format('truetype');
+       font-weight: 600;
+       font-display: swap;
+       font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Chillax-Bold';
+  src: url(assets/fonts/74d1529a0c0254642d50d9314bb27013.woff2) format('woff2'),
+       url(assets/fonts/d9d078aa32cadb070c02a24eec19f71f.woff) format('woff'),
+       url(assets/fonts/afec4fb98c81e138a906a6505276c2d1.ttf) format('truetype');
+       font-weight: 700;
+       font-display: swap;
+       font-style: normal;
+}
+
+
 *
 {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Chillax-Light', sans-serif;
+    /* color: white; */
+    /* font-family: 'Satoshi-Light', sans-serif; */
 }
 
+/* input {
+    margin-bottom: 0;
+} */
 html,
 body
 {
-    overflow: hidden;
-    background-color: black;
+    /* overflow: hidden; */
+    /* background-color: black; */
+    background-color: beige;
 }
+h1 {
+    font-size: 4em;
+    margin-top: 0.2em;
+}
+p, a {
+    font-family: 'Satoshi-Light', sans-serif;
+}
+math {
 
+    /* padding: 1em; */
+}
 .webgl
 {
     /* position: fixed; */
@@ -441,30 +745,41 @@ body
     z-index: 0;
 }
 .overlay {
-    padding: 1em;
-    margin: 1em;
+    /* padding: 1em;
+    margin: 1em; */
     /* bottom: 0;
     left: 0; */
-    
     position: absolute;
     outline: none;
     z-index: 1;
-    width: 100%;
+    width: 100vw;
+    text-align: center;
     /* height: 100%; */
-    color: white;
-    max-width: fit-content;
-    max-height: fit-content;
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 1em;
+    /* color: white; */
+    /* max-width: fit-content; */
+    /* max-height: fit-content; */
+    /* background-color: "rgba(0,0,0,0.00001)"; */
+    /* border-radius: 1em; */
     /* background: black; */
+}
+
+.overlay-text {
+    /* background-color: rgba(0,0,0,0.05); */
+    background-color: rgba(245,245,220,0.9);
+
+    padding: 1.2em;
+    border-radius: 1.2em;
+    margin: 1em;
+
 
 }
+/* .overlay > p {
+    max-width: 500px;
+} */
 a.button {
-    color:white;
-    display: block;
-}
-a.hover {
-    color:white;
+    /* color:white; */
+    background-color: rgba(0,0,0,0.2);
+    display:block;
 }
 /* .social-icon {
     width: 1.66em;
@@ -484,6 +799,23 @@ a.hover {
 main > p {
     font-size: .8;
     font-weight: 100;
+}
+.slidecontainer {
+    display: flex;
+    justify-content: center;
+	align-items: flex-start;
+    width: 100%;
+    /* max-width: fit-content; */
+    /* width: inherit; */
+    /* height: 4em; */
+}
+.slidecontainer > p, input, em {
+    flex: 0 0 1;
+    /* height: 1em; */
+    line-height: 1em;
+    font-size: 1.5em;
+    margin: .2em;
+    padding: .2em;
 }
 
 /*# sourceMappingURL=main.css.map*/

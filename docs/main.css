@@ -822,11 +822,13 @@ nav{
 	flex-direction: column;
 	align-items: center;
 }
-button {
+
+nav > button {
     text-align: 0;
     text-transform: none;
     font-size: 1em;
     background-color: rgba(245,245,220,0.9);
+
 }
 
 /*# sourceMappingURL=main.css.map*/

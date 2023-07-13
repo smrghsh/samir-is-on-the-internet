@@ -823,7 +823,7 @@ nav{
 	align-items: center;
 }
 
-nav > button {
+nav > a.button {
     text-align: 0;
     text-transform: none;
     font-size: 1em;

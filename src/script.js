@@ -1,38 +1,35 @@
-import './skeleton.css'
-import './style.css'
-import * as THREE from 'three'
-import { MeshLineGeometry, MeshLineMaterial, raycast } from 'meshline'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import "./skeleton.css";
+import "./style.css";
+import * as THREE from "three";
+import { MeshLineGeometry, MeshLineMaterial, raycast } from "meshline";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // import * as dat from 'dat.gui'
-import modMeshLineVertexShader from './shaders/modMeshLine/vertex.glsl'
-import modMeshLineFragmentShader from './shaders/modMeshLine/fragment.glsl'
-import { Font, SubtractiveBlending } from 'three'
-
-
-
+import modMeshLineVertexShader from "./shaders/modMeshLine/vertex.glsl";
+import modMeshLineFragmentShader from "./shaders/modMeshLine/fragment.glsl";
+import { Font, SubtractiveBlending } from "three";
 
 //Palette
 // const backgroundColor = new THREE.Color("black")
-const backgroundColor = new THREE.Color("beige")
+const backgroundColor = new THREE.Color("beige");
 
 /**
  * Sizes
  */
 const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
-}
+  width: window.innerWidth,
+  height: window.innerHeight,
+};
 
 /**
  * Base
  */
 
 // Canvas
-const canvas = document.querySelector('canvas.webgl')
+const canvas = document.querySelector("canvas.webgl");
 
 // Scene
-const scene = new THREE.Scene()
-scene.background = backgroundColor
+const scene = new THREE.Scene();
+scene.background = backgroundColor;
 
 /**
  * AxesHelper
@@ -40,31 +37,37 @@ scene.background = backgroundColor
 // const axesHelper = new THREE.AxesHelper()
 // scene.add(axesHelper)
 
-
 /**
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(35, sizes.width / sizes.height, 0.1, 120)
-camera.position.set(-1.526809290138386,2.933433136629435, 2.2502940751091676)
-camera.rotation.set(-0.9164283978958037,-0.3916373693287119,-0.46170863682209606)
+const camera = new THREE.PerspectiveCamera(
+  35,
+  sizes.width / sizes.height,
+  0.1,
+  120
+);
+camera.position.set(-1.526809290138386, 2.933433136629435, 2.2502940751091676);
+camera.rotation.set(
+  -0.9164283978958037,
+  -0.3916373693287119,
+  -0.46170863682209606
+);
 // camera.position.set
 // (4,
 //     6,
 //     4)
 // camera.rotation.set(-0.9164283978958037,-0.3916373693287119,-0.46170863682209606)
 // camera.lookAt(0,0,0)
-const controls = new OrbitControls( camera, canvas );
+const controls = new OrbitControls(camera, canvas);
 
-scene.add(camera)
+scene.add(camera);
 
 // for debugging purposes
-window.camera = camera
+window.camera = camera;
 
-// x: -1.5268092901383867, y: 2.933433136629435, z: 2.2502940751091676 
+// x: -1.5268092901383867, y: 2.933433136629435, z: 2.2502940751091676
 // _x: -0.9164283978958037, _y: -0.3916373693287119, _z: -0.46170863682209606
-
-
 
 /** weave */
 
@@ -73,89 +76,78 @@ window.camera = camera
  */
 
 //a
-var amplitude = 1.0
+var amplitude = 1.0;
 
-
-const lineLength = 8
+const lineLength = 8;
 const points = [];
 const size = [];
-for (let i = -lineLength; i < lineLength; i+=0.01) {
-    
-    points.push( new THREE.Vector3( 0, 0, i) );
+for (let i = -lineLength; i < lineLength; i += 0.01) {
+  points.push(new THREE.Vector3(0, 0, i));
 }
-const geometry = new MeshLineGeometry()
-geometry.setPoints(points,  (p) =>Math.sin(p) / 5)
+const geometry = new MeshLineGeometry();
+geometry.setPoints(points, (p) => Math.sin(p) / 5);
 const material = new MeshLineMaterial({
-    side: THREE.DoubleSide,
-    color: new THREE.Color(0.8,.1,0.3)
-})
+  side: THREE.DoubleSide,
+  color: new THREE.Color(0.8, 0.1, 0.3),
+});
 //https://stackoverflow.com/questions/59548828/how-to-give-vertex-shader-to-a-geometry-without-changing-the-material-in-threejs
-material.onBeforeCompile = function(info) {
-    console.log(info.fragmentShader)
-    info.vertexShader = modMeshLineVertexShader
-    info.fragmentShader = modMeshLineFragmentShader
-    info.uniforms.uTime = { value: 0.0 };
-    info.uniforms.offset = { value: 0.0 };
-    info.uniforms.speed = { value: 1.0 };
+material.onBeforeCompile = function (info) {
+  // console.log(info.fragmentShader)
+  info.vertexShader = modMeshLineVertexShader;
+  info.fragmentShader = modMeshLineFragmentShader;
+  info.uniforms.uTime = { value: 0.0 };
+  info.uniforms.offset = { value: 0.0 };
+  info.uniforms.speed = { value: 1.0 };
 
-    info.uniforms.amplitude = { value: 1.0 };
-    info.uniforms.b = { value: 0.8 };
-    info.uniforms.c = { value: 0.8 };
-    info.uniforms.d = { value: 0.8 };
-    info.uniforms.e = { value: 0.8 };
-    info.uniforms.f = { value: 0.8 }; //offset
-    console.log(info.uniforms)
-    // change info.vertexShader, info.fragmentShader, and/or info.uniforms here
-    // console.log(info.vertexShader)
-  };
+  info.uniforms.amplitude = { value: 1.0 };
+  info.uniforms.b = { value: 0.8 };
+  info.uniforms.c = { value: 0.8 };
+  info.uniforms.d = { value: 0.8 };
+  info.uniforms.e = { value: 0.8 };
+  info.uniforms.f = { value: 0.8 }; //offset
+  // console.log(info.uniforms)
+  // change info.vertexShader, info.fragmentShader, and/or info.uniforms here
+  // console.log(info.vertexShader)
+};
 
-
-for (var i = 0; i < 2*Math.PI; i +=  2*Math.PI/40 ){
-
-    let mesh = new THREE.Mesh(geometry,material)
-    mesh.rotation.y += Math.PI/2
-    mesh.rotation.z = i
-    mesh.position.y += Math.random() * 0.1
-    mesh.position.z += Math.random() * 0.1
-    mesh.position.x += Math.random() * 0.1
-    scene.add(mesh)
-    
+for (var i = 0; i < 2 * Math.PI; i += (2 * Math.PI) / 40) {
+  let mesh = new THREE.Mesh(geometry, material);
+  mesh.rotation.y += Math.PI / 2;
+  mesh.rotation.z = i;
+  mesh.position.y += Math.random() * 0.1;
+  mesh.position.z += Math.random() * 0.1;
+  mesh.position.x += Math.random() * 0.1;
+  scene.add(mesh);
 }
 // const mesh = new THREE.Mesh(geometry,material)
 // scene.add(mesh)
 // mesh.rotation.y += Math.PI/2
 
-
-
-
-
 /**
  * Renderer
  */
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas
-})
-renderer.setSize(sizes.width, sizes.height)
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+  canvas: canvas,
+});
+renderer.setSize(sizes.width, sizes.height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 /**
  * Sizes
  */
 // Window resizing
-window.addEventListener('resize', () =>
-{
-    // Update sizes
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
+window.addEventListener("resize", () => {
+  // Update sizes
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
 
-    // Update camera
-    camera.aspect = sizes.width / sizes.height
-    camera.updateProjectionMatrix()
+  // Update camera
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix();
 
-    // Update renderer
-    renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-})
-
+  // Update renderer
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});
 
 // sliders
 /*
@@ -169,63 +161,58 @@ slider.oninput = function() {
 } 
 */
 
-var aSlider = document.getElementById("a")
-aSlider.oninput = function() {
-    if( material.uniforms.amplitude ){
-        material.uniforms.amplitude.value = this.value
-    }
-} 
+var aSlider = document.getElementById("a");
+aSlider.oninput = function () {
+  if (material.uniforms.amplitude) {
+    material.uniforms.amplitude.value = this.value;
+  }
+};
 
-var bSlider = document.getElementById("b")
-bSlider.oninput = function() {
-    if( material.uniforms.b ){
-        material.uniforms.b.value = this.value
-    }
-} 
+var bSlider = document.getElementById("b");
+bSlider.oninput = function () {
+  if (material.uniforms.b) {
+    material.uniforms.b.value = this.value;
+  }
+};
 
-var cSlider = document.getElementById("c")
-cSlider.oninput = function() {
-    if( material.uniforms.c ){
-        material.uniforms.c.value = this.value
-    }
-} 
-var dSlider = document.getElementById("d")
-dSlider.oninput = function() {
-    if( material.uniforms.d ){
-        material.uniforms.d.value = this.value
-    }
-} 
-var eSlider = document.getElementById("e")
-eSlider.oninput = function() {
-    if( material.uniforms.e ){
-        material.uniforms.e.value = this.value
-    }
-} 
-var fSlider = document.getElementById("f")
-fSlider.oninput = function() {
-    if( material.uniforms.f ){
-        material.uniforms.f.value = this.value
-    }
-} 
-
-
+var cSlider = document.getElementById("c");
+cSlider.oninput = function () {
+  if (material.uniforms.c) {
+    material.uniforms.c.value = this.value;
+  }
+};
+var dSlider = document.getElementById("d");
+dSlider.oninput = function () {
+  if (material.uniforms.d) {
+    material.uniforms.d.value = this.value;
+  }
+};
+var eSlider = document.getElementById("e");
+eSlider.oninput = function () {
+  if (material.uniforms.e) {
+    material.uniforms.e.value = this.value;
+  }
+};
+var fSlider = document.getElementById("f");
+fSlider.oninput = function () {
+  if (material.uniforms.f) {
+    material.uniforms.f.value = this.value;
+  }
+};
 
 /**
  * Animate
  */
-const clock = new THREE.Clock()
-const tick = () =>
-{  
-    let e = clock.getElapsedTime() 
-    
-    
-    if( material.uniforms.uTime ){
-        material.uniforms.uTime.value = e
-    }
+const clock = new THREE.Clock();
+const tick = () => {
+  let e = clock.getElapsedTime();
 
-    renderer.render(scene, camera)
-    window.requestAnimationFrame(tick)
-}
+  if (material.uniforms.uTime) {
+    material.uniforms.uTime.value = e;
+  }
 
-tick()
+  renderer.render(scene, camera);
+  window.requestAnimationFrame(tick);
+};
 
+tick();

@@ -50,6 +50,10 @@ math {
     z-index: 1;
     width: 100vw;
     text-align: center;
+    /* top: 50%; */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw; /* Adjust the width as needed */
     /* height: 100%; */
     /* color: white; */
     /* max-width: fit-content; */

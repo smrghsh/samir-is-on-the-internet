@@ -1,32 +1,19 @@
 <template>
-  <div>
-    <!-- <NuxtWelcome /> -->
-    <header>
-      <h1>Samir Ghosh</h1>
-      <!-- instagram link -->
-    </header>
-  </div>
+  <navbar></navbar>
+  <corner-section>
+    <h1>hello world!</h1>
+    <div>
+      <p>I am a design researcher pursuing a PhD, advised by Katherine Isbister at the Social Emotional Technology Lab at University of California, Santa Cruz.</p>
+      <p>I believe that virtual reality and spatial computing should empower us to overcome difficult existential problems such as climate change and health. Supported by the Sloan Foundation, I research multi-user applications for scientific sensemaking like making VR simulations for wildfire evacuation specialists.</p>
+      <p>In the evenings, I serve as a community leader for the Creative Code Collective, contribute actively as a collaborator in the arts, and participate in movement communities.</p>
+      <p>Reach me at hello@samir.tech</p>
+    </div>
+  </corner-section>
 </template>
 
 <style>
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  h1 {
-    font-size: 2.5em;
-    margin: 0;
-  }
-  p {
-    font-size: 1.5em;
-    margin: 0;
-  }
-  a {
-    color: #000;
-  }
-  a:hover {
-    color: #f00;
-  }
+
+
 
 </style>
+

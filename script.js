@@ -1,43 +1,22 @@
-<script>
 import * as THREE from "three";
 import { MeshLineGeometry, MeshLineMaterial, raycast } from "meshline";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 // import * as dat from 'dat.gui'
-import modMeshLineVertexShader from "../assets/shaders/modMeshLine/vertex.glsl";
-import modMeshLineFragmentShader from "../assets/shaders/modMeshLine/fragment.glsl";
+import modMeshLineVertexShader from "./shaders/modMeshLine/vertex.glsl";
+import modMeshLineFragmentShader from "./shaders/modMeshLine/fragment.glsl";
 import { Font, SubtractiveBlending } from "three";
-
-export default {
-  // unmount() {
-    // leo says destroy it here
-  // }
-  mounted() {
-    const sizes = {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
-      /**
-     * Sizes
-     */
-  // Window resizing
-    window.addEventListener("resize", () => {
-      // Update sizes
-      sizes.width = window.innerWidth;
-      sizes.height = window.innerHeight;
-
-      // Update camera
-      camera.aspect = sizes.width / sizes.height;
-      camera.updateProjectionMatrix();
-
-      // Update renderer
-      renderer.setSize(sizes.width, sizes.height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    });
-
 
 //Palette
 // const backgroundColor = new THREE.Color("black")
 const backgroundColor = new THREE.Color("beige");
+
+/**
+ * Sizes
+ */
+const sizes = {
+  width: window.innerWidth,
+  height: window.innerHeight,
+};
 
 /**
  * Base
@@ -95,7 +74,7 @@ window.camera = camera;
  */
 
 //a
-const amplitude = 1.0;
+var amplitude = 1.0;
 
 const lineLength = 8;
 const points = [];
@@ -129,8 +108,8 @@ material.onBeforeCompile = function (info) {
   // console.log(info.vertexShader)
 };
 
-for (let i = 0; i < 2 * Math.PI; i += (2 * Math.PI) / 40) {
-  const mesh = new THREE.Mesh(geometry, material);
+for (var i = 0; i < 2 * Math.PI; i += (2 * Math.PI) / 40) {
+  let mesh = new THREE.Mesh(geometry, material);
   mesh.rotation.y += Math.PI / 2;
   mesh.rotation.z = i;
   mesh.position.y += Math.random() * 0.1;
@@ -150,7 +129,23 @@ const renderer = new THREE.WebGLRenderer({
 });
 renderer.setSize(sizes.width, sizes.height);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+/**
+ * Sizes
+ */
+// Window resizing
+window.addEventListener("resize", () => {
+  // Update sizes
+  sizes.width = window.innerWidth;
+  sizes.height = window.innerHeight;
 
+  // Update camera
+  camera.aspect = sizes.width / sizes.height;
+  camera.updateProjectionMatrix();
+
+  // Update renderer
+  renderer.setSize(sizes.width, sizes.height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});
 
 // sliders
 /*
@@ -208,7 +203,7 @@ slider.oninput = function() {
  */
 const clock = new THREE.Clock();
 const tick = () => {
-  const e = clock.getElapsedTime();
+  let e = clock.getElapsedTime();
 
   if (material.uniforms.uTime) {
     material.uniforms.uTime.value = e;
@@ -219,30 +214,3 @@ const tick = () => {
 };
 
 tick();
-
-
-
-
-  }
-}
-
-
-</script>
-
-
-
-<template>
-  <canvas class="webgl" />
-</template>
-
-<style>
-    canvas {
-        width: 100vw;
-        height: 100vh;
-        /* background-color: ; */
-        /* background-color: aqua; */
-        position:fixed;
-        outline: none;
-        z-index: -1;
-    }
-</style>

@@ -1,21 +1,46 @@
 
 <template>
-    <nav>
-        <div class="first-row">
-            <router-link to="/"class="home-link"><h1>Samir Ghosh</h1></router-link>
-            <div class="socials">
-                <a href="" ><img src="/assets/images/social-icons/github.svg" alt=""></a>
-                <a href="" ><img src="/assets/images/social-icons/instagram.svg" alt=""></a>
-            </div>
-        </div>
-        <div class="second-row">
-            <router-link class="subpage" to="/bio"><h3>Bio</h3></router-link>
-            <router-link class="subpage" to="/CV"><h3>CV</h3></router-link>
-            <!-- <router-link class="subpage" to="/CV"><h3>Notes</h3></router-link> -->
-            <router-link class="subpage" to="/Colophon"><h3>Colophon</h3></router-link>
-        </div>
-
-    </nav>
+  <nav>
+    <div class="first-row">
+      <NuxtLink
+        to="/"
+        class="home-link"
+      >
+        <h1>Samir Ghosh</h1>
+      </NuxtLink>
+      <div class="socials">
+        <a href=""><img
+          src="/assets/images/social-icons/github.svg"
+          alt=""
+        ></a>
+        <a href=""><img
+          src="/assets/images/social-icons/instagram.svg"
+          alt=""
+        ></a>
+      </div>
+    </div>
+    <div class="second-row">
+      <NuxtLink
+        class="subpage"
+        to="/bio"
+      >
+        <h3>Bio</h3>
+      </NuxtLink>
+      <a
+        class="subpage"
+        href="CV_Samir_Ghosh-11-6-23.pdf"
+      >
+        <h3>CV</h3>
+      </a>
+      <!-- <NuxtLink class="subpage" to="/CV"><h3>Notes</h3></NuxtLink> -->
+      <NuxtLink
+        class="subpage"
+        to="/Colophon"
+      >
+        <h3>Colophon</h3>
+      </NuxtLink>
+    </div>
+  </nav>
 </template>
 <style>
 nav {
@@ -88,6 +113,16 @@ nav {
     align-content: center;
     align-items: center;
 }
+.first-row {
+  background-color: rgba(245, 245, 222,0.8);
+  backdrop-filter: blur(10px);
+  /* blur */
+
+    /* opacity: .8; */
+    padding-left: .2em;
+    padding-right: .2em;
+}
+
 .second-row {
     display: flex;
     flex-direction: row;
@@ -96,8 +131,9 @@ nav {
     align-content: center;
     align-items: stretch;
 
-    background-color: #f5f5de;
-    opacity: .8;
+    background-color: rgba(245, 245, 222,0.8);
+    /* opacity: .8; */
+    backdrop-filter: blur(10px);
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     /* padding-top: 1em;

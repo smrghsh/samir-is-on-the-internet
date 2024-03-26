@@ -6,7 +6,12 @@
 body {
   background-color: #f5f5de;
 }
-h1,
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  /* margin-bottom: 0.2em; */
+  margin: 0.2em;
+}
 h2,
 h3 {
   font-weight: 200;

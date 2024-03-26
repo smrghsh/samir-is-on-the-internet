@@ -1,8 +1,8 @@
 <template>
-        <div class="corner-heading">
-        <!-- accepts h1, p -->
-            <slot></slot>
-        </div>
+  <div class="corner-heading">
+    <!-- accepts h1, p -->
+    <slot />
+  </div>
 </template>
 <style>
     .corner-heading {
@@ -13,8 +13,8 @@
     .corner-heading > h1 {
         width: 300px;
         /* background-color: aliceblue; */
-        background: none #f5f5de;
-        background-image: linear-gradient(to bottom right, rgba(245,245,222,1.0), rgba(245,245,222,0)); 
+        background: none;
+        background-image: linear-gradient(to bottom right, rgba(245,245,222,1.0), rgba(245,245,222,0.0)); 
         border-left: 1px solid black;
         border-top: 1px solid black;
         padding-left: 0.7em;
@@ -39,14 +39,17 @@
         padding: 0em 1em 0em 1em;
         max-width: 1000px;
 
-        background-color: rgba(245,245,222,.8);
+        background-color: rgba(245,245,222,.87);
         backdrop-filter: blur(10px);
         /* drop shadow */
         filter:drop-shadow(5px 5px 4px rgba(0,0,0,0.25));
     }
-    .corner-heading > div > p {
+    .corner-heading > div > p, li {
         font-size: 1.2em;
         font-weight: 300;
+    }
+    li {
+        margin-left: 2em;
     }
 
 </style>

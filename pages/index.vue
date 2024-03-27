@@ -5,12 +5,19 @@
     <navbar />
     <corner-section>
       <h1>hello world!</h1>
-      <div>
-        <p>I am a VR developer and design researcher pursuing a PhD, advised by Katherine Isbister at the Social Emotional Technology Lab at University of California, Santa Cruz.</p>
-        <p>I believe that virtual reality and spatial computing should empower us to overcome difficult existential problems such as climate change and health. Supported by the Sloan Foundation grant, I am on a project to research multi-user applications for scientific sensemaking, like making VR simulations for wildfire evacuation specialists.</p>
-        <p>In the evenings, I serve as a community leader for the Creative Code Collective, contribute actively as a collaborator in the arts, and participate in movement communities.</p>
-        <p>Reach me at hello@samir.tech</p>
+      <div class="not-the-heading">
+        <div class="about">
+          <p>I am a VR developer and design researcher pursuing a PhD, advised by Katherine Isbister at the Social Emotional Technology Lab at University of California, Santa Cruz.</p>
+          <p>I believe that virtual reality and spatial computing should empower us to overcome difficult existential problems such as climate change and health. Supported by the Sloan Foundation grant, I am on a project to research multi-user applications for scientific sensemaking, like making VR simulations for wildfire evacuation specialists.</p>
+          <p>In the evenings, I serve as a community leader for the Creative Code Collective, contribute actively as a collaborator in the arts, and participate in movement communities.</p>
+          <p>Reach me at hello@samir.tech</p>
+        </div>
+        <main>
+          <h3 class="project-demarcator">Selected Projects</h3>  
+          <ProjectsContainer />
+        </main>
       </div>
+
     </corner-section>
   </div>
 </template>
@@ -18,9 +25,33 @@
 <style>
 .front-layer {
   width: 100vw;
-  height: 100vh;
-  position: fixed;
+  /* height: 100vh; */
+  position: absolute;
   z-index: 2;
 }
+main{
+  position: relative;
+}
+.project-demarcator {
+  width: 300px;
+  /* background-color: aliceblue; */
+  /* background-color: blue; */
+  background-image: linear-gradient(to bottom right, rgba(245,245,222,1.0), rgba(245,245,222,0.0)); 
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  padding-left: 0.7em;
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+  font-size: 1.5em;
+  z-index: 1;
+  position: absolute;
+  /* top left corner is rounded 10px */
+  border-top-left-radius: 10px;
+  /* background blur 10 */
+  backdrop-filter: blur(10px);
+
+}
+
+
 
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="corner-heading">
-    <!-- accepts h1, p -->
+    <!-- accepts h1, div, -->
     <slot />
   </div>
 </template>
@@ -9,6 +9,8 @@
         margin-left: 2em;
     margin-top: 2em;
     max-width: 100vw;
+    background-color: red;
+    position: relative;
     }
     .corner-heading > h1 {
         width: 300px;
@@ -28,10 +30,15 @@
         /* background blur 10 */
         backdrop-filter: blur(10px);
     }
-    .corner-heading > div {
+    .corner-heading > .not-the-heading{
         position: absolute;
         z-index: 2;
-        margin-top: 5em;
+
+    }
+    .corner-heading > .not-the-heading > .about {
+        font-size: 1.2em;
+        font-weight: 300;
+        margin-top: 3em;
         margin-left: 2em;
         border-radius: 10px;
         border: 1px solid black;
@@ -43,13 +50,25 @@
         backdrop-filter: blur(10px);
         /* drop shadow */
         filter:drop-shadow(5px 5px 4px rgba(0,0,0,0.25));
+        
     }
-    .corner-heading > div > p, li {
-        font-size: 1.2em;
-        font-weight: 300;
-    }
+
     li {
         margin-left: 2em;
     }
+    .corner-heading > div > main {
+        /* border: 1px solid black; */
+        /* width: 100vw; */
+        background: transparent;
+        
 
+    } 
+
+    h2.project-demarcator {
+        background-color: rgba(245,245,222,.87);
+        backdrop-filter: blur(10px);
+        /* drop shadow */
+        filter:drop-shadow(5px 5px 4px rgba(0,0,0,0.25));
+
+    }
 </style>

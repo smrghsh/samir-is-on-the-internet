@@ -7,6 +7,9 @@ export default defineNuxtConfig({
 	vite: {
 		plugins: [glsl()],
 	},
+  modules: [
+    '@nuxt/content'
+  ],
   // modules: ['@nuxtjs/eslint-module'],
   css: ['assets/styles/normalize.css','assets/styles/main.css'], 
   devtools: { enabled: true },

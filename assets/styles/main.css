@@ -8,15 +8,26 @@ body {
 }
 h1 {
   font-size: 3em;
-  font-weight: 300;
+  font-weight: 200;
   /* margin-bottom: 0.2em; */
   margin: 0.2em;
 }
+
 h2,
 h3 {
   font-weight: 200;
+  /* border: none; */
 }
 p {
   font-size: 1em;
   font-weight: 300;
+}
+/* on mobile, h1 is 2em */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2em;
+  }
+  p {
+    font-size: 0.9em;
+  }
 }

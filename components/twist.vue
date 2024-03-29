@@ -36,8 +36,9 @@ export default {
 
 
 //Palette
-// const backgroundColor = new THREE.Color("black")
 const backgroundColor = new THREE.Color("beige");
+// const backgroundColor = new THREE.Color("black")
+// const backgroundColor = new THREE.Color("#D9B9AD");
 
 /**
  * Base
@@ -208,7 +209,7 @@ slider.oninput = function() {
  */
 const clock = new THREE.Clock();
 const tick = () => {
-  const e = clock.getElapsedTime();
+  const e = clock.getElapsedTime() * 0.5;
 
   if (material.uniforms.uTime) {
     material.uniforms.uTime.value = e;

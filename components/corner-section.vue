@@ -44,7 +44,7 @@
 
 }
 
-.corner-heading>.not-the-heading>.about {
+.corner-heading>.not-the-heading>.text {
     font-size: 1.2em;
     font-weight: 300;
     margin-top: 3em;

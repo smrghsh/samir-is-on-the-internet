@@ -642,7 +642,7 @@ const _routes = [
     meta: {},
     alias: [],
     redirect: void 0 ,
-    component: () => import('./index-CtnV666U.mjs').then((m) => m.default || m)
+    component: () => import('./index-ES-mpWq0.mjs').then((m) => m.default || m)
   }
 ];
 const _wrapIf = (component, props, slots) => {

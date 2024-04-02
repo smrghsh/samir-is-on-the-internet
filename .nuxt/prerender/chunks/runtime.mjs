@@ -78,7 +78,7 @@ function _expandFromEnv(value) {
 
 const inlineAppConfig = {
   "nuxt": {
-    "buildId": "ffb6bb97-c69b-4495-af44-c421ec3cfe8b"
+    "buildId": "20be8da4-9e8a-4301-ad9b-48d86db1d6b1"
   }
 };
 
@@ -160,7 +160,7 @@ const _inlineRuntimeConfig = {
     "content": {
       "locales": [],
       "defaultLocale": "",
-      "integrity": 1712037797735,
+      "integrity": 1712073056213,
       "experimental": {
         "stripQueryParameters": false,
         "advanceQuery": false,
@@ -3486,7 +3486,7 @@ const handlers = [
   { route: '/api/_content/query/:qid/**:params', handler: _QS3dd0, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/query/:qid', handler: _QS3dd0, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/query', handler: _QS3dd0, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/cache.1712037797735.json', handler: _FAPX4O, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/cache.1712073056213.json', handler: _FAPX4O, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/navigation/:qid/**:params', handler: _mwgRIO, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/navigation/:qid', handler: _mwgRIO, lazy: false, middleware: false, method: "get" },
   { route: '/api/_content/navigation', handler: _mwgRIO, lazy: false, middleware: false, method: "get" },

@@ -1,0 +1,306 @@
+{
+  "resolvedId": "/Users/vertex/code/samir-is-on-the-internet/pages/index.vue?macro=true",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "<template>\n\n  <twist />\n\n  <div class=\"front-layer\">\n    <navbar />\n    <corner-section>\n      <h1>hello world!</h1>\n      <div class=\"not-the-heading\">\n        <ContentDoc :head=\"false\" class=\"text\" path=\"/hello-world\">\n        </ContentDoc>\n        <!-- <main>\n          <h3 class=\"project-demarcator\">Selected Projects</h3>\n          <ProjectsContainer />\n        </main> -->\n      </div>\n\n    </corner-section>\n  </div>\n\n\n\n\n</template>\n\n<style>\n.front-layer {\n  width: 100vw;\n  /* height: 100vh; */\n  position: absolute;\n  z-index: 2;\n}\n\nmain {\n  position: relative;\n}\n\n.project-demarcator {\n  width: 300px;\n  background-color: none;\n  /* background-color: blue; */\n  background-image: linear-gradient(to bottom right, rgba(245, 245, 222, 1.0), rgba(245, 245, 222, 0.0));\n  border-left: 1px solid black;\n  border-top: 1px solid black;\n  /* border-bottom: none; */\n  padding-left: 0.7em;\n  padding-top: 0.3em;\n  padding-bottom: 2em;\n  margin-top: 0.5em;\n  font-size: 1.5em;\n  z-index: 1;\n  position: absolute;\n  /* top left corner is rounded 10px */\n  border-top-left-radius: 10px;\n  /* background blur 10 */\n  backdrop-filter: blur(10px);\n\n}\n</style>",
+      "start": 1712037250187,
+      "end": 1712037250213,
+      "sourcemaps": null
+    },
+    {
+      "name": "vite-plugin-glsl",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "vite-plugin-glsl",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1712037250213,
+      "end": 1712037250213,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "const _sfc_main = {}\nimport { resolveComponent as _resolveComponent, withCtx as _withCtx, createVNode as _createVNode } from \"vue\"\nimport { ssrRenderComponent as _ssrRenderComponent } from \"vue/server-renderer\"\n\nfunction _sfc_ssrRender(_ctx, _push, _parent, _attrs) {\n  const _component_twist = _resolveComponent(\"twist\")\n  const _component_navbar = _resolveComponent(\"navbar\")\n  const _component_corner_section = _resolveComponent(\"corner-section\")\n  const _component_ContentDoc = _resolveComponent(\"ContentDoc\")\n\n  _push(`<!--[-->`)\n  _push(_ssrRenderComponent(_component_twist, null, null, _parent))\n  _push(`<div class=\"front-layer\">`)\n  _push(_ssrRenderComponent(_component_navbar, null, null, _parent))\n  _push(_ssrRenderComponent(_component_corner_section, null, {\n    default: _withCtx((_, _push, _parent, _scopeId) => {\n      if (_push) {\n        _push(`<h1${\n          _scopeId\n        }>hello world!</h1><div class=\"not-the-heading\"${\n          _scopeId\n        }>`)\n        _push(_ssrRenderComponent(_component_ContentDoc, {\n          head: false,\n          class: \"text\",\n          path: \"/hello-world\"\n        }, null, _parent, _scopeId))\n        _push(`</div>`)\n      } else {\n        return [\n          _createVNode(\"h1\", null, \"hello world!\"),\n          _createVNode(\"div\", { class: \"not-the-heading\" }, [\n            _createVNode(_component_ContentDoc, {\n              head: false,\n              class: \"text\",\n              path: \"/hello-world\"\n            })\n          ])\n        ]\n      }\n    }),\n    _: 1\n  }, _parent))\n  _push(`</div><!--]-->`)\n}\n\nimport \"/Users/vertex/code/samir-is-on-the-internet/pages/index.vue?vue&type=style&index=0&lang.css\"\n\nimport { useSSRContext as __vite_useSSRContext } from 'vue'\nconst _sfc_setup = _sfc_main.setup\n_sfc_main.setup = (props, ctx) => {\n  const ssrContext = __vite_useSSRContext()\n  ;(ssrContext.modules || (ssrContext.modules = new Set())).add(\"pages/index.vue\")\n  return _sfc_setup ? _sfc_setup(props, ctx) : undefined\n}\nimport _export_sfc from '\u0000plugin-vue:export-helper'\nexport default /*#__PURE__*/_export_sfc(_sfc_main, [['ssrRender',_sfc_ssrRender]])",
+      "start": 1712037250213,
+      "end": 1712037250214,
+      "order": "normal",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/vertex/code/samir-is-on-the-internet/pages/index.vue"
+        ],
+        "names": [],
+        "mappings": ";;;;;;;;;EAAA;EAAA,MAAA;EAAA;EAAA,MAAA;EAAA,MAAA;IAAA,kBAMI,CAWiB;UAjBrB;QAAA;UAAA;;UAAA;;QAAA,MAAA;UASqB,IAAI,EAAE,KAAK;UAAE,KAAK,EAAC,MAAM;UAAC,IAAI,EAAC,cAAc;;QATlE;;;UAOM,aAAqB,YAAjB,cAAY;UAChB,aAOM,SAPD,KAAK,EAAC,iBAAiB;YAC1B,aACa;cADA,IAAI,EAAE,KAAK;cAAE,KAAK,EAAC,MAAM;cAAC,IAAI,EAAC,cAAc;;;;;;IATlE,GAAA;;EAAA",
+        "sourcesContent": [
+          "<template>\n\n  <twist />\n\n  <div class=\"front-layer\">\n    <navbar />\n    <corner-section>\n      <h1>hello world!</h1>\n      <div class=\"not-the-heading\">\n        <ContentDoc :head=\"false\" class=\"text\" path=\"/hello-world\">\n        </ContentDoc>\n        <!-- <main>\n          <h3 class=\"project-demarcator\">Selected Projects</h3>\n          <ProjectsContainer />\n        </main> -->\n      </div>\n\n    </corner-section>\n  </div>\n\n\n\n\n</template>\n\n<style>\n.front-layer {\n  width: 100vw;\n  /* height: 100vh; */\n  position: absolute;\n  z-index: 2;\n}\n\nmain {\n  position: relative;\n}\n\n.project-demarcator {\n  width: 300px;\n  background-color: none;\n  /* background-color: blue; */\n  background-image: linear-gradient(to bottom right, rgba(245, 245, 222, 1.0), rgba(245, 245, 222, 0.0));\n  border-left: 1px solid black;\n  border-top: 1px solid black;\n  /* border-bottom: none; */\n  padding-left: 0.7em;\n  padding-top: 0.3em;\n  padding-bottom: 2em;\n  margin-top: 0.5em;\n  font-size: 1.5em;\n  z-index: 1;\n  position: absolute;\n  /* top left corner is rounded 10px */\n  border-top-left-radius: 10px;\n  /* background blur 10 */\n  backdrop-filter: blur(10px);\n\n}\n</style>"
+        ]
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;"
+      }
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "result": "\nconst __nuxt_page_meta = null\nexport default __nuxt_page_meta\n",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post",
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          ""
+        ],
+        "names": [],
+        "mappings": "AAAA;AAAA;AAAA;"
+      }
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1712037250214,
+      "end": 1712037250214,
+      "order": "normal"
+    }
+  ]
+}

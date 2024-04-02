@@ -1,0 +1,318 @@
+{
+  "resolvedId": "/Users/vertex/code/samir-is-on-the-internet/components/navbar.vue?vue&type=style&index=0&lang.css?inline&used",
+  "transforms": [
+    {
+      "name": "vite:vue",
+      "result": "\nnav {\n  margin-left: 2em;\n  margin-top: 2em;\n  max-width: 90vw;\n  width: 400px;\n}\n\n@media (max-width: 600px) {\n  nav {\n    margin-left: 1em;\n  }\n}\n\n\n.home-link {\n  text-decoration: none;\n  color: black;\n\n  flex: 0 1 auto;\n  align-self: auto;\n  /* margin: 0; */\n}\n\n.home-link {\n  text-decoration: underline 1px rgba(0, 0, 0, 0);\n  transition: text-decoration-color 200ms;\n}\n\n.home-link:hover {\n  text-decoration: underline;\n  cursor: pointer;\n  text-decoration: underline 1px rgba(0, 0, 0, 1);\n  /* opacity: .9; */\n}\n\n.home-link>h1 {\n  font-size: 2.5em;\n}\n\n.subpage {\n  /* margin-left: 1em;\n    margin-right: 1em; */\n  text-align: center;\n  flex: 1 1 auto;\n  text-decoration: none;\n  color: black;\n  /* drop shadow */\n  border-right: 1px solid black;\n  max-width: 95vw;\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n  transition: 300ms;\n}\n\n.subpage:last-child {\n  border-right: none;\n}\n\n.subpage:hover {\n  background-color: lightskyblue;\n  opacity: .8;\n  /* drop shadow */\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n}\n\n.socials {\n  flex: 0 1 auto;\n  align-self: auto;\n\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-end;\n  align-content: center;\n  align-items: center;\n}\n\n.socials>a>img {\n  width: 1.8em;\n  height: 1.8em;\n  margin: 5px;\n  cursor: pointer;\n  /* no border */\n  border-radius: 5px;\n  border: none;\n  transition: 300ms;\n\n\n}\n\n.socials>a>img:hover {\n  opacity: 0.7;\n}\n\n.socials>a {\n  flex: 0 1 auto;\n  align-self: auto;\n}\n\n.first-row {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-content: center;\n  align-items: center;\n}\n\n.first-row {\n  background-color: rgba(245, 245, 222, 0.8);\n  backdrop-filter: blur(10px);\n  /* blur */\n\n  /* opacity: .8; */\n  padding-left: .2em;\n  padding-right: .2em;\n}\n\n.second-row {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-content: center;\n  align-items: stretch;\n\n  background-color: rgba(245, 245, 222, 0.8);\n  /* opacity: .8; */\n  backdrop-filter: blur(10px);\n  border-top: 1px solid black;\n  border-bottom: 1px solid black;\n  /* padding-top: 1em;\n    padding-bottom: 1em; */\n  /* padding-left: 1em;\n    padding-right: 1em; */\n  /* drop shadow */\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n\n}\n\n/* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */\n/* for active router links */\n/* nav {\n    text-align: center;\n    padding: 20px;\n    background-color: #f4f4f4;\n} */\n",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "sourcemaps": {
+        "version": 3,
+        "sources": [
+          "/Users/vertex/code/samir-is-on-the-internet/components/navbar.vue"
+        ],
+        "names": [],
+        "mappings": "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",
+        "file": "/Users/vertex/code/samir-is-on-the-internet/components/navbar.vue",
+        "sourceRoot": "",
+        "sourcesContent": [
+          "<template>\n  <nav>\n    <div class=\"first-row\">\n      <NuxtLink to=\"/\" class=\"home-link\">\n        <h1>Samir Ghosh</h1>\n      </NuxtLink>\n      <div class=\"socials\">\n        <a href=\"https://github.com/smrghsh\"><img src=\"/assets/images/social-icons/github.svg\" alt=\"\"></a>\n        <a href=\"https://www.instagram.com/vertex.shader/\"><img src=\"/assets/images/social-icons/instagram.svg\"\n            alt=\"\"></a>\n        <a href=\"https://www.linkedin.com/in/vertexshader\"><img src=\"/assets/images/social-icons/linkedin.svg\"\n            alt=\"\"></a>\n      </div>\n    </div>\n    <div class=\"second-row\">\n      <NuxtLink class=\"subpage\" to=\"/bio\">\n        <h3>Bio</h3>\n      </NuxtLink>\n      <a class=\"subpage\" href=\"CV_Samir_Ghosh-11-6-23.pdf\">\n        <h3>CV</h3>\n      </a>\n      <!-- <NuxtLink class=\"subpage\" to=\"/CV\"><h3>Notes</h3></NuxtLink> -->\n      <NuxtLink class=\"subpage\" to=\"/Colophon\">\n        <h3>Colophon</h3>\n      </NuxtLink>\n    </div>\n  </nav>\n</template>\n<style>\nnav {\n  margin-left: 2em;\n  margin-top: 2em;\n  max-width: 90vw;\n  width: 400px;\n}\n\n@media (max-width: 600px) {\n  nav {\n    margin-left: 1em;\n  }\n}\n\n\n.home-link {\n  text-decoration: none;\n  color: black;\n\n  flex: 0 1 auto;\n  align-self: auto;\n  /* margin: 0; */\n}\n\n.home-link {\n  text-decoration: underline 1px rgba(0, 0, 0, 0);\n  transition: text-decoration-color 200ms;\n}\n\n.home-link:hover {\n  text-decoration: underline;\n  cursor: pointer;\n  text-decoration: underline 1px rgba(0, 0, 0, 1);\n  /* opacity: .9; */\n}\n\n.home-link>h1 {\n  font-size: 2.5em;\n}\n\n.subpage {\n  /* margin-left: 1em;\n    margin-right: 1em; */\n  text-align: center;\n  flex: 1 1 auto;\n  text-decoration: none;\n  color: black;\n  /* drop shadow */\n  border-right: 1px solid black;\n  max-width: 95vw;\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n  transition: 300ms;\n}\n\n.subpage:last-child {\n  border-right: none;\n}\n\n.subpage:hover {\n  background-color: lightskyblue;\n  opacity: .8;\n  /* drop shadow */\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n}\n\n.socials {\n  flex: 0 1 auto;\n  align-self: auto;\n\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-end;\n  align-content: center;\n  align-items: center;\n}\n\n.socials>a>img {\n  width: 1.8em;\n  height: 1.8em;\n  margin: 5px;\n  cursor: pointer;\n  /* no border */\n  border-radius: 5px;\n  border: none;\n  transition: 300ms;\n\n\n}\n\n.socials>a>img:hover {\n  opacity: 0.7;\n}\n\n.socials>a {\n  flex: 0 1 auto;\n  align-self: auto;\n}\n\n.first-row {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-content: center;\n  align-items: center;\n}\n\n.first-row {\n  background-color: rgba(245, 245, 222, 0.8);\n  backdrop-filter: blur(10px);\n  /* blur */\n\n  /* opacity: .8; */\n  padding-left: .2em;\n  padding-right: .2em;\n}\n\n.second-row {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-content: center;\n  align-items: stretch;\n\n  background-color: rgba(245, 245, 222, 0.8);\n  /* opacity: .8; */\n  backdrop-filter: blur(10px);\n  border-top: 1px solid black;\n  border-bottom: 1px solid black;\n  /* padding-top: 1em;\n    padding-bottom: 1em; */\n  /* padding-left: 1em;\n    padding-right: 1em; */\n  /* drop shadow */\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n\n}\n\n/* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */\n/* for active router links */\n/* nav {\n    text-align: center;\n    padding: 20px;\n    background-color: #f4f4f4;\n} */\n</style>"
+        ]
+      }
+    },
+    {
+      "name": "vite-plugin-glsl",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "vite-plugin-glsl",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:layer-aliasing",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:server-devonly:transform",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "content-slot",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "nuxt:client-fallback-auto-id",
+      "start": 1712037250255,
+      "end": 1712037250255,
+      "order": "pre"
+    },
+    {
+      "name": "server-only-component-transform",
+      "start": 1712037250255,
+      "end": 1712037250256,
+      "order": "pre"
+    },
+    {
+      "name": "vite:css",
+      "result": "nav{margin-left:2em;margin-top:2em;max-width:90vw;width:400px}@media (max-width:600px){nav{margin-left:1em}}.home-link{align-self:auto;color:#000;flex:0 1 auto;text-decoration:none;-webkit-text-decoration:underline 1px transparent;text-decoration:underline 1px transparent;transition:text-decoration-color .2s}.home-link:hover{cursor:pointer;text-decoration:underline;-webkit-text-decoration:underline 1px #000;text-decoration:underline 1px #000}.home-link>h1{font-size:2.5em}.subpage{border-right:1px solid #000;color:#000;flex:1 1 auto;max-width:95vw;text-align:center;text-decoration:none;transition:.3s}.subpage:last-child{border-right:none}.subpage:hover{background-color:#87cefa;opacity:.8}.socials{align-content:center;align-items:center;align-self:auto;display:flex;flex:0 1 auto;flex-direction:row;flex-wrap:nowrap;justify-content:flex-end}.socials>a>img{border:none;border-radius:5px;cursor:pointer;height:1.8em;margin:5px;transition:.3s;width:1.8em}.socials>a>img:hover{opacity:.7}.socials>a{align-self:auto;flex:0 1 auto}.first-row{align-items:center;padding-left:.2em;padding-right:.2em}.first-row,.second-row{align-content:center;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background-color:hsla(60,53%,92%,.8);display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-between}.second-row{align-items:stretch;border-bottom:1px solid #000;border-top:1px solid #000}",
+      "start": 1712037250256,
+      "end": 1712037250260,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/vertex/code/samir-is-on-the-internet/components/navbar.vue",
+        "mappings": "AACA,IACE,eAAgB,CAChB,cAAe,CACf,cAAe,CACf,WACF,CAEA,yBACE,IACE,eACF,CACF,CAGA,WAKE,eAAgB,CAHhB,UAAY,CAEZ,aAAc,CAHd,oBAAqB,CASrB,iDAA+C,CAA/C,yCAA+C,CAC/C,oCAJF,CAOA,iBAEE,cAAe,CADf,yBAA0B,CAE1B,0CAA+C,CAA/C,kCAEF,CAEA,cACE,eACF,CAEA,SAQE,2BAA6B,CAF7B,UAAY,CAFZ,aAAc,CAKd,cAAe,CANf,iBAAkB,CAElB,oBAAqB,CAMrB,cACF,CAEA,oBACE,iBACF,CAEA,eACE,wBAA8B,CAC9B,UAGF,CAEA,SAQE,oBAAqB,CACrB,kBAAmB,CAPnB,eAAgB,CAEhB,YAAa,CAHb,aAAc,CAId,kBAAmB,CACnB,gBAAiB,CACjB,wBAGF,CAEA,eAOE,WAAY,CADZ,iBAAkB,CAFlB,cAAe,CAFf,YAAa,CACb,UAAW,CAKX,cAAiB,CAPjB,WAUF,CAEA,qBACE,UACF,CAEA,WAEE,eAAgB,CADhB,aAEF,CAEA,WAME,kBAAmB,CASnB,iBAAkB,CAClB,kBATF,CAYA,uBAdE,oBAAqB,CAMrB,kCAA2B,CAA3B,0BAA2B,CAD3B,oCAA0C,CAT1C,YAAa,CACb,kBAAmB,CACnB,gBAAiB,CACjB,6BAmCF,CApBA,YAME,mBAAoB,CAMpB,4BAA8B,CAD9B,yBASF",
+        "names": [],
+        "sources": [
+          "/Users/vertex/code/samir-is-on-the-internet/components/navbar.vue"
+        ],
+        "sourcesContent": [
+          "\nnav {\n  margin-left: 2em;\n  margin-top: 2em;\n  max-width: 90vw;\n  width: 400px;\n}\n\n@media (max-width: 600px) {\n  nav {\n    margin-left: 1em;\n  }\n}\n\n\n.home-link {\n  text-decoration: none;\n  color: black;\n\n  flex: 0 1 auto;\n  align-self: auto;\n  /* margin: 0; */\n}\n\n.home-link {\n  text-decoration: underline 1px rgba(0, 0, 0, 0);\n  transition: text-decoration-color 200ms;\n}\n\n.home-link:hover {\n  text-decoration: underline;\n  cursor: pointer;\n  text-decoration: underline 1px rgba(0, 0, 0, 1);\n  /* opacity: .9; */\n}\n\n.home-link>h1 {\n  font-size: 2.5em;\n}\n\n.subpage {\n  /* margin-left: 1em;\n    margin-right: 1em; */\n  text-align: center;\n  flex: 1 1 auto;\n  text-decoration: none;\n  color: black;\n  /* drop shadow */\n  border-right: 1px solid black;\n  max-width: 95vw;\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n  transition: 300ms;\n}\n\n.subpage:last-child {\n  border-right: none;\n}\n\n.subpage:hover {\n  background-color: lightskyblue;\n  opacity: .8;\n  /* drop shadow */\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n}\n\n.socials {\n  flex: 0 1 auto;\n  align-self: auto;\n\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: flex-end;\n  align-content: center;\n  align-items: center;\n}\n\n.socials>a>img {\n  width: 1.8em;\n  height: 1.8em;\n  margin: 5px;\n  cursor: pointer;\n  /* no border */\n  border-radius: 5px;\n  border: none;\n  transition: 300ms;\n\n\n}\n\n.socials>a>img:hover {\n  opacity: 0.7;\n}\n\n.socials>a {\n  flex: 0 1 auto;\n  align-self: auto;\n}\n\n.first-row {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-content: center;\n  align-items: center;\n}\n\n.first-row {\n  background-color: rgba(245, 245, 222, 0.8);\n  backdrop-filter: blur(10px);\n  /* blur */\n\n  /* opacity: .8; */\n  padding-left: .2em;\n  padding-right: .2em;\n}\n\n.second-row {\n  display: flex;\n  flex-direction: row;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-content: center;\n  align-items: stretch;\n\n  background-color: rgba(245, 245, 222, 0.8);\n  /* opacity: .8; */\n  backdrop-filter: blur(10px);\n  border-top: 1px solid black;\n  border-bottom: 1px solid black;\n  /* padding-top: 1em;\n    padding-bottom: 1em; */\n  /* padding-left: 1em;\n    padding-right: 1em; */\n  /* drop shadow */\n  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */\n\n}\n\n/* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */\n/* for active router links */\n/* nav {\n    text-align: center;\n    padding: 20px;\n    background-color: #f4f4f4;\n} */\n"
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:esbuild",
+      "start": 1712037250260,
+      "end": 1712037250260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:json",
+      "start": 1712037250260,
+      "end": 1712037250260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker",
+      "start": 1712037250260,
+      "end": 1712037250260,
+      "order": "normal"
+    },
+    {
+      "name": "vite:vue",
+      "result": "nav{margin-left:2em;margin-top:2em;max-width:90vw;width:400px}@media (max-width:600px){nav{margin-left:1em}}.home-link{align-self:auto;color:#000;flex:0 1 auto;text-decoration:none;-webkit-text-decoration:underline 1px transparent;text-decoration:underline 1px transparent;transition:text-decoration-color .2s}.home-link:hover{cursor:pointer;text-decoration:underline;-webkit-text-decoration:underline 1px #000;text-decoration:underline 1px #000}.home-link>h1{font-size:2.5em}.subpage{border-right:1px solid #000;color:#000;flex:1 1 auto;max-width:95vw;text-align:center;text-decoration:none;transition:.3s}.subpage:last-child{border-right:none}.subpage:hover{background-color:#87cefa;opacity:.8}.socials{align-content:center;align-items:center;align-self:auto;display:flex;flex:0 1 auto;flex-direction:row;flex-wrap:nowrap;justify-content:flex-end}.socials>a>img{border:none;border-radius:5px;cursor:pointer;height:1.8em;margin:5px;transition:.3s;width:1.8em}.socials>a>img:hover{opacity:.7}.socials>a{align-self:auto;flex:0 1 auto}.first-row{align-items:center;padding-left:.2em;padding-right:.2em}.first-row,.second-row{align-content:center;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background-color:hsla(60,53%,92%,.8);display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-between}.second-row{align-items:stretch;border-bottom:1px solid #000;border-top:1px solid #000}",
+      "start": 1712037250260,
+      "end": 1712037250261,
+      "order": "normal",
+      "sourcemaps": {
+        "file": "/Users/vertex/code/samir-is-on-the-internet/components/navbar.vue",
+        "mappings": "AAAA,IAAI,eAAe,CAAC,cAAc,CAAC,cAAc,CAAC,WAAW,CAAC,yBAAyB,IAAI,eAAe,CAAC,CAAC,WAAW,eAAe,CAAC,UAAU,CAAC,aAAa,CAAC,oBAAoB,CAAC,iDAAiD,CAAC,yCAAyC,CAAC,oCAAoC,CAAC,iBAAiB,cAAc,CAAC,yBAAyB,CAAC,0CAA0C,CAAC,kCAAkC,CAAC,cAAc,eAAe,CAAC,SAAS,2BAA2B,CAAC,UAAU,CAAC,aAAa,CAAC,cAAc,CAAC,iBAAiB,CAAC,oBAAoB,CAAC,cAAc,CAAC,oBAAoB,iBAAiB,CAAC,eAAe,wBAAwB,CAAC,UAAU,CAAC,SAAS,oBAAoB,CAAC,kBAAkB,CAAC,eAAe,CAAC,YAAY,CAAC,aAAa,CAAC,kBAAkB,CAAC,gBAAgB,CAAC,wBAAwB,CAAC,eAAe,WAAW,CAAC,iBAAiB,CAAC,cAAc,CAAC,YAAY,CAAC,UAAU,CAAC,cAAc,CAAC,WAAW,CAAC,qBAAqB,UAAU,CAAC,WAAW,eAAe,CAAC,aAAa,CAAC,WAAW,kBAAkB,CAAC,iBAAiB,CAAC,kBAAkB,CAAC,uBAAuB,oBAAoB,CAAC,kCAAkC,CAAC,0BAA0B,CAAC,oCAAoC,CAAC,YAAY,CAAC,kBAAkB,CAAC,gBAAgB,CAAC,6BAA6B,CAAC,YAAY,mBAAmB,CAAC,4BAA4B,CAAC,yBAAyB",
+        "names": [],
+        "sources": [
+          "/Users/vertex/code/samir-is-on-the-internet/components/navbar.vue"
+        ],
+        "sourcesContent": [
+          null
+        ],
+        "version": 3
+      }
+    },
+    {
+      "name": "vite:vue-jsx",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:remove-plugin-metadata",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:components:imports",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "replace",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "ssr-styles",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "vite:define",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default \"nav{margin-left:2em;margin-top:2em;max-width:90vw;width:400px}@media (max-width:600px){nav{margin-left:1em}}.home-link{align-self:auto;color:#000;flex:0 1 auto;text-decoration:none;-webkit-text-decoration:underline 1px transparent;text-decoration:underline 1px transparent;transition:text-decoration-color .2s}.home-link:hover{cursor:pointer;text-decoration:underline;-webkit-text-decoration:underline 1px #000;text-decoration:underline 1px #000}.home-link>h1{font-size:2.5em}.subpage{border-right:1px solid #000;color:#000;flex:1 1 auto;max-width:95vw;text-align:center;text-decoration:none;transition:.3s}.subpage:last-child{border-right:none}.subpage:hover{background-color:#87cefa;opacity:.8}.socials{align-content:center;align-items:center;align-self:auto;display:flex;flex:0 1 auto;flex-direction:row;flex-wrap:nowrap;justify-content:flex-end}.socials>a>img{border:none;border-radius:5px;cursor:pointer;height:1.8em;margin:5px;transition:.3s;width:1.8em}.socials>a>img:hover{opacity:.7}.socials>a{align-self:auto;flex:0 1 auto}.first-row{align-items:center;padding-left:.2em;padding-right:.2em}.first-row,.second-row{align-content:center;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);background-color:hsla(60,53%,92%,.8);display:flex;flex-direction:row;flex-wrap:nowrap;justify-content:space-between}.second-row{align-items:stretch;border-bottom:1px solid #000;border-top:1px solid #000}\"",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal",
+      "sourcemaps": {
+        "mappings": ""
+      }
+    },
+    {
+      "name": "vite:build-html",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "vite:worker-import-meta-url",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "vite:asset-import-meta-url",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "commonjs",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "vite:dynamic-import-vars",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "vite:import-glob",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:composable-keys",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:imports-transform",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "unctx:transform",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:pages-macros-transform",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-template",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:components-loader",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "nuxt:tree-shake-composables:transform",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "post"
+    },
+    {
+      "name": "vite:build-import-analysis",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    },
+    {
+      "name": "vite:reporter",
+      "start": 1712037250261,
+      "end": 1712037250261,
+      "order": "normal"
+    }
+  ]
+}

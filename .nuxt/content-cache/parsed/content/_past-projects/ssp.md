@@ -1,0 +1,1 @@
+{"parsed":{"_path":"/_past-projects/ssp","_dir":"_past-projects","_draft":false,"_partial":true,"_locale":"","title":"Ssp","description":"","body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:_past-projects:ssp.md","_source":"content","_file":"_past-projects/ssp.md","_extension":"md"},"hash":"ZmHNvV87qX"}

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content'
   ],
+  // to fix three?
   build:{
     transpile:["three"]
 },

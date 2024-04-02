@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   ],
   // to fix three?
   build:{
-    transpile:["three"]
+    transpile:["three", "meshline"]
 },
   // modules: ['@nuxtjs/eslint-module'],
   css: ['assets/styles/normalize.css','assets/styles/main.css'], 

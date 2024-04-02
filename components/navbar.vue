@@ -5,8 +5,11 @@
         <h1>Samir Ghosh</h1>
       </NuxtLink>
       <div class="socials">
-        <a href=""><img src="/assets/images/social-icons/github.svg" alt=""></a>
-        <a href=""><img src="/assets/images/social-icons/instagram.svg" alt=""></a>
+        <a href="https://github.com/smrghsh"><img src="/assets/images/social-icons/github.svg" alt=""></a>
+        <a href="https://www.instagram.com/vertex.shader/"><img src="/assets/images/social-icons/instagram.svg"
+            alt=""></a>
+        <a href="https://www.linkedin.com/in/vertexshader"><img src="/assets/images/social-icons/linkedin.svg"
+            alt=""></a>
       </div>
     </div>
     <div class="second-row">
@@ -44,6 +47,23 @@ nav {
 
   flex: 0 1 auto;
   align-self: auto;
+  /* margin: 0; */
+}
+
+.home-link {
+  text-decoration: underline 1px rgba(0, 0, 0, 0);
+  transition: text-decoration-color 200ms;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline 1px rgba(0, 0, 0, 1);
+  /* opacity: .9; */
+}
+
+.home-link>h1 {
+  font-size: 2.5em;
 }
 
 .subpage {
@@ -57,6 +77,7 @@ nav {
   border-right: 1px solid black;
   max-width: 95vw;
   /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */
+  transition: 300ms;
 }
 
 .subpage:last-child {
@@ -88,7 +109,9 @@ nav {
   margin: 5px;
   cursor: pointer;
   /* no border */
+  border-radius: 5px;
   border: none;
+  transition: 300ms;
 
 
 }

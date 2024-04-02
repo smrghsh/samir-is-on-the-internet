@@ -20,7 +20,7 @@
         <li>Help keep my web development skills sharp because frameworks are always changing!</li>
         <p></p>
       </div> -->
-      <ContentDoc class="text" path="/colophon">
+      <ContentDoc :head="false" class="text" path="/colophon">
       </ContentDoc>
     </div>
 

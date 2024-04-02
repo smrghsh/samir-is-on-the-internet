@@ -55,7 +55,7 @@
     padding: 0em 1em 0em 1em;
     max-width: 1000px;
 
-    background-color: rgba(245, 245, 222, .87);
+    background-color: rgba(245, 245, 222, .82);
     backdrop-filter: blur(10px);
     /* drop shadow */
     filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));

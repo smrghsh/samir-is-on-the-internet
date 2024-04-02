@@ -1,6 +1,6 @@
 import { _ as __nuxt_component_0 } from './nuxt-link-CFXPg0gv.mjs';
-import { withCtx, createVNode, useSSRContext, mergeProps } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
-import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrRenderSlot } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/server-renderer/index.mjs';
+import { withCtx, createVNode, useSSRContext, mergeProps } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
+import { ssrRenderAttrs, ssrRenderComponent, ssrRenderAttr, ssrRenderSlot } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/server-renderer/index.mjs';
 import { _ as _export_sfc } from './_plugin-vue_export-helper-1tPrXgE0.mjs';
 
 const _imports_0 = "data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20aria-label='GitHub'%20role='img'%20viewBox='0%200%20512%20512'%3e%3crect%20width='512'%20height='512'%20rx='15%25'%20fill='%231B1817'/%3e%3cpath%20fill='%23fff'%20d='M335%20499c14%200%2012%2017%2012%2017H165s-2-17%2012-17c13%200%2016-6%2016-12l-1-50c-71%2016-86-28-86-28-12-30-28-37-28-37-24-16%201-16%201-16%2026%202%2040%2026%2040%2026%2022%2039%2059%2028%2074%2022%202-17%209-28%2016-35-57-6-116-28-116-126%200-28%2010-51%2026-69-3-6-11-32%203-67%200%200%2021-7%2070%2026%2042-12%2086-12%20128%200%2049-33%2070-26%2070-26%2014%2035%206%2061%203%2067%2016%2018%2026%2041%2026%2069%200%2098-60%20120-117%20126%2010%208%2018%2024%2018%2048l-1%2070c0%206%203%2012%2016%2012z'/%3e%3c/svg%3e";

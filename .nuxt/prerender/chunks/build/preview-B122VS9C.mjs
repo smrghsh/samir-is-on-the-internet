@@ -1,9 +1,9 @@
-import { ref } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
-import { parse } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/cookie-es/dist/index.mjs';
-import { getRequestHeader, setCookie, getCookie, deleteCookie } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/h3/dist/index.mjs';
-import destr from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/destr/dist/index.mjs';
-import { isEqual } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/ohash/dist/index.mjs';
-import { klona } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/klona/dist/index.mjs';
+import { ref } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
+import { parse } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/cookie-es/dist/index.mjs';
+import { getRequestHeader, setCookie, getCookie, deleteCookie } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/h3/dist/index.mjs';
+import destr from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/destr/dist/index.mjs';
+import { isEqual } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/ohash/dist/index.mjs';
+import { klona } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/klona/dist/index.mjs';
 import { a as useRoute, c as useNuxtApp } from './server.mjs';
 
 function useRequestEvent(nuxtApp = useNuxtApp()) {

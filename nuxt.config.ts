@@ -10,6 +10,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxt/content'
   ],
+  build:{
+    transpile:["three"]
+},
   // modules: ['@nuxtjs/eslint-module'],
   css: ['assets/styles/normalize.css','assets/styles/main.css'], 
   devtools: { enabled: true },

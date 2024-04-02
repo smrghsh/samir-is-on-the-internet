@@ -1,4 +1,4 @@
-import { defineComponent, h, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
+import { defineComponent, h, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
 
 const _sfc_main = defineComponent({
   name: "DocumentDrivenEmpty",

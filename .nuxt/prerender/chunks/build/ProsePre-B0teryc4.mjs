@@ -1,6 +1,6 @@
 import _sfc_main$1 from './ProseCode-pTmlp-wa.mjs';
-import { defineComponent, mergeProps, withCtx, createVNode, renderSlot, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
-import { ssrRenderComponent, ssrRenderClass, ssrRenderStyle, ssrRenderSlot } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/server-renderer/index.mjs';
+import { defineComponent, mergeProps, withCtx, createVNode, renderSlot, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
+import { ssrRenderComponent, ssrRenderClass, ssrRenderStyle, ssrRenderSlot } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/server-renderer/index.mjs';
 
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "ProsePre",

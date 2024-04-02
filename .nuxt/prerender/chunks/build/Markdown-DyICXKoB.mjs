@@ -1,4 +1,4 @@
-import { defineComponent, getCurrentInstance, useSlots, computed, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
+import { defineComponent, getCurrentInstance, useSlots, computed, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
 import _sfc_main$1 from './ContentSlot-DY7LiAz9.mjs';
 
 const _sfc_main = defineComponent({

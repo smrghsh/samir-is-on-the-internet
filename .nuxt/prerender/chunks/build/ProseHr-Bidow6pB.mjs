@@ -1,5 +1,5 @@
-import { ssrRenderAttrs } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/server-renderer/index.mjs';
-import { useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
+import { ssrRenderAttrs } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/server-renderer/index.mjs';
+import { useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
 import { _ as _export_sfc } from './_plugin-vue_export-helper-1tPrXgE0.mjs';
 
 const _sfc_main = {};

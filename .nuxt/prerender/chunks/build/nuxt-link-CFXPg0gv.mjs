@@ -1,5 +1,5 @@
-import { defineComponent, computed, ref, h, resolveComponent } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
-import { hasProtocol, joinURL, parseURL, parseQuery, withTrailingSlash, withoutTrailingSlash } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/ufo/dist/index.mjs';
+import { defineComponent, computed, ref, h, resolveComponent } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
+import { hasProtocol, joinURL, parseURL, parseQuery, withTrailingSlash, withoutTrailingSlash } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/ufo/dist/index.mjs';
 import { f as useRouter, n as nuxtLinkDefaults, b as useRuntimeConfig, g as navigateTo } from './server.mjs';
 
 const firstNonUndefined = (...args) => args.find((arg) => arg !== void 0);

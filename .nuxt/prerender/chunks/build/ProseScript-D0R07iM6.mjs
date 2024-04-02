@@ -1,5 +1,5 @@
-import { defineComponent, unref, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
-import { ssrRenderAttrs } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/server-renderer/index.mjs';
+import { defineComponent, unref, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
+import { ssrRenderAttrs } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/server-renderer/index.mjs';
 
 const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "ProseScript",

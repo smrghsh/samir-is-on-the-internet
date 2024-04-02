@@ -1,4 +1,4 @@
-import { defineComponent, getCurrentInstance, useSlots, computed, h, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
+import { defineComponent, getCurrentInstance, useSlots, computed, h, useSSRContext } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
 
 const TEXT_TAGS = ["p", "h1", "h2", "h3", "h4", "h5", "h6", "li"];
 function isTag(vnode, tag) {

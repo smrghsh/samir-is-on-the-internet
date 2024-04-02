@@ -1,42 +1,42 @@
-import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, setResponseHeader, send, getRequestHeaders, removeResponseHeader, createError, getResponseHeader, getQuery as getQuery$1, getCookie, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/h3/dist/index.mjs';
-import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/ofetch/dist/node.mjs';
-import destr, { destr as destr$1 } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/destr/dist/index.mjs';
-import { createCall, createFetch } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/unenv/runtime/fetch/index.mjs';
-import { createHooks } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/hookable/dist/index.mjs';
-import { klona } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/klona/dist/index.mjs';
-import { snakeCase, kebabCase, pascalCase, camelCase } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/scule/dist/index.mjs';
-import defu, { defuFn, defu as defu$1 } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/defu/dist/defu.mjs';
-import { hash } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/ohash/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, decodePath, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/ufo/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/unstorage/drivers/fs.mjs';
-import file_58_47_47_47Users_47vertex_47code_47samir_45is_45on_45the_45internet_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
-import unstorage_47drivers_47fs_45lite from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/unstorage/drivers/fs-lite.mjs';
-import { toRouteMatcher, createRouter } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/radix3/dist/index.mjs';
+import process from 'node:process';globalThis._importMeta_=globalThis._importMeta_||{url:"file:///_entry.js",env:process.env};import { defineEventHandler, handleCacheHeaders, splitCookiesString, isEvent, createEvent, fetchWithEvent, getRequestHeader, eventHandler, setHeaders, sendRedirect, proxyRequest, setResponseStatus, setResponseHeader, send, getRequestHeaders, removeResponseHeader, createError, getResponseHeader, getQuery as getQuery$1, getCookie, createApp, createRouter as createRouter$1, toNodeListener, lazyEventHandler } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/h3/dist/index.mjs';
+import { createFetch as createFetch$1, Headers as Headers$1 } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/ofetch/dist/node.mjs';
+import destr, { destr as destr$1 } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/destr/dist/index.mjs';
+import { createCall, createFetch } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/unenv/runtime/fetch/index.mjs';
+import { createHooks } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/hookable/dist/index.mjs';
+import { klona } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/klona/dist/index.mjs';
+import { snakeCase, kebabCase, pascalCase, camelCase } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/scule/dist/index.mjs';
+import defu, { defuFn, defu as defu$1 } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/defu/dist/defu.mjs';
+import { hash } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/ohash/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, decodePath, withLeadingSlash, withoutTrailingSlash, isRelative } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/ufo/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/unstorage/drivers/fs.mjs';
+import file_58_47_47_47Users_47vertex_47code_47samir_45is_45on_45the_45internet2_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js';
+import unstorage_47drivers_47fs_45lite from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/unstorage/drivers/fs-lite.mjs';
+import { toRouteMatcher, createRouter } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/radix3/dist/index.mjs';
 import { promises } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve, extname } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/pathe/dist/index.mjs';
-import { unified } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/unified/index.js';
-import { toString } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/mdast-util-to-string/index.js';
-import { postprocess, preprocess } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/micromark/index.js';
-import { stringifyPosition } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/unist-util-stringify-position/index.js';
-import { markdownLineEnding, markdownSpace } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/micromark-util-character/index.js';
-import { push, splice } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/micromark-util-chunked/index.js';
-import { resolveAll } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/micromark-util-resolve-all/index.js';
-import { normalizeUri } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/micromark-util-sanitize-uri/index.js';
-import slugify from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/slugify/slugify.js';
-import remarkParse from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/remark-parse/index.js';
-import remark2rehype from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/remark-rehype/index.js';
-import remarkMDC, { parseFrontMatter } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/remark-mdc/dist/index.mjs';
-import { toString as toString$1 } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/hast-util-to-string/index.js';
-import Slugger from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/github-slugger/index.js';
-import { detab } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/detab/index.js';
-import remarkEmoji from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/remark-emoji/index.js';
-import remarkGFM from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/remark-gfm/index.js';
-import rehypeExternalLinks from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/rehype-external-links/index.js';
-import rehypeSortAttributeValues from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/rehype-sort-attribute-values/index.js';
-import rehypeSortAttributes from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/rehype-sort-attributes/index.js';
-import rehypeRaw from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/rehype-raw/index.js';
+import { dirname, resolve, extname } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/pathe/dist/index.mjs';
+import { unified } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/unified/index.js';
+import { toString } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/mdast-util-to-string/index.js';
+import { postprocess, preprocess } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/micromark/index.js';
+import { stringifyPosition } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/unist-util-stringify-position/index.js';
+import { markdownLineEnding, markdownSpace } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/micromark-util-character/index.js';
+import { push, splice } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/micromark-util-chunked/index.js';
+import { resolveAll } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/micromark-util-resolve-all/index.js';
+import { normalizeUri } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/micromark-util-sanitize-uri/index.js';
+import slugify from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/slugify/slugify.js';
+import remarkParse from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/remark-parse/index.js';
+import remark2rehype from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/remark-rehype/index.js';
+import remarkMDC, { parseFrontMatter } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/remark-mdc/dist/index.mjs';
+import { toString as toString$1 } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/hast-util-to-string/index.js';
+import Slugger from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/github-slugger/index.js';
+import { detab } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/detab/index.js';
+import remarkEmoji from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/remark-emoji/index.js';
+import remarkGFM from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/remark-gfm/index.js';
+import rehypeExternalLinks from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/rehype-external-links/index.js';
+import rehypeSortAttributeValues from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/rehype-sort-attribute-values/index.js';
+import rehypeSortAttributes from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/rehype-sort-attributes/index.js';
+import rehypeRaw from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/rehype-raw/index.js';
 
 function getEnv(key, opts) {
   const envKey = snakeCase(key).toUpperCase();
@@ -78,7 +78,7 @@ function _expandFromEnv(value) {
 
 const inlineAppConfig = {
   "nuxt": {
-    "buildId": "09b63abb-4484-4772-a392-e0fccb9b6df5"
+    "buildId": "ffb6bb97-c69b-4495-af44-c421ec3cfe8b"
   }
 };
 
@@ -160,7 +160,7 @@ const _inlineRuntimeConfig = {
     "content": {
       "locales": [],
       "defaultLocale": "",
-      "integrity": 1712037247962,
+      "integrity": 1712037797735,
       "experimental": {
         "stripQueryParameters": false,
         "advanceQuery": false,
@@ -340,7 +340,7 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
   }
 });
 
-const serverAssets = [{"baseName":"server","dir":"/Users/vertex/code/samir-is-on-the-internet/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/Users/vertex/code/samir-is-on-the-internet2/server/assets"}];
 
 const assets$1 = createStorage();
 
@@ -352,14 +352,14 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets$1);
 
-storage.mount('internal:nuxt:prerender', file_58_47_47_47Users_47vertex_47code_47samir_45is_45on_45the_45internet_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js({"driver":"file:///Users/vertex/code/samir-is-on-the-internet/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js","base":"/Users/vertex/code/samir-is-on-the-internet/.nuxt/cache/nitro/prerender"}));
-storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"/Users/vertex/code/samir-is-on-the-internet/.data/kv"}));
-storage.mount('content:source:content', unstorage_47drivers_47fs({"name":"content:source:content","driver":"fs","base":"/Users/vertex/code/samir-is-on-the-internet/content","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/vertex/code/samir-is-on-the-internet/.nuxt/content-cache","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/vertex/code/samir-is-on-the-internet","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/vertex/code/samir-is-on-the-internet/server","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/vertex/code/samir-is-on-the-internet/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/vertex/code/samir-is-on-the-internet/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('internal:nuxt:prerender', file_58_47_47_47Users_47vertex_47code_47samir_45is_45on_45the_45internet2_47node_modules_47nuxt_47dist_47core_47runtime_47nitro_47cache_45driver_46js({"driver":"file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/nuxt/dist/core/runtime/nitro/cache-driver.js","base":"/Users/vertex/code/samir-is-on-the-internet2/.nuxt/cache/nitro/prerender"}));
+storage.mount('data', unstorage_47drivers_47fs_45lite({"driver":"fsLite","base":"/Users/vertex/code/samir-is-on-the-internet2/.data/kv"}));
+storage.mount('content:source:content', unstorage_47drivers_47fs({"name":"content:source:content","driver":"fs","base":"/Users/vertex/code/samir-is-on-the-internet2/content","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache:content', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/vertex/code/samir-is-on-the-internet2/.nuxt/content-cache","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/vertex/code/samir-is-on-the-internet2","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/vertex/code/samir-is-on-the-internet2/server","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/vertex/code/samir-is-on-the-internet2/.nuxt","ignore":["**/node_modules/**","**/.git/**"]}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/vertex/code/samir-is-on-the-internet2/.nuxt/cache","ignore":["**/node_modules/**","**/.git/**"]}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -2695,7 +2695,7 @@ const json = defineTransformer({
     let parsed;
     if (typeof content === "string") {
       if (_id.endsWith("json5")) {
-        parsed = (await import('file:///Users/vertex/code/samir-is-on-the-internet/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
+        parsed = (await import('file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/json5/lib/index.js').then((m) => m.default || m)).parse(content);
       } else if (_id.endsWith("json")) {
         parsed = destr$1(content);
       }
@@ -3305,7 +3305,7 @@ const getContentQuery = (event) => {
   return query;
 };
 
-const _oMW1lo = defineEventHandler(async (event) => {
+const _QS3dd0 = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   const { advanceQuery } = useRuntimeConfig().public.content.experimental;
   if (query.first) {
@@ -3334,7 +3334,7 @@ const _oMW1lo = defineEventHandler(async (event) => {
   return serverQueryContent(event, query).find();
 });
 
-const _bFTUZq = defineEventHandler(async (event) => {
+const _FAPX4O = defineEventHandler(async (event) => {
   const { content } = useRuntimeConfig();
   const now = Date.now();
   const contents = await serverQueryContent(event).find();
@@ -3442,7 +3442,7 @@ function isObject(obj) {
   return Object.prototype.toString.call(obj) === "[object Object]";
 }
 
-const _9v4taW = defineEventHandler(async (event) => {
+const _mwgRIO = defineEventHandler(async (event) => {
   const query = getContentQuery(event);
   if (!isPreview(event) && Object.keys(query).length === 0) {
     const cache = await cacheStorage.getItem("content-navigation.json");
@@ -3479,18 +3479,18 @@ const _9v4taW = defineEventHandler(async (event) => {
   return createNav(contents?.result || contents, configs);
 });
 
-const _lazy_NX7kJo = () => import('./_/renderer.mjs');
+const _lazy_BVYcNY = () => import('./_/renderer.mjs');
 
 const handlers = [
   { route: '', handler: _f4b49z, lazy: false, middleware: true, method: undefined },
-  { route: '/api/_content/query/:qid/**:params', handler: _oMW1lo, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query/:qid', handler: _oMW1lo, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/query', handler: _oMW1lo, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/cache.1712037247962.json', handler: _bFTUZq, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid/**:params', handler: _9v4taW, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation/:qid', handler: _9v4taW, lazy: false, middleware: false, method: "get" },
-  { route: '/api/_content/navigation', handler: _9v4taW, lazy: false, middleware: false, method: "get" },
-  { route: '/**', handler: _lazy_NX7kJo, lazy: true, middleware: false, method: undefined }
+  { route: '/api/_content/query/:qid/**:params', handler: _QS3dd0, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query/:qid', handler: _QS3dd0, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/query', handler: _QS3dd0, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/cache.1712037797735.json', handler: _FAPX4O, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid/**:params', handler: _mwgRIO, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation/:qid', handler: _mwgRIO, lazy: false, middleware: false, method: "get" },
+  { route: '/api/_content/navigation', handler: _mwgRIO, lazy: false, middleware: false, method: "get" },
+  { route: '/**', handler: _lazy_BVYcNY, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {

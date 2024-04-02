@@ -1,7 +1,7 @@
-import { ref, shallowRef, toRef, getCurrentInstance, onServerPrefetch, unref } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/vue/index.mjs';
+import { ref, shallowRef, toRef, getCurrentInstance, onServerPrefetch, unref } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/vue/index.mjs';
 import { d as asyncDataDefaults, c as useNuxtApp, e as createError, b as useRuntimeConfig } from './server.mjs';
-import { withLeadingSlash, joinURL, withoutTrailingSlash, withBase } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/ufo/dist/index.mjs';
-import { hash } from 'file:///Users/vertex/code/samir-is-on-the-internet/node_modules/ohash/dist/index.mjs';
+import { withLeadingSlash, joinURL, withoutTrailingSlash, withBase } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/ufo/dist/index.mjs';
+import { hash } from 'file:///Users/vertex/code/samir-is-on-the-internet2/node_modules/ohash/dist/index.mjs';
 import { a as useRequestEvent, u as useContentPreview } from './preview-B122VS9C.mjs';
 
 const isDefer = (dedupe) => dedupe === "defer" || dedupe === false;

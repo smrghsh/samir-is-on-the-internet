@@ -1,6 +1,1 @@
----
-thumbnail: '/assets/whatever'
-title: VR for Scientific Sensemaking
----
-How can we help scientists with their spatial data?
-Supported by the Sloan Foundation.
+{"parsed":{"_path":"/_current-projects/vrss","_dir":"_current-projects","_draft":false,"_partial":true,"_locale":"","title":"VR for Scientific Sensemaking","description":"How can we help scientists with their spatial data?\nSupported by the Sloan Foundation.","thumbnail":"/assets/whatever","body":{"type":"root","children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"How can we help scientists with their spatial data?\nSupported by the Sloan Foundation."}]}],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:_current-projects:VRSS.md","_source":"content","_file":"_current-projects/VRSS.md","_extension":"md"},"hash":"bhuKZtHTwY"}

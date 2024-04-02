@@ -1,5 +1,1 @@
----
-title: Corpus Callosum
----
-
-Wow I did a whole thing
+{"parsed":{"_path":"/_past-projects/coca","_dir":"_past-projects","_draft":false,"_partial":true,"_locale":"","title":"Corpus Callosum","description":"Wow I did a whole thing","body":{"type":"root","children":[{"type":"element","tag":"p","props":{},"children":[{"type":"text","value":"Wow I did a whole thing"}]}],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:_past-projects:coca.md","_source":"content","_file":"_past-projects/coca.md","_extension":"md"},"hash":"OFgzmRwIZm"}

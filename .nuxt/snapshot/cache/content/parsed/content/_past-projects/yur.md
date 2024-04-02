@@ -1,1 +1,0 @@
-{"parsed":{"_path":"/_past-projects/yur","_dir":"_past-projects","_draft":false,"_partial":true,"_locale":"","title":"Yur","description":"","body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:_past-projects:yur.md","_source":"content","_file":"_past-projects/yur.md","_extension":"md"},"hash":"8DwXlCmPNo"}

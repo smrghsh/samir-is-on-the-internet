@@ -9,10 +9,10 @@
       <div class="not-the-heading">
         <ContentDoc :head="false" class="text" path="/hello-world">
         </ContentDoc>
-        <!-- <main>
+        <main>
           <h3 class="project-demarcator">Selected Projects</h3>
           <ProjectsContainer />
-        </main> -->
+        </main>
       </div>
 
     </corner-section>

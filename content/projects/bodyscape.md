@@ -1,6 +1,7 @@
 ---
 title: Bodyscape and other fashion pieces
 year: 2017
+displayYear: 2017
 thumbnail: bodyscape.jpg
 display: true
 ---

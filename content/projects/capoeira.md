@@ -1,7 +1,7 @@
 ---
 title: Capoeira VR
-year: present
-display: false
+year: ongoing
+display: true
 ---
 
 

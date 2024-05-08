@@ -1,27 +1,38 @@
 <template>
-    <div class="card-container">
-        <ContentList path="/projects" v-slot="{ list }">
+
+    <ContentList :query="query" path="/projects" v-slot="{ list }">
+        <div class="card-container">
             <div v-for="project in list" :key="project._path">
+
                 <Card v-if="project.display">
                     <article>
 
                         <img :src="'./images/projects/thumbnails/' + project.thumbnail" alt="project.title">
 
-                        <h3 class="project-title">{{ project.title }} <span class="time">{{ project.year }}</span></h3>
+                        <h3 class="project-title">{{ project.title }} <span class="time">{{ project.displayYear
+                                }}</span></h3>
                         <ContentDoc :path="project._path" v-slot="{ project }">
-
                         </ContentDoc>
+                        <NuxtLink :to="`${project.slug}`" class="button">Read More</NuxtLink>
                     </article>
                 </Card>
 
             </div>
-        </ContentList>
 
+        </div>
 
-    </div>
+    </ContentList>
+
 
 
 </template>
+
+<script setup lang="ts">
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
+const query: QueryBuilderParams = { path: '/projects', draft: false, sort: [{ year: -1 }] }
+
+
+</script>
 
 
 <style>
@@ -41,14 +52,6 @@
     z-index: 2;
     margin-top: 3em;
     margin-left: 2em;
-
-    /* display: flex; */
-    /* flex-direction: row; */
-    /* flex-wrap: nowrap; */
-    /* justify-content: space-between; */
-    /* align-content: center; */
-    /* align-items: center; */
-    /* justify-content: space-around; */
 }
 
 @media (max-width: 600px) {

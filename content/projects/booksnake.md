@@ -1,6 +1,7 @@
 ---
 title: Booksnake AR
 year: 2022
+displayYear: 2022
 thumbnail: booksnake.png
 display: true
 

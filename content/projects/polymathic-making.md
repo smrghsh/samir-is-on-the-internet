@@ -1,6 +1,6 @@
 ---
 title: Polymathic Making Workshops
-year: 1999
-display: false
+year: 2019-2022
+display: true
 ---
-asdf
+- Content about my workshops 

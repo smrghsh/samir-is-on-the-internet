@@ -1,5 +1,5 @@
 ---
-title: Dandelion
+title: Make a Wish!/Dandelion
 
-display: false
+display: true
 ---

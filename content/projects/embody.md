@@ -1,6 +1,6 @@
 ---
 title: embody
-display: true
+draft: true
 ---
 
 used EMG sensors and such

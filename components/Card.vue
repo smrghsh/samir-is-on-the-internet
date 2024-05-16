@@ -17,7 +17,7 @@
     margin: 5px;
     margin-bottom: 10px;
     width: 200px;
-    min-height: 350px;
+    min-height: 450px;
     min-width: 280px;
     max-width: 95vw;
     flex: 1 1 1;

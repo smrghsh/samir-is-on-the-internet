@@ -1,5 +1,6 @@
 ---
 title: Social Superpowers
+draft: true
 ---
 social superpowers
 

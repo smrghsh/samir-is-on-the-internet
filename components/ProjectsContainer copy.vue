@@ -4,17 +4,17 @@
         <div class="card-container">
             <div v-for="project in list" :key="project._path">
 
-                <Card v-if="!project.draft">
+                <Card v-if="project.display">
                     <article>
-                        <img class="thumbnail" :src="'./images/projects/thumbnails/' + project.thumbnail"
-                            alt="project.title">
+                        <img :src="'./images/projects/thumbnails/' + project.thumbnail" alt="project.title">
 
                         <h3 class="project-title">{{ project.title }} <span class="time">{{ project.displayYear
                                 }}</span></h3>
-                        <ContentDoc :path="project._path" v-slot="{ doc }">
-                            <ContentRenderer :value="doc" :excerpt="true" />
+                        <ContentDoc :path="project._path" v-slot="{ project }">
                         </ContentDoc>
-                        <NuxtLink class="read-more" :to="`${project.slug}`">read more</NuxtLink>
+                        <span>
+                            <NuxtLink :to="`${project.slug}`">Read More</NuxtLink>
+                        </span>
                     </article>
                 </Card>
             </div>
@@ -29,8 +29,7 @@
 
 <script setup lang="ts">
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
-// Function to get a preview of the first 200 characters from the first paragraph
+const query: QueryBuilderParams = { path: '/projects', draft: false, sort: [{ year: -1 }] }
 </script>
 
 
@@ -59,28 +58,18 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
     }
 }
 
-.read-more {
-    color: black;
-    /* text-decoration: none; */
-    /* font-size: 0.8em; */
-    font-weight: 300;
-    margin-top: 0.5em;
-    display: block;
-}
-
 .time {
     color: grey;
 }
 
-h3.project-title {
+.project-title {
     font-size: 1.5em;
     font-weight: 300;
-    /* margin-bottom: 0.5em; */
-    margin-bottom: 0em;
+    margin-bottom: 0.5em;
     margin-top: 0em;
 }
 
-img.thumbnail {
+img {
     width: 100%;
     height: 160px;
     border-radius: 10px;
@@ -88,43 +77,20 @@ img.thumbnail {
 
 }
 
-.links {
-    display: flex;
-    /* justify-content: center; */
-    /* vertical */
-    /* flex-direction: column; */
-    width: 90%;
-    align-items: center;
-    /* margin-top: 1em; */
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-    padding-top: 0em;
-
-}
-
 .button {
-    /* background-color: #4CAF50; */
+    background-color: #4CAF50;
     border: 1px black solid;
-    /* color: white; */
-    color: black;
-    padding: 0.3em 0.5em;
+    color: white;
+    padding: 0.2em 0.3em;
     margin: 0.2em 0.3em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     /* font-size: 16px; */
     /* margin: 4px 2px; */
-    /* drop shadow */
-    /* neumorphic */
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), -3px -3px 3px rgba(255, 255, 255, 0.55);
     cursor: pointer;
     border-radius: 10px;
 
-}
-
-.button:hover {
-    opacity: 0.8em;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgba(255, 255, 255, 0.55);
 }
 
 .card-container>.card {
@@ -136,8 +102,7 @@ img.thumbnail {
     margin: 1em;
     width: 200px;
     max-width: 95vw;
-    /* height: 520px; */
-    min-height: 520px;
+    min-height: 500px;
     flex: 0 0 1;
     text-align: center;
     filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));

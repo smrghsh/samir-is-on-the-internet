@@ -4,6 +4,8 @@ year: 2020
 thumbnail: diwali.gif
 draft: true
 ---
+
+<!-- more -->
 As a drop of water travels down a stream, it swirls in eddies and vortices whose patterns constantly change. This complexity is a challenge to simulate-- as an aggregate mass, the liquid flows downstream, but a closer examination will show counter currents and changing turbulence. Closer still, individual molecules react to subtle forces as they push and pull their peers.
 
 <!-- Inigo Quilez, progenitor of shader techniques, wrote the following about depicting nature with computer graphics:

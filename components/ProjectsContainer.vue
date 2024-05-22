@@ -2,19 +2,20 @@
 
     <ContentList :query="query" path="/projects" v-slot="{ list }">
         <div class="card-container">
-            <div v-for="project in list" :key="project._path">
+            <div v-for="project in  list " :key="project._path">
 
                 <Card v-if="!project.draft">
                     <article>
                         <img class="thumbnail" :src="'./images/projects/thumbnails/' + project.thumbnail"
-                            alt="project.title">
+                            :alt="project.title + ' thumbnail image'">
 
                         <h3 class="project-title">{{ project.title }} <span class="time">{{ project.displayYear
                                 }}</span></h3>
                         <ContentDoc :path="project._path" v-slot="{ doc }">
                             <ContentRenderer :value="doc" :excerpt="true" />
                         </ContentDoc>
-                        <NuxtLink class="read-more" :to="`${project.slug}`">read more</NuxtLink>
+                        <NuxtLink v-if="project.hasMore" class="read-more" :to="`${project.slug}`">read more
+                        </NuxtLink>
                     </article>
                 </Card>
             </div>
@@ -85,22 +86,41 @@ img.thumbnail {
     height: 160px;
     border-radius: 10px;
     margin-bottom: 0.2em;
-
+    /* object-fit: cover */
 }
 
 .links {
     display: flex;
-    /* justify-content: center; */
+    justify-content: start;
     /* vertical */
+    flex-wrap: wrap;
     /* flex-direction: column; */
     width: 90%;
     align-items: center;
+    align-items: baseline;
     /* margin-top: 1em; */
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
+    margin-top: 0.15em;
+    margin-bottom: 0.15em;
     padding-top: 0em;
 
 }
+
+
+.links>a {
+    /* margin: 0.2em; */
+    flex: 1 1 1;
+    font-size: 0.9em;
+    /* flex-basis: content; */
+}
+
+
+/* .links>a:first-child {
+    margin-left: 0em;
+}
+
+.links>a:last-child {
+    margin-right: 0em;
+} */
 
 .button {
     /* background-color: #4CAF50; */
@@ -116,7 +136,7 @@ img.thumbnail {
     /* margin: 4px 2px; */
     /* drop shadow */
     /* neumorphic */
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2), -3px -3px 3px rgba(255, 255, 255, 0.55);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.55);
     cursor: pointer;
     border-radius: 10px;
 
@@ -137,7 +157,7 @@ img.thumbnail {
     width: 200px;
     max-width: 95vw;
     /* height: 520px; */
-    min-height: 520px;
+    min-height: 550px;
     flex: 0 0 1;
     text-align: center;
     filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));

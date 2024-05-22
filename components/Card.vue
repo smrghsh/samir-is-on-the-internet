@@ -21,7 +21,7 @@
     min-width: 280px;
     max-width: 95vw;
     flex: 1 1 1;
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.2));
 
     flex: 0 1 auto;
     align-self: auto;

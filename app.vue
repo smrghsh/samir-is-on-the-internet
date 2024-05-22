@@ -14,8 +14,8 @@
 useSeoMeta({
   title: 'Samir Ghosh',
   ogTitle: 'Samir Ghosh',
-  description: 'Samir Ghosh is a VR developer and interface researcher',
-  ogDescription: 'Samir Ghosh is a VR developer and interface researcher',
+  description: 'VR developer and interface researcher',
+  ogDescription: 'VR developer and interface researcher',
   ogImage: 'https://samir.tech/preview.png',
   ogUrl: 'https://samir.tech',
   

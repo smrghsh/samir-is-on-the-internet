@@ -6,7 +6,7 @@
 
                 <Card v-if="!project.draft">
                     <article>
-                        <img class="thumbnail" :src="'./images/projects/thumbnails/' + project.thumbnail"
+                        <img class="thumbnail" :src="'./images/projects/thumbnails-resized/' + project.thumbnail"
                             :alt="project.title + ' thumbnail image'">
 
                         <h3 class="project-title">{{ project.title }} <span class="time">{{ project.displayYear

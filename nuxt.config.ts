@@ -14,6 +14,9 @@ export default defineNuxtConfig({
   build:{
     transpile:["three", "meshline"]
 },
+  content: {
+    contentHead: false
+  },
   // modules: ['@nuxtjs/eslint-module'],
   css: ['assets/styles/normalize.css','assets/styles/main.css'],
   devtools: { enabled: true }

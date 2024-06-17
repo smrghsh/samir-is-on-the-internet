@@ -3,6 +3,7 @@ title: Polymathic Making Workshops
 year: 2019
 displayYear: 2019-2022
 thumbnail: arduino.jpeg
+draft: true
 hasMore: true
 slug: polymathic-making
 # draft: true

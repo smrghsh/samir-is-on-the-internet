@@ -3,6 +3,7 @@ title: Google Summer of Code
 year: 2023
 displayYear: 2023
 thumbnail: p5xr.png
+draft: true
 hasMore: true
 slug: gsoc
 ---

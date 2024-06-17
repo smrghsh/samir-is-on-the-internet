@@ -4,6 +4,7 @@ year: 2023
 displayYear: 2023
 thumbnail: p5xr.png
 hasMore: true
+slug: gsoc
 ---
 
 <div class="links">

@@ -4,6 +4,7 @@ year: 2017
 displayYear: 2017
 thumbnail: bodyscape.jpg
 display: true
+slug: bodyscape
 ---
 <div class="links">
     <a class="button" href="https://vimeo.com/220150348">Video (Vimeo)</a>

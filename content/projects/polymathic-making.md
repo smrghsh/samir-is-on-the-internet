@@ -4,6 +4,7 @@ year: 2019
 displayYear: 2019-2022
 thumbnail: arduino.jpeg
 hasMore: true
+slug: polymathic-making
 # draft: true
 ---
 <div class="links">

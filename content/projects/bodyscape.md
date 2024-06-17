@@ -4,6 +4,7 @@ year: 2017
 displayYear: 2017
 thumbnail: bodyscape.jpg
 display: true
+hasMore: true
 slug: bodyscape
 ---
 <div class="links">

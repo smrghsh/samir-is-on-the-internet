@@ -3,7 +3,6 @@ title: Chem Reality
 year: 2024
 displayYear: 2024
 thumbnail: chem.png
-draft: true
 hasMore: true
 slug: chem
 ---

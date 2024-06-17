@@ -3,7 +3,7 @@ title: Polymathic Making Workshops
 year: 2019
 displayYear: 2019-2022
 thumbnail: arduino.jpeg
-hasMore: false
+hasMore: true
 # draft: true
 ---
 <div class="links">
@@ -18,4 +18,6 @@ hasMore: false
 Three years of practical, critical, and hands-on workshops out of the makerspace at the [Ahmanson Lab](https://polymathic.usc.edu/ahmanson-lab)
 
 <!-- more -->
+
+From 2019 to 2022, I taught a series of workshops for the Sidney Harman Academy for Polymathic Academy at the University of Southern California (Harman Academy). Throughout this time, I iterated on a workshop format for teaching both practical technical skills and critical thinking, adaptable to novel and emerging technologies across artificial intelligence, internet of things, rapid manufacturing, and augmented and virtual reality. The links above refer to event pages with descriptions of these workshops.
 

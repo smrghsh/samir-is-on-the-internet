@@ -2,8 +2,13 @@
 title: Make a Wish!/Dandelion
 year: 2023
 displayYear: 2023
-draft: true
+thumbnail: dandelion.png
+draft: false
+hasMore: false
 ---
-An interactive generative art piece where you blow into your mic to blow on a dandelion to make a wish. Submitted for curation and 
+<div class="links">
+    <a class="button" href="https://editor.p5js.org/samirghosh/full/vcia689SL">Try it out!</a>
+</div>
+An interactive generative art piece where you blow into your mic to blow on a dandelion to make a wish. Every dandelion is unique! 
 <!-- more -->
-I looked at 
+

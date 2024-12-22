@@ -214,6 +214,8 @@ export default {
 
       if (material.uniforms.uTime) {
         material.uniforms.uTime.value = e;
+        material.uniforms.uTime.value = 5;
+
       }
 
       renderer.render(scene, camera);

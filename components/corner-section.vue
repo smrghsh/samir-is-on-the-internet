@@ -6,7 +6,7 @@
 </template>
 <style>
 .corner-heading {
-    margin-left: 2em;
+    margin-left: 1em;
     margin-top: 1em;
     max-width: 100vw;
     background-color: red;
@@ -15,7 +15,7 @@
 
 @media (max-width: 600px) {
     .corner-heading {
-        margin-left: 1em;
+        margin-left: 0.25em;
     }
 }
 

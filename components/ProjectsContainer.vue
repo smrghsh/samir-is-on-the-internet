@@ -2,7 +2,7 @@
 
     <ContentList :query="query" path="/projects" v-slot="{ list }">
         <div class="card-container">
-            <div v-for="project in  list " :key="project._path">
+            <div v-for="project in list " :key="project._path">
 
                 <Card v-if="!project.draft">
                     <article>
@@ -148,7 +148,7 @@ img.thumbnail {
 }
 
 .card-container>.card {
-    background-color: rgba(245, 245, 222, .87);
+    /* background-color: rgba(245, 245, 222, .87); */
     backdrop-filter: blur(10px);
     border-radius: 10px;
     border: 1px solid black;

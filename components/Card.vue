@@ -8,7 +8,7 @@
 
 <style>
 .card {
-    background-color: rgba(245, 245, 222, .97);
+    /* background-color: rgba(245, 245, 222, .97); */
     backdrop-filter: blur(10px);
     border-radius: 10px;
     border: 1px solid black;

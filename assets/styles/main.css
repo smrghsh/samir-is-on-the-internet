@@ -1,22 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+:root {
+  color-scheme: light dark;
+  /* fg = frosted glass */
+  /* cs = cardstock */
+  /* bt = body text */
+  /* nh = not heading */
+  /* Colors, borders, shadows */
+  --dark-border-col: rgb(67, 67, 67);
+  --light-border-col: black;
+  --dark-cs-border: 1px solid rgb(74, 74, 74);
+  --light-cs-border: 1px solid white;
+  --dark-cs-bg-col: rgba(38, 38, 38, 0.57);
+  --light-cs-bg-col: rgba(245, 245, 222, 0.97);
+  --time-col: grey;
+  --button-border: 1px black solid;
+  --dark-text-col: rgb(203, 203, 203);
+  --light-text-col: black;
+  --dark-button-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3),
+    -3px -3px 3px rgba(255, 255, 255, 0.55);
+  --light-button-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3),
+    -3px -3px 3px rgba(255, 255, 255, 0.55);
+  --dark-button-hover: rgba(67, 67, 67, 20);
+  --light-button-hover: lightskyblue;
+  border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+
+  /* Indents */
+  --squish-stop: 0.25em;
+  --one-stop: 0.7em;
+  --two-stop: 1.4em;
+  --three-stop: 2.1em;
+}
 * {
   font-family: "Inter", sans-serif;
+  color: light-dark(var(--light-text-col), var(--dark-text-col));
 }
-body {
+/* body {
   background-color: #f5f5de;
-}
+} */
+
 h1 {
   font-size: 3em;
   font-weight: 200;
-  /* margin-bottom: 0.2em; */
   margin: 0.2em;
 }
 
 h2,
 h3 {
   font-weight: 200;
-  /* border: none; */
 }
 p {
   font-size: 1em;

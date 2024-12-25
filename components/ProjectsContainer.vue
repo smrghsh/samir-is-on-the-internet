@@ -56,27 +56,24 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
 
 @media (max-width: 600px) {
     .card-container {
-        margin-left: 1em;
+        margin-left: var(--one-stop);
     }
 }
 
 .read-more {
     color: black;
-    /* text-decoration: none; */
-    /* font-size: 0.8em; */
     font-weight: 300;
     margin-top: 0.5em;
     display: block;
 }
 
 .time {
-    color: grey;
+    color: var(--time-col);
 }
 
 h3.project-title {
     font-size: 1.5em;
     font-weight: 300;
-    /* margin-bottom: 0.5em; */
     margin-bottom: 0em;
     margin-top: 0em;
 }
@@ -86,19 +83,15 @@ img.thumbnail {
     height: 160px;
     border-radius: 10px;
     margin-bottom: 0.2em;
-    /* object-fit: cover */
 }
 
 .links {
     display: flex;
     justify-content: start;
-    /* vertical */
     flex-wrap: wrap;
-    /* flex-direction: column; */
     width: 90%;
     align-items: center;
     align-items: baseline;
-    /* margin-top: 1em; */
     margin-top: 0.15em;
     margin-bottom: 0.15em;
     padding-top: 0em;
@@ -107,26 +100,15 @@ img.thumbnail {
 
 
 .links>a {
-    /* margin: 0.2em; */
     flex: 1 1 1;
     font-size: 0.9em;
-    /* flex-basis: content; */
 }
 
-
-/* .links>a:first-child {
-    margin-left: 0em;
-}
-
-.links>a:last-child {
-    margin-right: 0em;
-} */
 
 .button {
     /* background-color: #4CAF50; */
-    border: 1px black solid;
-    /* color: white; */
-    color: black;
+    border: var(--button-border);
+
     padding: 0.3em 0.5em;
     margin: 0.2em 0.3em;
     text-align: center;
@@ -136,7 +118,7 @@ img.thumbnail {
     /* margin: 4px 2px; */
     /* drop shadow */
     /* neumorphic */
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.55);
+    box-shadow: light-dark(var(--light-button-shadow), var(--dark-button-shadow));
     cursor: pointer;
     border-radius: 10px;
 
@@ -144,14 +126,13 @@ img.thumbnail {
 
 .button:hover {
     opacity: 0.8em;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgba(255, 255, 255, 0.55);
+    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgba(255, 255, 255, 0.55); */
 }
 
 .card-container>.card {
-    /* background-color: rgba(245, 245, 222, .87); */
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    border: 1px solid black;
+    border: var(--cs-border);
     padding: 1em;
     margin: 1em;
     width: 200px;

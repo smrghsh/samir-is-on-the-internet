@@ -33,11 +33,6 @@
 </template>
 <style>
 nav {
-  /* margin-left: 2em; */
-  /* margin-top: 2em; */
-  /* max-width: 90vw; */
-  /* width: 400px; */
-  /* background-color: rgba(245, 245, 222, 0.8);*/
   backdrop-filter: blur(10px);
 
 }
@@ -60,7 +55,10 @@ nav {
 .home-link:hover {
   text-decoration: underline;
   cursor: pointer;
-  text-decoration: underline 1px rgba(0, 0, 0, 1);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: light-dark(var(--light-border-col), var(--dark-border-col));
+  /* text-decoration: underline 1px rgba(0, 0, 0, 1); */
   /* opacity: .9; */
 }
 
@@ -69,16 +67,17 @@ nav {
 }
 
 .subpage {
-  /* margin-left: 1em;
-    margin-right: 1em; */
   text-align: center;
   flex: 1 1 auto;
   text-decoration: none;
   color: black;
-  /* drop shadow */
-  border-right: 1px solid black;
+  border-width: 1px;
+  border-style: solid;
+  border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
   max-width: 95vw;
-  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */
   transition: 300ms;
 }
 
@@ -87,10 +86,8 @@ nav {
 }
 
 .subpage:hover {
-  background-color: lightskyblue;
+  background-color: light-dark(var(--light-button-hover), var(--dark-button-hover));
   opacity: .8;
-  /* drop shadow */
-  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */
 }
 
 .socials {
@@ -110,7 +107,6 @@ nav {
   height: 1.5em;
   margin: 2px;
   cursor: pointer;
-  /* no border */
   border-radius: 5px;
   border: none;
   transition: 300ms;
@@ -135,7 +131,7 @@ nav {
   align-content: center;
   align-items: center;
   max-width: 1800px;
-  padding-left: .2em;
+  padding-left: var(--one-stop);
   padding-right: 2em;
 }
 
@@ -149,27 +145,13 @@ nav {
   align-content: center;
   align-items: stretch;
   max-width: 1800px;
-  /* background-color: rgba(245, 245, 222, 0.8); */
-
-  /* background-color: rgba(245, 245, 222, 0.8); */
-  /* opacity: .8; */
+  background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
   backdrop-filter: blur(10px);
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  /* padding-top: 1em;
-    padding-bottom: 1em; */
-  /* padding-left: 1em;
-    padding-right: 1em; */
-  /* drop shadow */
-  /* box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1); */
+  border-style: solid;
+  border-width: 1px;
+  border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+  border-right: none;
+  border-left: none;
 
 }
-
-/* https://stackoverflow.com/questions/46083220/how-to-vuejs-router-link-active-style */
-/* for active router links */
-/* nav {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-} */
 </style>

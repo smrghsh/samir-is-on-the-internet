@@ -29,12 +29,12 @@ export default {
                 window.localStorage.setItem('darkMode', true);
                 document.querySelectorAll('*').forEach(
                     (el) => {
-                        el.style.color = 'rgb(203,203,203)';
-                        el.style.borderColor = 'rgb(67,67,67)';
+                        // el.style.color = 'rgb(203,203,203)';
+                        // el.style.borderColor = 'rgb(67,67,67)';
                     });
                 document.querySelectorAll('.card, .subpage, .text').forEach(
                     (el) => {
-                        el.style.backgroundColor = 'rgb(35,35,35)';
+                        // el.style.backgroundColor = 'rgb(35,35,35)';
                     });
                 document.querySelectorAll('.subpage').forEach(
                     // make just the :hover behavior 41,41,41

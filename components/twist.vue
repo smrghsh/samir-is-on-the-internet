@@ -37,15 +37,26 @@ export default {
     window.addEventListener("darkMode", () => {
       scene.background = new THREE.Color("rgb(30, 30, 30)");
       console.log("changing scene background")
+      document.querySelectorAll('*').forEach(
+        (el) => {
+          el.style["color-scheme"] = 'dark';
+        });
+
     });
     window.addEventListener("lightMode", () => {
       scene.background = new THREE.Color("aliceblue");
+      document.querySelectorAll('*').forEach(
+        (el) => {
+          el.style["color-scheme"] = 'light';
+        });
+
     });
 
 
     //Palette
-    const backgroundColor = new THREE.Color("AliceBlue");
-    // const backgroundColor = new THREE.Color("black")
+    // const backgroundColor = new THREE.Color("AliceBlue");
+    const backgroundColor = new THREE.Color("rgb(30, 30, 30)")
+    // backgroundColor = new THREE.Color("black")
     // const backgroundColor = new THREE.Color("#D9B9AD");
 
     /**
@@ -128,7 +139,7 @@ export default {
       mesh.position.y += Math.random() * 0.1;
       mesh.position.z += Math.random() * 0.1;
       mesh.position.x += Math.random() * 0.1;
-      // scene.add(mesh);
+      scene.add(mesh);
     }
     /**
      * Renderer

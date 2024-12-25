@@ -8,10 +8,10 @@
 
 <style>
 .card {
-    /* background-color: rgba(245, 245, 222, .97); */
+    background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    border: 1px solid black;
+    border: light-dark(var(--light-cs-border), var(--dark-cs-border));
     padding: 1em;
     /* margin: 1em; */
     margin: 5px;

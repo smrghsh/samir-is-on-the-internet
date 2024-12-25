@@ -8,14 +8,13 @@
 .corner-heading {
     margin-left: 1em;
     margin-top: 1em;
-    max-width: 100vw;
-    background-color: red;
+    max-width: 95vw;
     position: relative;
 }
 
 @media (max-width: 600px) {
     .corner-heading {
-        margin-left: 0.25em;
+        margin-left: var(--squish-stop);
     }
 }
 
@@ -24,9 +23,14 @@
     /* background-color: aliceblue; */
     background: none;
     /* background-image: linear-gradient(to bottom right, rgba(245, 245, 222, 1.0), rgba(245, 245, 222, 0.0)); */
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-    padding-left: 0.7em;
+    /* border-left: 1px solid black; */
+    /* border-top: 1px solid black; */
+    border-width: 1px;
+    border-style: solid;
+    border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+    border-bottom: none;
+    border-right: none;
+    padding-left: var(--one-stop);
     padding-top: 0.4em;
     padding-bottom: 3em;
     font-size: 1.5em;
@@ -48,10 +52,11 @@
     font-size: 1.2em;
     font-weight: 300;
     margin-top: 3em;
-    margin-left: 2em;
+    margin-left: var(--three-stop);
     border-radius: 10px;
-    border: 1px solid black;
-    /* padding: 1em; */
+    border-width: 1px;
+    border-style: solid;
+    border-color: light-dark(var(--light-border-col), var(--dark-border-col));
     padding: 0em 1em 0em 1em;
     max-width: 1000px;
 
@@ -64,7 +69,11 @@
 
 @media (max-width: 600px) {
     .corner-heading>.not-the-heading>.about {
-        margin-left: 1em;
+        margin-left: var(--two-stop);
+    }
+
+    .corner-heading>.not-the-heading>.text {
+        margin-left: var(--one-stop);
     }
 }
 

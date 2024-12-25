@@ -20,26 +20,32 @@
 export default {
     mounted() {
         // event listener for the checkbox input#colorModeSwitchCheckbox
+        console.log("darkMode", window.localStorage.getItem('darkMode'))
         const checkbox = document.getElementById('colorModeSwitchCheckbox');
         checkbox.addEventListener('change', function () {
             if (this.checked) {
                 console.log('dark mode');
                 window.dispatchEvent(new Event('darkMode'));
-                // select all elements EXCEPT FOR a that isn't .button and color: white
-                // document.querySelectorAll('*:not(a):not(.button):not([style*="color: white"])').forEach(
-                //     (el) => {
-                //         el.style.color = 'white';
-                //     });
-                //select all make color: white, all border colors whilte
+                window.localStorage.setItem('darkMode', true);
                 document.querySelectorAll('*').forEach(
                     (el) => {
-                        el.style.color = 'white';
-                        el.style.borderColor = 'white';
+                        el.style.color = 'rgb(203,203,203)';
+                        el.style.borderColor = 'rgb(67,67,67)';
                     });
+                document.querySelectorAll('.card, .subpage, .text').forEach(
+                    (el) => {
+                        el.style.backgroundColor = 'rgb(35,35,35)';
+                    });
+                document.querySelectorAll('.subpage').forEach(
+                    // make just the :hover behavior 41,41,41
+
+                )
 
             } else {
                 console.log('light mode');
                 window.dispatchEvent(new Event('lightMode'));
+                window.localStorage.setItem('darkMode', false);
+
 
             }
 

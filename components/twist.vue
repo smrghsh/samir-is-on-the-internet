@@ -35,7 +35,8 @@ export default {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     });
     window.addEventListener("darkMode", () => {
-      scene.background = new THREE.Color("black");
+      scene.background = new THREE.Color("rgb(30, 30, 30)");
+      console.log("changing scene background")
     });
     window.addEventListener("lightMode", () => {
       scene.background = new THREE.Color("aliceblue");

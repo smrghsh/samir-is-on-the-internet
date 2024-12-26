@@ -33,7 +33,7 @@
     z-index: 1;
     position: absolute;
     border-top-left-radius: 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(15px);
 }
 
 .corner-heading>.not-the-heading {
@@ -51,6 +51,7 @@
     border-width: 1px;
     border-style: solid;
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+    background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
     padding: 0em 1em 0em 1em;
     max-width: 1000px;
     backdrop-filter: blur(10px);

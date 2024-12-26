@@ -7,13 +7,17 @@
   /* bt = body text */
   /* nh = not heading */
   /* Colors, borders, shadows */
+
+  /* Potential ideas for light */
+  /* #fff7f0 */
   --dark-scene-background: rgb(30, 30, 30);
+  --light-scene-background: rgb(255, 253, 241);
   --dark-border-col: rgb(67, 67, 67);
   --light-border-col: black;
   --dark-cs-border: 1px solid rgb(74, 74, 74);
   --light-cs-border: 1px solid white;
   --dark-cs-bg-col: rgba(38, 38, 38, 0.87);
-  --light-cs-bg-col: rgba(245, 245, 222, 0.97);
+  --light-cs-bg-col: rgba(255, 253, 241, 0.77);
   --time-col: grey;
   --button-border: 1px black solid;
   --dark-text-col: rgb(203, 203, 203);
@@ -24,8 +28,8 @@
   --dark-text-deemphasis-col: rgb(125, 125, 125);
   --dark-link-col: rgb(125, 148, 160);
   --dark-link-hover-col: rgb(149, 169, 179);
-  --light-link-col: rgb(0, 0, 255);
-  --link-link-hover-col: rgb(149, 169, 179);
+  --light-link-col: aliceblue;
+  --link-link-hover-col: blue;
 
   border-color: light-dark(var(--light-border-col), var(--dark-border-col));
 
@@ -43,7 +47,10 @@
 }
 
 body {
-  background-color: light-dark(white, var(--dark-scene-background));
+  background-color: light-dark(
+    var(--light-scene-background),
+    var(--dark-scene-background)
+  );
 }
 
 h1 {
@@ -60,6 +67,7 @@ p {
   font-size: 1em;
   font-weight: 300;
 }
+
 /* on mobile, h1 is 2em */
 @media (max-width: 600px) {
   h1 {

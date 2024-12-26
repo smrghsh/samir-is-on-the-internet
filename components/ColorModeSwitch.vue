@@ -21,28 +21,38 @@ export default {
     mounted() {
         // event listener for the checkbox input#colorModeSwitchCheckbox
         const checkbox = document.getElementById('colorModeSwitchCheckbox');
+        function getSystemOrInitialTheme() {
+            if (window.localStorage.getItem('darkMode') === 'true') {
+                return true;
+            } else if (window.localStorage.getItem('darkMode') === 'false') {
+                return false;
+            }
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        const isDarkModeOriginally = getSystemOrInitialTheme();
+        console.log(`The system theme is: ${isDarkModeOriginally ? 'dark' : 'light'}`);
+        if (isDarkModeOriginally) {
+            checkbox.checked = true;
+            window.dispatchEvent(new Event('darkMode'));
+        } else {
+            checkbox.checked = false;
+            window.dispatchEvent(new Event('lightMode'));
+        }
         checkbox.addEventListener('change', function () {
             if (this.checked) {
                 console.log('dark mode');
                 window.dispatchEvent(new Event('darkMode'));
                 window.localStorage.setItem('darkMode', true);
-                document.querySelectorAll('*').forEach(
-                    (el) => {
-                        // el.style.color = 'rgb(203,203,203)';
-                        // el.style.borderColor = 'rgb(67,67,67)';
-                    });
-                document.querySelectorAll('.card, .subpage, .text').forEach(
-                    (el) => {
-                        // el.style.backgroundColor = 'rgb(35,35,35)';
-                    });
-                document.querySelectorAll('.subpage').forEach(
-                    // make just the :hover behavior 41,41,41
-
-                )
-
             } else {
                 console.log('light mode');
                 window.dispatchEvent(new Event('lightMode'));
+                window.localStorage.setItem('darkMode', false);
+
 
 
             }
@@ -52,7 +62,7 @@ export default {
 }
 </script>
 <style>
-/* From Uiverse.io by andrew-demchenk0 */
+/* adapted from Uiverse.io by andrew-demchenk0 */
 .switch {
     font-size: 17px;
     position: relative;
@@ -74,7 +84,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: lightsteelblue;
+    background-color: rgb(82, 101, 146);
     transition: .4s;
     border-radius: 30px;
 }
@@ -152,7 +162,7 @@ export default {
 }
 
 .input:checked+.slider {
-    background-color: #183153;
+    background-color: rgb(16, 34, 83);
 }
 
 .input:focus+.slider {

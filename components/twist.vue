@@ -17,6 +17,16 @@ export default {
       width: window.innerWidth,
       height: window.innerHeight,
     };
+    function getSystemTheme() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    const isDarkModeOriginally = getSystemTheme();
+    console.log(`The system theme is: ${isDarkModeOriginally ? 'dark' : 'light'}`);
     /**
    * Sizes
    */
@@ -44,7 +54,7 @@ export default {
 
     });
     window.addEventListener("lightMode", () => {
-      scene.background = new THREE.Color("aliceblue");
+      scene.background = new THREE.Color("rgb(255, 253, 241)");
       document.querySelectorAll('*').forEach(
         (el) => {
           el.style["color-scheme"] = 'light';
@@ -55,9 +65,7 @@ export default {
 
     //Palette
     // const backgroundColor = new THREE.Color("AliceBlue");
-    const backgroundColor = new THREE.Color("rgb(30, 30, 30)")
-    // backgroundColor = new THREE.Color("black")
-    // const backgroundColor = new THREE.Color("#D9B9AD");
+    const backgroundColor = isDarkModeOriginally ? new THREE.Color("rgb(30, 30, 30)") : new THREE.Color("rgb(255, 253, 241)");
 
     /**
      * Base
@@ -158,11 +166,9 @@ export default {
     const tick = () => {
       const e = clock.getElapsedTime() * 0.5;
 
-      // if (material.uniforms.uTime) {
-      //   material.uniforms.uTime.value = e;
-      //   material.uniforms.uTime.value = 5;
-
-      // }
+      if (material.uniforms.uTime) {
+        material.uniforms.uTime.value = e;
+      }
       renderer.render(scene, camera);
       window.requestAnimationFrame(tick);
     };

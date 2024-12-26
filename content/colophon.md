@@ -4,7 +4,7 @@ This website uses the [Inter](https://fonts.google.com/specimen/Inter) (with the
 
 Dark mode's colors are inspired by the default dark mode of [Obsidian](https://obsidian.md/), a software with which I keep a digital [Zettlekasten](https://en.wikipedia.org/wiki/Zettelkasten). I appreciate they use a mix of greys to reduce contrast, contain enough saliency to distinguish interactable elements.
 
-Light mode's colors are---- (TODO)
+Light mode's colors come from a generative art sketch where I challenged myself to use a beige color as the background and find constrastive colors for the swirl in the foreground.
 
 The [source code](https://github.com/smrghsh/samir-is-on-the-internet) is viewable on GitHub, it includes [Three.js](https://threejs-journey.com/) for the generative shader graphic on the home page, and uses Vue.js + Vite via [Nuxt](https://nuxt.com/) for a content management system and build tooling. The site is hosted with Cloudflare Pages. (Thank you for the configuration help, [Leo](https://github.com/TheInnerParty)!)
 

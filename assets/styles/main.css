@@ -71,7 +71,7 @@ p {
 /* on mobile, h1 is 2em */
 @media (max-width: 600px) {
   h1 {
-    font-size: 2.2em;
+    font-size: 2 em;
   }
   p {
     font-size: 0.9em;

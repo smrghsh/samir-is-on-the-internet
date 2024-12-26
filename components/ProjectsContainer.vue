@@ -2,7 +2,7 @@
 
     <ContentList :query="query" path="/projects" v-slot="{ list }">
         <div class="card-container">
-            <div v-for="project in  list " :key="project._path">
+            <div v-for="project in list " :key="project._path">
 
                 <Card v-if="!project.draft">
                     <article>
@@ -37,8 +37,6 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
 
 <style>
 .card-container {
-    /* background-color: red; */
-
     width: 1800px;
     max-width: 95vw;
     display: flex;
@@ -47,7 +45,6 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
     justify-content: flex-start;
     align-content: center;
     align-items: flex-start;
-
     position: absolute;
     z-index: 2;
     margin-top: 3em;
@@ -56,27 +53,24 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
 
 @media (max-width: 600px) {
     .card-container {
-        margin-left: 1em;
+        margin-left: var(--one-stop);
     }
 }
 
 .read-more {
-    color: black;
-    /* text-decoration: none; */
-    /* font-size: 0.8em; */
+    color: light-dark(var(--light-text-deemphasis-col), var(--dark-text-deemphasis-col));
     font-weight: 300;
     margin-top: 0.5em;
     display: block;
 }
 
 .time {
-    color: grey;
+    color: light-dark(var(--light-text-deemphasis-col), var(--dark-text-deemphasis-col));
 }
 
 h3.project-title {
     font-size: 1.5em;
     font-weight: 300;
-    /* margin-bottom: 0.5em; */
     margin-bottom: 0em;
     margin-top: 0em;
 }
@@ -86,19 +80,15 @@ img.thumbnail {
     height: 160px;
     border-radius: 10px;
     margin-bottom: 0.2em;
-    /* object-fit: cover */
 }
 
 .links {
     display: flex;
     justify-content: start;
-    /* vertical */
     flex-wrap: wrap;
-    /* flex-direction: column; */
     width: 90%;
     align-items: center;
     align-items: baseline;
-    /* margin-top: 1em; */
     margin-top: 0.15em;
     margin-bottom: 0.15em;
     padding-top: 0em;
@@ -107,51 +97,48 @@ img.thumbnail {
 
 
 .links>a {
-    /* margin: 0.2em; */
     flex: 1 1 1;
     font-size: 0.9em;
-    /* flex-basis: content; */
+    color: light-dark(var(--light-text-col), var(--dark-text-col));
+
 }
 
-
-/* .links>a:first-child {
-    margin-left: 0em;
-}
-
-.links>a:last-child {
-    margin-right: 0em;
-} */
 
 .button {
     /* background-color: #4CAF50; */
-    border: 1px black solid;
-    /* color: white; */
-    color: black;
+    /* border: var(--button-border); */
+
     padding: 0.3em 0.5em;
     margin: 0.2em 0.3em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    /* font-size: 16px; */
-    /* margin: 4px 2px; */
-    /* drop shadow */
-    /* neumorphic */
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3), -3px -3px 3px rgba(255, 255, 255, 0.55);
+    border-width: 1px;
+    border-style: solid;
+    border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+    box-shadow: 2px 2px 2px black,
+        -0.1px -0.1px 0.1px rgb(30, 30, 30);
     cursor: pointer;
     border-radius: 10px;
+    /* text-decoration: underline; */
+    /* text-decoration-thickness: 0.1px; */
 
 }
 
 .button:hover {
     opacity: 0.8em;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgba(255, 255, 255, 0.55);
+    background-color: light-dark(var(--light-button-hover), var(--dark-button-hover));
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(255, 255, 255, 0.55);
+    text-decoration-thickness: 1px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+    text-decoration-color: light-dark(var(--light-border-col), var(--dark-border-col));
 }
 
 .card-container>.card {
-    background-color: rgba(245, 245, 222, .87);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    border: 1px solid black;
+    border: var(--cs-border);
     padding: 1em;
     margin: 1em;
     width: 200px;

@@ -20,7 +20,6 @@
 export default {
     mounted() {
         // event listener for the checkbox input#colorModeSwitchCheckbox
-        console.log("darkMode", window.localStorage.getItem('darkMode'))
         const checkbox = document.getElementById('colorModeSwitchCheckbox');
         checkbox.addEventListener('change', function () {
             if (this.checked) {
@@ -44,7 +43,6 @@ export default {
             } else {
                 console.log('light mode');
                 window.dispatchEvent(new Event('lightMode'));
-                window.localStorage.setItem('darkMode', false);
 
 
             }

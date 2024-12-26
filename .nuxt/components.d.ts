@@ -2,6 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'Card': typeof import("../components/Card.vue")['default']
+    'ColorModeSwitch': typeof import("../components/ColorModeSwitch.vue")['default']
     'ProjectsContainer': typeof import("../components/ProjectsContainer.vue")['default']
     'CornerSection': typeof import("../components/corner-section.vue")['default']
     'Navbar': typeof import("../components/navbar.vue")['default']
@@ -67,6 +68,7 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyCard': typeof import("../components/Card.vue")['default']
+    'LazyColorModeSwitch': typeof import("../components/ColorModeSwitch.vue")['default']
     'LazyProjectsContainer': typeof import("../components/ProjectsContainer.vue")['default']
     'LazyCornerSection': typeof import("../components/corner-section.vue")['default']
     'LazyNavbar': typeof import("../components/navbar.vue")['default']
@@ -135,6 +137,7 @@ declare module 'vue' {
 }
 
 export const Card: typeof import("../components/Card.vue")['default']
+export const ColorModeSwitch: typeof import("../components/ColorModeSwitch.vue")['default']
 export const ProjectsContainer: typeof import("../components/ProjectsContainer.vue")['default']
 export const CornerSection: typeof import("../components/corner-section.vue")['default']
 export const Navbar: typeof import("../components/navbar.vue")['default']
@@ -200,6 +203,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyCard: typeof import("../components/Card.vue")['default']
+export const LazyColorModeSwitch: typeof import("../components/ColorModeSwitch.vue")['default']
 export const LazyProjectsContainer: typeof import("../components/ProjectsContainer.vue")['default']
 export const LazyCornerSection: typeof import("../components/corner-section.vue")['default']
 export const LazyNavbar: typeof import("../components/navbar.vue")['default']

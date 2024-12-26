@@ -37,8 +37,6 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
 
 <style>
 .card-container {
-    /* background-color: red; */
-
     width: 1800px;
     max-width: 95vw;
     display: flex;
@@ -47,7 +45,6 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
     justify-content: flex-start;
     align-content: center;
     align-items: flex-start;
-
     position: absolute;
     z-index: 2;
     margin-top: 3em;
@@ -61,14 +58,14 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
 }
 
 .read-more {
-    color: black;
+    color: light-dark(var(--light-text-deemphasis-col), var(--dark-text-deemphasis-col));
     font-weight: 300;
     margin-top: 0.5em;
     display: block;
 }
 
 .time {
-    color: var(--time-col);
+    color: light-dark(var(--light-text-deemphasis-col), var(--dark-text-deemphasis-col));
 }
 
 h3.project-title {
@@ -102,31 +99,40 @@ img.thumbnail {
 .links>a {
     flex: 1 1 1;
     font-size: 0.9em;
+    color: light-dark(var(--light-text-col), var(--dark-text-col));
+
 }
 
 
 .button {
     /* background-color: #4CAF50; */
-    border: var(--button-border);
+    /* border: var(--button-border); */
 
     padding: 0.3em 0.5em;
     margin: 0.2em 0.3em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    /* font-size: 16px; */
-    /* margin: 4px 2px; */
-    /* drop shadow */
-    /* neumorphic */
-    box-shadow: light-dark(var(--light-button-shadow), var(--dark-button-shadow));
+    border-width: 1px;
+    border-style: solid;
+    border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+    box-shadow: 2px 2px 2px black,
+        -0.1px -0.1px 0.1px rgb(30, 30, 30);
     cursor: pointer;
     border-radius: 10px;
+    /* text-decoration: underline; */
+    /* text-decoration-thickness: 0.1px; */
 
 }
 
 .button:hover {
     opacity: 0.8em;
-    /* box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), -1px -1px 1px rgba(255, 255, 255, 0.55); */
+    background-color: light-dark(var(--light-button-hover), var(--dark-button-hover));
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(255, 255, 255, 0.55);
+    text-decoration-thickness: 1px;
+    text-decoration-line: underline;
+    text-decoration-thickness: 0.5px;
+    text-decoration-color: light-dark(var(--light-border-col), var(--dark-border-col));
 }
 
 .card-container>.card {

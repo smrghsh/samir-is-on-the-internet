@@ -19,12 +19,8 @@
 }
 
 .corner-heading>h1 {
-    width: 300px;
-    /* background-color: aliceblue; */
+    width: var(--section-seperator-width);
     background: none;
-    /* background-image: linear-gradient(to bottom right, rgba(245, 245, 222, 1.0), rgba(245, 245, 222, 0.0)); */
-    /* border-left: 1px solid black; */
-    /* border-top: 1px solid black; */
     border-width: 1px;
     border-style: solid;
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
@@ -36,9 +32,7 @@
     font-size: 1.5em;
     z-index: 1;
     position: absolute;
-    /* top left corner is rounded 10px */
     border-top-left-radius: 10px;
-    /* background blur 10 */
     backdrop-filter: blur(10px);
 }
 
@@ -59,10 +53,7 @@
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
     padding: 0em 1em 0em 1em;
     max-width: 1000px;
-
-    /* background-color: rgba(245, 245, 222, .82); */
     backdrop-filter: blur(10px);
-    /* drop shadow */
     filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
 
 }
@@ -82,15 +73,12 @@ li {
 }
 
 .corner-heading>div>main {
-    /* border: 1px solid black; */
-    /* width: 100vw; */
+
     background: transparent;
 }
 
 h2.project-demarcator {
-    /* background-color: rgba(245, 245, 222, .87); */
     backdrop-filter: blur(10px);
-    /* drop shadow */
     filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
 }
 </style>

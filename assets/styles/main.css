@@ -7,37 +7,44 @@
   /* bt = body text */
   /* nh = not heading */
   /* Colors, borders, shadows */
+  --dark-scene-background: rgb(30, 30, 30);
   --dark-border-col: rgb(67, 67, 67);
   --light-border-col: black;
   --dark-cs-border: 1px solid rgb(74, 74, 74);
   --light-cs-border: 1px solid white;
-  --dark-cs-bg-col: rgba(38, 38, 38, 0.57);
+  --dark-cs-bg-col: rgba(38, 38, 38, 0.87);
   --light-cs-bg-col: rgba(245, 245, 222, 0.97);
   --time-col: grey;
   --button-border: 1px black solid;
   --dark-text-col: rgb(203, 203, 203);
   --light-text-col: black;
-  --dark-button-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3),
-    -3px -3px 3px rgba(255, 255, 255, 0.55);
-  --light-button-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3),
-    -3px -3px 3px rgba(255, 255, 255, 0.55);
   --dark-button-hover: rgba(67, 67, 67, 20);
   --light-button-hover: lightskyblue;
+  --light-text-deemphasis-col: olive;
+  --dark-text-deemphasis-col: rgb(125, 125, 125);
+  --dark-link-col: rgb(125, 148, 160);
+  --dark-link-hover-col: rgb(149, 169, 179);
+  --light-link-col: rgb(0, 0, 255);
+  --link-link-hover-col: rgb(149, 169, 179);
+
   border-color: light-dark(var(--light-border-col), var(--dark-border-col));
 
-  /* Indents */
-  --squish-stop: 0.25em;
+  /* Indents and Widths */
+  --squish-stop: 0.35em;
   --one-stop: 0.7em;
   --two-stop: 1.4em;
   --three-stop: 2.1em;
+  --card-min-width: 280px;
+  --section-seperator-width: calc(var(--card-min-width) + var(--two-stop));
 }
 * {
   font-family: "Inter", sans-serif;
   color: light-dark(var(--light-text-col), var(--dark-text-col));
 }
-/* body {
-  background-color: #f5f5de;
-} */
+
+body {
+  background-color: light-dark(white, var(--dark-scene-background));
+}
 
 h1 {
   font-size: 3em;

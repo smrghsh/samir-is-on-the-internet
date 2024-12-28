@@ -21,7 +21,7 @@
       <NuxtLink class="subpage" to="/bio">
         <h3>Bio</h3>
       </NuxtLink>
-      <a class="subpage" href="CV_Samir_Ghosh-12-23-24.pdf">
+      <a class="subpage" href="CV_Samir_Ghosh-12-27-24.pdf">
         <h3>CV</h3>
       </a>
       <!-- <NuxtLink class="subpage" to="/CV"><h3>Notes</h3></NuxtLink> -->

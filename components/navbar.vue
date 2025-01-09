@@ -24,6 +24,9 @@
       <a class="subpage" href="CV_Samir_Ghosh-12-27-24.pdf">
         <h3>CV</h3>
       </a>
+      <a class="subpage" href="Resume_Samir_Ghosh-01-09-25.pdf">
+        <h3>Resume</h3>
+      </a>
       <!-- <NuxtLink class="subpage" to="/CV"><h3>Notes</h3></NuxtLink> -->
       <NuxtLink class="subpage" to="/Colophon">
         <h3>Colophon</h3>

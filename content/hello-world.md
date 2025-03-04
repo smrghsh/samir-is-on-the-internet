@@ -4,5 +4,5 @@ I believe that virtual reality and spatial computing should empower us to overco
 
 Outside of research, I serve as a community leader for the [Creative Code Collective](https://creativecodecollective.github.io/), contribute actively as a collaborator in the arts, and participate in movement communities.
 
-Reach me at <a href="mailto:hello@samir.tech">hello@samir.tech</a>
+I am open to chat about academic collaboration or work opportunities involved with cutting edge XR or 3D scientific visualization. Reach me at <a href="mailto:hello@samir.tech">hello@samir.tech</a>
 

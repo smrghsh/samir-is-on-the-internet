@@ -10,5 +10,5 @@ thumbnail: capoeira.jpg
     <!-- <a class="button" href="https://github.com/smrghsh/capoiera">GitHub</a> -->
 </div>
 
-As part of an experiment to put acrobatic and martial arts movement inside VR, Danny Andreev from [Sunburn Schematics](https://sunburnschematics.com/) created a 3D mesh of my body using photogrammetry and post-processing tools, and I used Mixamo to rig and animate capoeira movements. The ultimate goal is to be able to fight, dance, and play with this avatar using complex, expressive kicks, spins, and dodges.
+As part of an experiment to put acrobatic and martial arts movement inside VR, I created a 3D mesh of my body using photogrammetry and post-processing tools, and I used Mixamo to rig and animate capoeira movements. The ultimate goal is to be able to fight, dance, and play with this avatar using complex, expressive kicks, spins, and dodges.
 <!--more--> 

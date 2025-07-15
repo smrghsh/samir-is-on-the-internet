@@ -10,6 +10,9 @@
             alt=""></a>
         <a href="https://www.linkedin.com/in/vertexshader"><img src="/assets/images/social-icons/linkedin.svg"
             alt=""></a>
+        <a href="https://scholar.google.com/citations?hl=en&user=XJdXFN4AAAAJ"><img
+            src="/assets/images/social-icons/googlescholar.svg" alt=""></a>
+        <a href="https://orcid.org/0009-0004-4575-4954"><img src="/assets/images/social-icons/orcid.svg" alt=""></a>
       </div>
       <ColorModeSwitch />
     </div>

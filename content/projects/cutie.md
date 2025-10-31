@@ -3,6 +3,8 @@ title: Applied Cuteness Research and Cutie
 year: 2023
 displayYear: 2023
 thumbnail: cutie.png
+draft: true
+
 
 ---
 <div class="links">

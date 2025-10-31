@@ -3,6 +3,8 @@ title: Minerva
 year: 2021
 displayYear: 2021
 thumbnail: minerva.png
+draft: true
+
 ---
 <div class="links">
     <a class="button" href="https://www.instagram.com/p/CXjgFwavEw3/">Video</a>

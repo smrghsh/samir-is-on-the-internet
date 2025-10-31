@@ -6,11 +6,7 @@ const { slug } = useRoute().params;
 </script>
 
 <template>
-    <div class="return-container">
-        <NuxtLink to="/" class="back-to-home">
-            << back to home</NuxtLink>
-    </div>
-
+    <Return />
     <article class="doc">
 
         <ContentDoc :path="`/projects/${slug}`">
@@ -25,31 +21,15 @@ const { slug } = useRoute().params;
                 <h1 class="title">
                     404
                 </h1>
+                <h1>P̛̞͉̹̩̹̰̺̱̩a͇ͅg̼̮͙̦̪̘͞e̦̫͕͖͇͝͞ ͙̮̲͕̼̖͙n͏͙̝̭̟̰͖ọ̘̟͙̦̮t͏̙͔̟̝̣̼͝
+                    ҉̦̮͔F̱̀o̧͈̬͖͔̠̬͎͓u̥̩̗͓̦̗n̨̻̯̖̜̗̮̭̠͢d̡̰̺͎̤</h1>
             </template>
-            <!-- <h1>
-                    {{ doc.title }}
-                </h1>
-                <h3>{{ doc.displayYear }}</h3>
-                <ContentRenderer :value="doc"></ContentRenderer> -->
+
         </ContentDoc>
     </article>
 </template>
 
 <style>
-.return-container {
-    margin: 2em;
-    margin-top: 3em;
-    /* font-size: 1.5em; */
-    /* font-weight: 200; */
-}
-
-.back-to-home {
-    margin: 2em;
-    margin-top: 3em;
-    /* font-size: 1.5em; */
-    /* font-weight: 200; */
-}
-
 article.doc {
     width: 700px;
     max-width: 95vw;
@@ -57,8 +37,8 @@ article.doc {
 }
 
 h1.title {
-    /* font-size: 2em; */
-    font-weight: 200;
+    font-size: 4rem;
+    font-weight: 600;
     /* margin: 1em; */
 }
 

@@ -3,6 +3,8 @@ title: Colocated XR physiological signals
 year: 2024.5
 displayYear: 2024
 thumbnail: physiochi24.jpeg
+draft: true
+
 ---
 <div class="links">
     <a class="button" href="https://drive.google.com/file/d/1r-QDuNwG9wTHMV-CsnvWw8qzSnfImqq8/view?usp=sharing">CHI '24 Workshop Paper</a>

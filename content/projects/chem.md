@@ -4,6 +4,8 @@ year: 2024
 displayYear: 2024
 thumbnail: chem.png
 hasMore: true
+draft: true
+
 slug: chem
 ---
 <div class="links">

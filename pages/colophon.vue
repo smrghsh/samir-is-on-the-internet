@@ -1,5 +1,7 @@
 <template>
-  <navbar />
+  <!-- <navbar /> -->
+  <!-- <NuxtLink>back to home page</NuxtLink> -->
+  <Return></Return>
   <corner-section>
     <h1>Colophon</h1>
     <div class="not-the-heading">
@@ -8,6 +10,7 @@
     </div>
 
   </corner-section>
+
 </template>
 
 <style></style>

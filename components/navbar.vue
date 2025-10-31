@@ -3,6 +3,7 @@
     <div class="first-row">
       <NuxtLink to="/" class="home-link">
         <h1>Samir Ghosh</h1>
+        <!-- <h3>XR RESEARCH AND DEVELOPMENT</h3> -->
       </NuxtLink>
       <div class="socials">
         <a href="https://github.com/smrghsh"><img src="/assets/images/social-icons/github.svg" alt=""></a>
@@ -14,27 +15,23 @@
             src="/assets/images/social-icons/googlescholar.svg" alt=""></a>
         <a href="https://orcid.org/0009-0004-4575-4954"><img src="/assets/images/social-icons/orcid.svg" alt=""></a>
       </div>
-      <ColorModeSwitch />
+      <!-- <ColorModeSwitch /> -->
     </div>
 
     <div class="second-row">
-      <!-- <NuxtLink class="subpage" to="/research">
-        <h3>Research</h3>
-      </NuxtLink> -->
       <NuxtLink class="subpage" to="/bio">
-        <h3>Bio</h3>
+        <h3>About</h3>
       </NuxtLink>
-      <a class="subpage" href="CV-Samir-Ghosh-Aug-2025.pdf">
-        <h3>CV</h3>
-      </a>
-      <a class=" subpage" href="Resume_Samir_Ghosh-02-17-25.pdf">
-        <h3>Resume</h3>
-      </a>
-      <!-- <NuxtLink class="subpage" to="/CV"><h3>Notes</h3></NuxtLink> -->
+
+      <NuxtLink class="subpage" to="/cv-and-resume">
+        <h3>CV, Resume</h3>
+      </NuxtLink>
+
       <NuxtLink class="subpage" to="/Colophon">
         <h3>Colophon</h3>
       </NuxtLink>
     </div>
+
   </nav>
 </template>
 <style>
@@ -42,7 +39,6 @@ nav {
   backdrop-filter: blur(10px);
 
 }
-
 
 .home-link {
   text-decoration: none;
@@ -69,31 +65,44 @@ nav {
 }
 
 .home-link>h1 {
-  font-size: 2.5em;
+  font-size: 3.4rem;
 }
 
 .subpage {
   text-align: center;
   flex: 1 1 auto;
   text-decoration: none;
-  color: black;
+  /* color: black; */
   border-width: 1px;
   border-style: solid;
   border-color: light-dark(var(--light-border-col), var(--dark-border-col));
   border-top: none;
-  border-bottom: none;
+  /* border-bottom: none; */
   border-left: none;
+  border-right: none;
   max-width: 95vw;
-  transition: 300ms;
+  /* transition: 300ms; */
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: -1px;
+  /* left align */
+  text-align: left;
 }
 
 .subpage:last-child {
   border-right: none;
+  border-bottom: none;
 }
 
 .subpage:hover {
-  background-color: light-dark(var(--light-button-hover), var(--dark-button-hover));
-  opacity: .8;
+  background-color: darkslategray;
+  transition: 300ms;
+}
+
+.subpage:hover h3 {
+  transition: 300ms;
+  color: white;
+  /* background-color: light-dark(var(--light-button-hover), var(--dark-button-hover)); */
 }
 
 .socials {
@@ -109,15 +118,20 @@ nav {
 }
 
 .socials>a>img {
-  width: 1.5em;
-  height: 1.5em;
+  width: 2rem;
+  aspect-ratio: 1;
   margin: 2px;
   cursor: pointer;
   border-radius: 5px;
   border: none;
   transition: 300ms;
+}
 
-
+/* Adjust GitHub octopus size and position to align with other icons */
+.socials>a[href*="github.com"]>img {
+  transform: scale(0.85);
+  margin-top: -10%;
+  /* Pull the icon up a bit to center it better */
 }
 
 .socials>a>img:hover {
@@ -131,33 +145,34 @@ nav {
 
 .first-row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: center;
-  align-items: center;
+  align-items: flex-start;
   max-width: 1800px;
   padding-left: var(--one-stop);
-  padding-right: 2em;
+  /* padding-right: 2em; */
 }
 
 
 
 .second-row {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-content: center;
-  align-items: stretch;
+  align-items: flex-start;
   max-width: 1800px;
   background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
   backdrop-filter: blur(10px);
-  border-style: solid;
-  border-width: 1px;
-  border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+  /* border-style: solid; */
+  /* border-width: 1px; */
+  /* border-color: light-dark(var(--light-border-col), var(--dark-border-col)); */
   border-right: none;
   border-left: none;
+  margin-left: calc(var(--one-stop) + 0.2rem);
 
 }
 </style>

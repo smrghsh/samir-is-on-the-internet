@@ -2,7 +2,7 @@
 
     <ContentList :query="query" path="/projects" v-slot="{ list }">
         <div class="card-container">
-            <div v-for="project in list " :key="project._path">
+            <div v-for="project in list" :key="project._path">
 
                 <Card v-if="!project.draft">
                     <article>
@@ -49,6 +49,7 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
     z-index: 2;
     margin-top: 3em;
     margin-left: 2em;
+    padding-bottom: 10em;
 }
 
 @media (max-width: 600px) {
@@ -69,8 +70,8 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
 }
 
 h3.project-title {
-    font-size: 1.5em;
-    font-weight: 300;
+    font-size: 1em;
+    font-weight: 400;
     margin-bottom: 0em;
     margin-top: 0em;
 }

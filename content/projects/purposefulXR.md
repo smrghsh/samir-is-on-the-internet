@@ -3,8 +3,9 @@ title: PurposefulXR Workshop
 year: 2025
 displayYear: 2025
 thumbnail: purposefulXR.png
-display: true
+display: false
 hasMore: false
+
 ---
 <div class="links">
 <a class="button" href="https://smrghsh.github.io/purposefulXR/">Archival Website</a>

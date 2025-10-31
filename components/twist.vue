@@ -65,7 +65,7 @@ export default {
 
     //Palette
     // const backgroundColor = new THREE.Color("AliceBlue");
-    const backgroundColor = isDarkModeOriginally ? new THREE.Color("rgb(30, 30, 30)") : new THREE.Color("rgb(255, 253, 241)");
+    const backgroundColor = isDarkModeOriginally ? new THREE.Color("aliceblue") : new THREE.Color("aliceblue");
 
     /**
      * Base
@@ -147,7 +147,7 @@ export default {
       mesh.position.y += Math.random() * 0.1;
       mesh.position.z += Math.random() * 0.1;
       mesh.position.x += Math.random() * 0.1;
-      scene.add(mesh);
+      // scene.add(mesh);
     }
     /**
      * Renderer
@@ -167,7 +167,7 @@ export default {
       const e = clock.getElapsedTime() * 0.5;
 
       if (material.uniforms.uTime) {
-        material.uniforms.uTime.value = e;
+        //  material.uniforms.uTime.value = e;
       }
       renderer.render(scene, camera);
       window.requestAnimationFrame(tick);

@@ -3,11 +3,13 @@ title: Booksnake AR
 year: 2022
 displayYear: 2022
 thumbnail: booksnake.png
-display: true
 hasMore: false
+# draft: true
 ---
 <div class="links">
-    <a class="button" href="https://booksnake.app/">Project Page</a>
+    <a class="button" href="https://booksnake.app/">Website</a>
+        <a class="button" href="https://booksnake.app/">App Store</a>
+
 </div>
 
 Booksnake lets you explore digitized archival items in the real world using the International Image Interoperability Framework (IIIF). This open framework, used by leading galleries, libraries, and museums, allows Booksnake to download an item's image and metadata, creating a custom virtual object for you to explore.

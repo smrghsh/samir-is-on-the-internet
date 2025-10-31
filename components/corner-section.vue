@@ -29,7 +29,7 @@
     padding-left: var(--one-stop);
     padding-top: 0.4em;
     padding-bottom: 3em;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     z-index: 1;
     position: absolute;
     border-top-left-radius: 10px;
@@ -54,6 +54,7 @@
     background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
     padding: 0em 1em 0em 1em;
     max-width: 1000px;
+    min-width: 80vw;
     backdrop-filter: blur(10px);
     filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
 
@@ -70,7 +71,8 @@
 }
 
 li {
-    margin-left: 2em;
+    /* margin-left: 2rem; */
+    margin-left: var(--two-stop);
 }
 
 .corner-heading>div>main {

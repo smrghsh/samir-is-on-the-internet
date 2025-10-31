@@ -3,8 +3,9 @@ title: Hawai'i Tourism Aspects with Situated AR
 year: 2024
 displayYear: 2024
 thumbnail: hawaii-tourism-ar.png
-display: true
+display: false
 slug: hawaiiAR
+draft: true
 ---
 <div class="links">
     <a class="button" href="https://arxiv.org/abs/2404.15610">CHI '24 Workshop Paper</a>

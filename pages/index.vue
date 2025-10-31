@@ -3,10 +3,10 @@
   <div class="front-layer">
     <navbar />
     <corner-section>
-      <h1>hello world!</h1>
+      <!-- <h1>hello world!</h1> -->
       <div class="not-the-heading">
-        <ContentDoc :head="false" class="text" path="/hello-world">
-        </ContentDoc>
+        <!-- <ContentDoc :head="false" class="text" path="/hello-world">
+        </ContentDoc> -->
         <main>
           <h3 class="project-demarcator">Selected Projects</h3>
           <ProjectsContainer />
@@ -15,6 +15,7 @@
 
     </corner-section>
   </div>
+
 </template>
 
 <style>
@@ -30,11 +31,11 @@ main {
 }
 
 /* media query for small devices 600px */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   main {
     padding-left: var(--squish-stop);
   }
-}
+} */
 
 .project-demarcator {
   width: var(--section-seperator-width);
@@ -43,12 +44,12 @@ main {
   border-color: light-dark(var(--light-border-col), var(--dark-border-col));
   border-right: none;
   border-bottom: none;
-  margin-left: var(one-stop);
-  padding-left: var(--one-stop);
-  padding-top: 0.3em;
+  /* margin-left: var(--one-stop); */
+  padding-left: calc(var(--one-stop) + var(--squish-stop));
+  padding-top: var(--squish-stop);
   padding-bottom: 2em;
   margin-top: 0.5em;
-  font-size: 1.5em;
+  font-size: 1rem;
   z-index: 1;
   position: absolute;
   border-top-left-radius: 10px;

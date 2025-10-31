@@ -1,16 +1,201 @@
 <template>
-  <navbar />
+  <!-- <navbar /> -->
+  <Return></Return>
   <corner-section>
-    <h1>Bio</h1>
+
+    <h1>About Me
+    </h1>
+
     <div class="not-the-heading">
       <div class="text">
-        <ContentDoc :head="false" class="text" path="/bio">
-        </ContentDoc>
-      </div>
 
+        <select name="model" id="modelSelector">
+          <option selected value="human">Human</option>
+          <option value="chatGPT">ChatGPT 5</option>
+          <option value="gemini">Gemini 2.5 Flash</option>
+          <option value="claude">Claude Sonnet 4.5</option>
+        </select>
+        <input id="wordCountSlider" type="range" min="50" max="250" value="250" step="50">
+        <span id="wordCount">250 words</span>
+        <div id="bio">
+          <p>I'm baby authentic shabby chic mlkshk pok pok DSA pinterest messenger bag sartorial pickled dreamcatcher 3
+            wolf moon raw denim. Single-origin coffee beard man braid occupy chartreuse flannel truffaut, la croix marfa
+            banh mi small batch roof party vice kitsch meditation. Tousled kinfolk next level yuccie fashion axe neutral
+            milk hotel. Jean shorts banjo cronut, ascot pug artisan woke you probably haven't heard of them fit cray
+            schlitz gluten-free poke. Squid la croix woke bushwick etsy locavore mumblecore green juice JOMO +1 3 wolf
+            moon XOXO.</p>
+          <p>I'm baby authentic shabby chic mlkshk pok pok DSA pinterest messenger bag sartorial pickled dreamcatcher 3
+            wolf moon raw denim. Single-origin coffee beard man braid occupy chartreuse flannel truffaut, la croix marfa
+            banh mi small batch roof party vice kitsch meditation. Tousled kinfolk next level yuccie fashion axe neutral
+            milk hotel. Jean shorts banjo cronut, ascot pug artisan woke you probably haven't heard of them fit cray
+            schlitz gluten-free poke. Squid la croix woke bushwick etsy locavore mumblecore green juice JOMO +1 3 wolf
+            moon XOXO.</p>
+
+        </div>
+
+        <!--  
+        <ContentDoc :head="false" class="text" path="/bio">
+        </ContentDoc> -->
+
+      </div>
     </div>
+
 
   </corner-section>
 </template>
 
-<style></style>
+<script>
+
+export default {
+  data() {
+    return {
+      copy: {
+        human50: [
+          "Samir Ghosh is an XR researcher,and creative coder. As a PhD candidate at the SET Lab at UC Santa Cruz, he researches collaborative tools for scientific sensemaking, exploring how groups engage with complex data for topics such as wildfire mitigation and marine science.",
+        ],
+        human100: [
+          "Samir Ghosh is an XR researcher,and creative coder. As a PhD candidate at the SET Lab at UC Santa Cruz, he researches collaborative tools for scientific sensemaking, exploring how groups engage with complex data for topics such as wildfire mitigation and marine science. Outside of research, he leads the Creative Code Collective and collaborates on interactive art installations.",
+          "Previously, he was the Assistant Director of the Ahmanson Lab at the University of Southern California, where he contributed to impactful AR/VR projects in the humanities with institutions such as the Library of Congress,, and The Huntington.",
+        ],
+        human150: ["Samir Ghosh is an XR researcher,and creative coder. As a PhD candidate at the SET Lab at UC Santa Cruz, he researches collaborative tools for scientific sensemaking, exploring how groups engage with complex data for topics such as wildfire mitigation and marine science through rapid prototyping and co-design. Outside of research, he leads the Creative Code Collective and collaborates on interactive art installations.",
+          "Previously, he was the Assistant Director of the Ahmanson Lab at the University of Southern California, where he contributed to impactful AR/VR projects in the humanities with institutions such as the Library of Congress, the California Science Center, and The Huntington.",
+          "He brings experience from both industry and arts: As an XR Developer with Sarah Ciston, he created award-winning 3D experiences of the AI War Cloud project. As an intern at Intel, he worked in the maintenance of massive server farms and supercomputers."
+        ]
+        ,
+        human200: [
+          "Samir Ghosh is an XR researcher,and creative coder. As a PhD candidate at the SET Lab at UC Santa Cruz, he researches collaborative tools for scientific sensemaking, exploring how groups engage with complex data for topics such as wildfire mitigation and marine science through rapid prototyping and co-design. Outside of research, he leads the Creative Code Collective and collaborates on interactive art installations.",
+          "Previously, he was the Assistant Director of the Ahmanson Lab at the University of Southern California, where he contributed to impactful AR/VR projects in the humanities with institutions such as the Library of Congress, the California Science Center, and The Huntington.",
+          "He brings experience from both industry and arts: As an XR Developer with Sarah Ciston, he created award-winning 3D experiences of the AI War Cloud project. As an intern at Intel, he worked in the maintenance of massive server farms and supercomputers.",
+          "During his undergraduate years, he led Corpus Callosum, a tech+arts collective, scaling it to over 100 members and building systems that sustain its productions to this day. He holds dual bachelor’s degrees in computational linguistics and cognitive science from the University of Southern California."
+        ]
+        ,
+        human250: [
+          "Samir Ghosh is a California based XR researcher and creative coder specializing in rapid interface prototyping and human computer interaction. As a PhD candidate at the Social Emotional Technology Lab at UC Santa Cruz, he uses co-design to research collaborative VR tools for scientific sensemaking, using cutting edge 3D, graphics, and AI techniques to explore how groups engage with complex data. Topics include wildfire mitigation, coral restoration, and marine mammal science. Outside of research, he leads the Creative Code Collective and collaborates on interactive art installations and experimental media.",
+          "Previously, he was the Assistant Director of the Ahmanson Lab at the University of Southern California, where he contributed to impactful AR/VR projects in the humanities with institutions such as the Library of Congress, The Vatican, the California Science Center, and The Huntington.",
+          "He brings experience from both industry and arts: As an XR Developer with Sarah Ciston, he created award winning 3D visualizations of the AI War Cloud project. As an intern at Intel, he worked in the maintenance of massive server farms and supercomputers.",
+          "During his undergraduate years, he led Corpus Callosum, a tech+arts collective, scaling it to over 100 members and building systems that sustain its productions to this day. He holds dual bachelor’s degrees in computational linguistics and cognitive science from the University of Southern California.",
+          "In his free time, he practices capoeira and Latin-American dance— exploring rhythm, community, and embodied cognition as foundational aspects of human interaction.",
+        ],
+        chatGPT50: ["Samir Ghosh is a California-based XR researcher and creative coder focused on human–computer interaction and rapid interface prototyping. A PhD candidate at UC Santa Cruz, he designs collaborative VR tools integrating 3D visualization and AI. Previously at USC’s Ahmanson Lab, he led AR/VR projects for major cultural institutions."],
+        chatGPT100: ["Samir Ghosh is a California-based XR researcher and creative coder specializing in human–computer interaction and rapid interface prototyping. A PhD candidate at UC Santa Cruz, he develops collaborative VR tools that integrate 3D visualization and AI to support scientific sensemaking in domains such as wildfire mitigation and marine science.",
+          "Previously Assistant Director of the Ahmanson Lab at USC, he led AR/VR projects with institutions including the Library of Congress and the California Science Center. He also directs the Creative Code Collective and holds dual bachelor’s degrees in Computational Linguistics and Cognitive Science from the University of Southern California."
+        ],
+        chatGPT150: [
+          "Samir Ghosh is a California-based XR researcher and creative coder specializing in human–computer interaction and rapid interface prototyping. As a PhD candidate at UC Santa Cruz’s Social Emotional Technology Lab, he develops collaborative VR tools for scientific sensemaking, integrating 3D visualization and AI to support complex decision-making in areas such as wildfire mitigation and marine science.",
+          "Previously, he served as Assistant Director of the Ahmanson Lab at the University of Southern California, leading AR/VR projects with partners including the Library of Congress, The Vatican, and the California Science Center. His work combines technical fluency with creative design, spanning interactive systems, visualization, and immersive media.",
+          "He also leads the Creative Code Collective, supporting interdisciplinary projects at the intersection of art and computation. Ghosh holds dual bachelor’s degrees in Computational Linguistics and Cognitive Science from USC and continues to explore embodiment and interaction through movement arts."
+        ],
+        chatGPT200: [
+          "Samir Ghosh is a California-based XR researcher and creative coder focused on human–computer interaction and rapid interface prototyping. A PhD candidate at the Social Emotional Technology Lab at UC Santa Cruz, he uses participatory co-design to develop collaborative VR tools for scientific sensemaking. His research integrates 3D visualization and AI methods to help teams interpret complex datasets in fields such as wildfire mitigation, coral restoration, and marine mammal science. He also leads the Creative Code Collective and collaborates on interactive art installations and experimental media.",
+          "Previously, Ghosh served as Assistant Director of the Ahmanson Lab at the University of Southern California, where he helped produce AR/VR projects in partnership with institutions including the Library of Congress, The Vatican, the California Science Center, and The Huntington. His professional work spans both technical and artistic domains: as an XR developer with Sarah Ciston, he co-created the award-winning AI War Cloud visualization project, and at Intel, he supported the maintenance of high-performance computing systems.",
+          "As an undergraduate at USC, he founded and scaled Corpus Callosum, a tech–arts collective now exceeding 100 members. He holds dual bachelor’s degrees in Computational Linguistics and Cognitive Science. Outside research, he studies capoeira and Latin dance, exploring rhythm and embodied cognition."
+        ],
+        chatGPT250: [
+          "Samir Ghosh is a California-based XR researcher and creative coder whose work bridges human–computer interaction, immersive visualization, and rapid interface prototyping. A PhD candidate at the Social Emotional Technology Lab at UC Santa Cruz, he employs participatory co-design to create collaborative VR tools for scientific sensemaking. His current projects integrate advanced 3D graphics and AI techniques to help interdisciplinary teams interpret complex data in domains such as wildfire mitigation, coral restoration, and marine mammal research. Beyond academia, he directs the Creative Code Collective and contributes to interactive art installations and experimental media projects.",
+          "Previously, Ghosh served as Assistant Director of the Ahmanson Lab at the University of Southern California, developing impactful AR/VR initiatives in the digital humanities with partners including the Library of Congress, The Vatican, the California Science Center, and The Huntington. His technical and artistic practice extends across sectors: as an XR developer with Sarah Ciston, he created award-winning 3D visualizations for AI War Cloud; earlier, at Intel, he supported infrastructure maintenance for high-performance computing systems.",
+          "During his undergraduate studies at USC, Ghosh co-founded and scaled Corpus Callosum, a student tech–arts collective that continues to produce events and installations. He earned dual bachelor’s degrees in Computational Linguistics and Cognitive Science. Outside research, he practices capoeira and Latin dance, exploring embodied cognition and rhythm as essential modes of collective intelligence and human connection."
+        ],
+        gemini50: [
+          "Samir Ghosh is an XR researcher and creative coder specializing in rapid interface prototyping and HCI. A PhD candidate, he develops collaborative VR tools for scientific sensemaking using 3D graphics and AI techniques. He holds dual degrees in Cognitive Science and Computational Linguistics, providing a foundation in interaction design.",
+        ],
+        gemini100: [
+          "Samir Ghosh is an XR researcher and creative coder specializing in rapid interface prototyping and Human-Computer Interaction (HCI).",
+          "As a PhD candidate at UC Santa Cruz, he investigates collaborative VR tools for scientific sensemaking, utilizing 3D graphics and AI techniques to optimize group interaction with complex data. Previously, he directed the Ahmanson Lab at USC, where he drove high-impact AR/VR projects for partners including the Library of Congress. He holds dual degrees in Computational Linguistics and Cognitive Science, offering a strong interdisciplinary foundation in interaction design and embodied cognition."
+        ],
+        gemini150: [
+          "Samir Ghosh is an XR researcher and creative coder specializing in rapid interface prototyping and Human-Computer Interaction (HCI).",
+          "As a PhD candidate at the Social Emotional Technology Lab at UC Santa Cruz, he investigates collaborative VR tools for scientific sensemaking. His research utilizes cutting-edge 3D graphics and AI techniques to explore group dynamics in complex data visualization and collaborative design. He also leads the Creative Code Collective, applying his skills to experimental media and interactive art installations.",
+          "Samir’s professional background includes serving as the Assistant Director of the Ahmanson Lab at the University of Southern California (USC), where he drove high-impact AR/VR projects in the humanities, partnering with major cultural institutions. He also brings industry experience as an XR Developer, creating award-winning 3D visualizations.",
+          "He holds dual bachelor’s degrees from USC in Computational Linguistics and Cognitive Science, establishing an interdisciplinary foundation in human information processing and interaction design. His focus on embodied practices like Capoeira further emphasizes his interest in embodied cognition as a core element of intuitive human interaction."
+        ],
+        gemini200: [
+          "Samir Ghosh is an XR researcher and creative coder specializing in rapid interface prototyping and Human-Computer Interaction (HCI).",
+          "As a PhD candidate at the Social Emotional Technology Lab at UC Santa Cruz, he investigates collaborative VR tools for scientific sensemaking. His work uses cutting-edge 3D graphics and AI techniques to explore how groups interact with complex data across real-world applications, including wildfire mitigation and marine mammal science. He also leads the Creative Code Collective, furthering his skills in experimental media and interactive art installations.",
+          "Samir’s professional background includes serving as the Assistant Director of the Ahmanson Lab at the University of Southern California (USC). There, he drove high-impact AR/VR projects in the humanities, partnering with prestigious institutions such as the Library of Congress and The Vatican. He also brings industry experience as an XR Developer, creating award-winning 3D visualizations.",
+          "He holds dual bachelor’s degrees from USC in Computational Linguistics and Cognitive Science, establishing an interdisciplinary foundation in human information processing and interaction design. His focus on embodied practices, such as Capoeira, further emphasizes his deep interest in embodied cognition as a core element of intuitive human interaction."
+        ],
+        gemini250: [
+          "Samir Ghosh is a California-based XR researcher and creative coder specializing in rapid interface prototyping and Human-Computer Interaction (HCI).",
+          "As a PhD candidate at the Social Emotional Technology Lab at UC Santa Cruz, he investigates collaborative VR tools for scientific sensemaking. His research employs cutting-edge 3D graphics and AI techniques to explore how groups interact with and visualize complex data, driving advancements in collaboration models and immersive data engagement. Outside of his core research, he leads the Creative Code Collective, furthering his practical skills in experimental media and interactive art installations.",
+          "Previously, Samir served as the Assistant Director of the Ahmanson Lab at the University of Southern California (USC), where he contributed to high-impact AR/VR projects in the humanities and cultural heritage, partnering with institutions such as the Library of Congress and The Vatican. He also brings industry experience as an XR Developer, creating award-winning 3D visualizations.",
+          "Samir holds dual bachelor’s degrees from USC in Computational Linguistics and Cognitive Science, providing a strong interdisciplinary foundation in human information processing and interaction design. His diverse interests, including Capoeira and Latin American dance, underscore his focus on embodied cognition, rhythm, and community as foundational aspects of intuitive human interaction."
+        ],
+        claude50: ["Samir Ghosh is an XR researcher and creative coder specializing in rapid prototyping and human-computer interaction. As a PhD candidate at UC Santa Cruz's SET Lab, he develops collaborative VR tools for scientific sensemaking. Previously Assistant Director of USC's Ahmanson Lab, he built AR/VR experiences for institutions including the Library of Congress and The Vatican."
+        ],
+        claude100: ["Samir Ghosh is a California-based XR researcher and creative coder specializing in rapid interface prototyping and human-computer interaction. As a PhD candidate at UC Santa Cruz's SET Lab, he develops collaborative VR tools for scientific sensemaking using co-design methodologies and cutting-edge 3D graphics and AI techniques, exploring how groups engage with complex data in wildfire mitigation, coral restoration, and marine mammal science.",
+          "Previously, as Assistant Director of USC's Ahmanson Lab, Samir built AR/VR experiences with institutions including the Library of Congress and The Vatican. He leads the Creative Code Collective and founded Corpus Callosum, a tech+arts collective that scaled to over 100 members. He holds dual bachelor's degrees in computational linguistics and cognitive science from USC."
+        ],
+        claude150: ["Samir Ghosh is a California-based XR researcher and creative coder specializing in rapid interface prototyping and human-computer interaction. As a PhD candidate at UC Santa Cruz's SET Lab, he develops collaborative VR tools for scientific sensemaking using co-design methodologies and cutting-edge 3D graphics and AI techniques. His research explores how groups engage with complex data in domains including wildfire mitigation, coral restoration, and marine mammal science.",
+          "Previously, as Assistant Director of USC's Ahmanson Lab, Samir built AR/VR experiences with institutions including the Library of Congress and The Vatican. He leads the Creative Code Collective, collaborating on interactive installations and experimental media, and founded Corpus Callosum, a tech+arts collective that scaled to over 100 members.",
+          "Samir holds dual bachelor's degrees in computational linguistics and cognitive science from USC. His approach to HCI is informed by embodied cognition principles, shaped by his practice of capoeira and Latin-American dance."
+        ],
+        claude200: ["Samir Ghosh is a California-based XR researcher and creative coder specializing in rapid interface prototyping and human-computer interaction. As a PhD candidate at UC Santa Cruz's Social Emotional Technology Lab, he develops collaborative VR tools for scientific sensemaking using co-design methodologies and cutting-edge 3D graphics and AI techniques. His research explores how groups engage with complex data in domains including wildfire mitigation, coral restoration, and marine mammal science.",
+          "Previously, as Assistant Director of USC's Ahmanson Lab, Samir built impactful AR/VR experiences with institutions including the Library of Congress, The Vatican, and the California Science Center. His creative practice includes award-winning XR development work and leadership of the Creative Code Collective, where he collaborates on interactive installations and experimental media.",
+          "During his undergraduate years, Samir founded Corpus Callosum, a tech+arts collective that scaled to over 100 members, building sustainable production systems still in use today. He holds dual bachelor's degrees in computational linguistics and cognitive science from USC.",
+          "Samir's approach to HCI is informed by embodied cognition principles, shaped by his practice of capoeira and Latin-American dance—disciplines that explore rhythm, community, and physical interaction as foundational to human experience."
+        ],
+        claude250: ["Samir Ghosh is a California-based XR researcher and creative coder specializing in rapid interface prototyping and human-computer interaction. As a PhD candidate at UC Santa Cruz's Social Emotional Technology Lab, he uses co-design methodologies to develop collaborative VR tools for scientific sensemaking, leveraging cutting-edge 3D graphics and AI techniques to explore how groups engage with complex data in domains including wildfire mitigation, coral restoration, and marine mammal science.",
+          "Previously, as Assistant Director of USC's Ahmanson Lab, Samir contributed to impactful AR/VR projects with institutions including the Library of Congress, The Vatican, the California Science Center, and The Huntington. His industry experience includes XR development with Sarah Ciston, creating award-winning 3D visualizations for the AI War Cloud project, and infrastructure engineering at Intel maintaining enterprise-scale server farms and supercomputers.",
+          "Samir's leadership extends beyond research—he led Corpus Callosum, a tech+arts collective that scaled to over 100 members, building sustainable production systems still in use today. Currently, he leads the Creative Code Collective and collaborates on interactive art installations and experimental media. He holds dual bachelor's degrees in computational linguistics and cognitive science from USC.",
+          "His approach to HCI is informed by embodied cognition principles, shaped by his practice of capoeira and Latin-American dance, which explore rhythm, community, and physical interaction as foundational to human experience."
+        ],
+      }
+
+
+    }
+  },
+  mounted() {
+    const slider = document.getElementById('wordCountSlider');
+    const wordCount = document.getElementById('wordCount');
+    const modelSelector = document.getElementById('modelSelector');
+    const bioDiv = document.getElementById('bio');
+
+    const updateBio = () => {
+      const model = modelSelector.value;
+      const words = slider.value;
+      const key = `${model}${words}`;
+      const paragraphs = this.copy[key];
+
+      // Convert array of paragraphs to HTML
+      bioDiv.innerHTML = Array.isArray(paragraphs)
+        ? paragraphs.map(p => `<p>${p}</p>`).join('')
+        : `<p>${paragraphs}</p>`;
+      wordCount.textContent = `${words} words`;
+    };
+
+    // Update bio when slider moves
+    slider.addEventListener('input', updateBio);
+
+    // Update bio when model changes
+    modelSelector.addEventListener('change', updateBio);
+
+    // Set initial content
+    updateBio();
+  }
+}
+</script>
+
+<style>
+select {
+  background-color: var(--background-secondary);
+}
+
+.homereturn {
+  margin-left: var(--squish-stop);
+}
+
+#modelSelector {
+  margin-top: 1em;
+}
+
+#wordCountSlider {
+  margin-left: 0.2em;
+  margin-top: 0.2em;
+}
+
+#wordCount {
+  font-size: 0.8em;
+  margin-left: 0.5em;
+  /* margin-bottom: 100px; */
+}
+</style>

@@ -6,7 +6,7 @@ displayYear: ongoing
 hasMore: false
 ---
 <div class="links">
-    <!-- <a class="button" href="https://itch.io/jam/xr-brain-jam/rate/1103372">Demo</a> -->
+    <a class="button" href="https://github.com/smrghsh/coral">Source Code and Demo</a>
 
 </div>
 

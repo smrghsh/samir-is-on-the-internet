@@ -14,6 +14,8 @@
         <a href="https://scholar.google.com/citations?hl=en&user=XJdXFN4AAAAJ"><img
             src="/assets/images/social-icons/googlescholar.svg" alt=""></a>
         <a href="https://orcid.org/0009-0004-4575-4954"><img src="/assets/images/social-icons/orcid.svg" alt=""></a>
+        <a href="https://vertexshader.substack.com/"><img src="/assets/images/social-icons/substack.svg" alt=""></a>
+
       </div>
       <!-- <ColorModeSwitch /> -->
     </div>
@@ -132,6 +134,11 @@ nav {
   transform: scale(0.85);
   margin-top: -10%;
   /* Pull the icon up a bit to center it better */
+}
+
+/* Adjust Substack icon size */
+.socials>a[href*="substack.com"]>img {
+  transform: scale(0.75);
 }
 
 .socials>a>img:hover {

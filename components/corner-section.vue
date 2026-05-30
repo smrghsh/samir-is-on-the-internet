@@ -60,7 +60,7 @@
     min-width: 80vw;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    box-shadow: 2px 2px 2px darkslategrey, -0.1px -0.1px 0.1px darkslategrey;
+    box-shadow: 0 10px 40px light-dark(rgba(0,0,0,0.08), rgba(0,0,0,0.5));
 }
 
 @media (max-width: 600px) {

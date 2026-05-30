@@ -1,0 +1,1 @@
+import{_ as t}from"./BoppQckP.js";import{_ as e}from"./DlAUqK2U.js";import{o as n,c as _,b as c,w as s,a as r}from"./DWNJEP24.js";const a={},m={class:"return-container"},i=r("p",{class:"homereturn"},"← back to home",-1);function p(d,f){const o=t;return n(),_("div",m,[c(o,{to:"/"},{default:s(()=>[i]),_:1})])}const l=e(a,[["render",p]]);export{l as _};

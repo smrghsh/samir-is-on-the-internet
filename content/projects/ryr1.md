@@ -1,5 +1,5 @@
 ---
-title: Poke a Protein - Spatial Protein Explorer
+title: Spatial Protein Explorer
 year: 2025.75
 displayYear: 2026
 thumbnail: RYR1.png

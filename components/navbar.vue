@@ -44,7 +44,7 @@ nav {
   );
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid light-dark(rgba(20, 20, 20, 0.12), rgba(255, 255, 255, 0.1));
+  border-bottom: none;
 }
 
 .home-link {

@@ -10,3 +10,5 @@ hasMore: false
 </div>
 
 An XR system for wildfire resilience that uses AI to support situational awareness and community decision-making in high-risk environments. Built with multi-user spatial interfaces and real geospatial data, enabling first responders and researchers to collaboratively analyze fire behavior and evacuation planning. Presented at ACM MXR 2026 in Portland.
+
+<!--more-->

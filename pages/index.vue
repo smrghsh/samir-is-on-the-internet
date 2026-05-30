@@ -1,5 +1,6 @@
 <template>
-  <twist />
+  <twist class="bg-light-only" />
+  <diamonds class="bg-dark-only" />
   <div class="front-layer">
     <navbar />
     <corner-section>
@@ -19,6 +20,16 @@
 </template>
 
 <style>
+/* bg switching */
+.bg-dark-only { display: none; }
+:root.dark-mode .bg-dark-only { display: block; }
+:root.dark-mode .bg-light-only { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  .bg-dark-only { display: block; }
+  .bg-light-only { display: none; }
+}
+
 .front-layer {
   width: 100vw;
   position: absolute;

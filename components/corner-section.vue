@@ -45,8 +45,8 @@
 .corner-heading>.not-the-heading>.text {
     font-size: 1rem;
     font-weight: 300;
-    margin-top: 0.5em;
-    margin-left: var(--one-stop);
+    margin-top: 3em;
+    margin-left: var(--three-stop);
     border-top-left-radius: 10px;
     border-width: 1px;
     border-style: solid;

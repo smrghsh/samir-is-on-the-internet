@@ -87,7 +87,8 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(82, 101, 146);
+    background-color: #f5f3ee;
+    border: 1px solid rgba(20, 20, 20, 0.18);
     transition: .4s;
     border-radius: 30px;
 }
@@ -101,7 +102,7 @@ export default {
     left: 2px;
     bottom: 2px;
     z-index: 2;
-    background-color: white;
+    background-color: #2ea36a;
     transition: .4s;
 }
 
@@ -112,10 +113,11 @@ export default {
     z-index: 1;
     width: 24px;
     height: 24px;
+    fill: rgba(20, 20, 20, 0.7);
 }
 
 .moon svg {
-    fill: LavenderBlush;
+    fill: #5fd49a;
     position: absolute;
     top: 5px;
     left: 5px;
@@ -124,55 +126,17 @@ export default {
     height: 24px;
 }
 
-/* .switch:hover */
-.sun svg {
-    animation: rotate 15s linear infinite;
-}
-
-@keyframes rotate {
-
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* .switch:hover */
-.moon svg {
-    animation: tilt 5s linear infinite;
-}
-
-@keyframes tilt {
-
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(-10deg);
-    }
-
-    75% {
-        transform: rotate(10deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
 .input:checked+.slider {
-    background-color: rgb(16, 34, 83);
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .input:focus+.slider {
-    box-shadow: 0 0 1px #183153;
+    box-shadow: 0 0 0 2px rgba(95, 212, 154, 0.4);
 }
 
 .input:checked+.slider:before {
     transform: translateX(30px);
+    background-color: #5fd49a;
 }
 </style>

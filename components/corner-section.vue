@@ -26,7 +26,7 @@
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
     border-bottom: none;
     border-right: none;
-    padding-left: var(--one-stop);
+    padding-left: calc(var(--one-stop) + var(--squish-stop));
     padding-top: 0.4em;
     padding-bottom: 4.5rem;
     font-size: 1.25rem;

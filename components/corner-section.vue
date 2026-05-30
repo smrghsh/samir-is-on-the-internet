@@ -51,13 +51,16 @@
     border-width: 1px;
     border-style: solid;
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
-    background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
+    background-color: light-dark(
+        rgba(255, 255, 255, 0.72),
+        rgba(20, 20, 20, 0.65)
+    );
     padding: 0em 1em 0em 1em;
     max-width: 1000px;
     min-width: 80vw;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
-
 }
 
 @media (max-width: 600px) {

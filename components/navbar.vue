@@ -38,17 +38,20 @@
 </template>
 <style>
 nav {
-  backdrop-filter: blur(10px);
-
+  background-color: light-dark(
+    rgba(245, 243, 238, 0.85),
+    rgba(0, 0, 0, 0.75)
+  );
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid light-dark(rgba(20, 20, 20, 0.12), rgba(255, 255, 255, 0.1));
 }
 
 .home-link {
   text-decoration: none;
-  color: black;
-
+  color: light-dark(var(--light-text-col), var(--dark-text-col));
   flex: 0 1 auto;
   align-self: auto;
-  /* margin: 0; */
 }
 
 .home-link {
@@ -172,8 +175,7 @@ nav {
   align-content: center;
   align-items: flex-start;
   max-width: 1800px;
-  background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
-  backdrop-filter: blur(10px);
+  background-color: transparent;
   /* border-style: solid; */
   /* border-width: 1px; */
   /* border-color: light-dark(var(--light-border-col), var(--dark-border-col)); */

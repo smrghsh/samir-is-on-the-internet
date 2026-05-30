@@ -3,10 +3,10 @@
   <div class="front-layer">
     <navbar />
     <corner-section>
-      <!-- <h1>hello world!</h1> -->
+      <h1>hello world!</h1>
       <div class="not-the-heading">
-        <!-- <ContentDoc :head="false" class="text" path="/hello-world">
-        </ContentDoc> -->
+        <ContentDoc :head="false" class="text" path="/hello-world">
+        </ContentDoc>
         <main>
           <h3 class="project-demarcator">Selected Projects</h3>
           <ProjectsContainer />

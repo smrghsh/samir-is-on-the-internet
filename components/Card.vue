@@ -9,26 +9,28 @@
 <style>
 .card {
     background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     border-radius: 8px;
     border-width: 1px;
     border-style: solid;
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
     padding: 0.5rem;
-    /* margin: 1em; */
     margin: var(--squish-stop);
     margin-bottom: 8px;
     width: var(--card-min-width);
     min-height: var(--card-min-height);
     min-width: var(--card-min-width);
     max-width: 95vw;
-    flex: 1 1 1;
-    filter: drop-shadow(5px 5px 4px rgb(47, 79, 79, 0.2));
-
     flex: 0 1 auto;
     align-self: auto;
-    box-shadow: 2px 2px 2px darkslategrey,
-        -0.1px -0.1px 0.1px darkslategrey;
+    box-shadow: 0 10px 40px light-dark(rgba(0,0,0,0.08), rgba(0,0,0,0.5));
+    transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.card:hover {
+    background-color: light-dark(rgba(255,255,255,0.7), rgba(255,255,255,0.06));
+    transform: translateY(-2px);
 }
 
 /* @media (max-width: 600px) {

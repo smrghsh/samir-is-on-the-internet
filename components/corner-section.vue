@@ -43,26 +43,21 @@
 }
 
 .corner-heading>.not-the-heading>.text {
-    font-size: 1rem;
+    font-size: 1.2em;
     font-weight: 300;
     margin-top: 3em;
     margin-left: var(--three-stop);
-    border-top-left-radius: 10px;
+    border-radius: 10px;
     border-width: 1px;
     border-style: solid;
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
-    border-right: none;
-    border-bottom: none;
     background-color: light-dark(
         rgba(255, 255, 255, 0.72),
         rgba(20, 20, 20, 0.65)
     );
-    padding-left: calc(var(--one-stop) + var(--squish-stop));
-    padding-top: var(--squish-stop);
-    padding-bottom: 2em;
-    padding-right: 2em;
+    padding: 0em 1em 0em 1em;
     max-width: 1000px;
-    min-width: var(--section-seperator-width);
+    min-width: 80vw;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     box-shadow: 2px 2px 2px darkslategrey, -0.1px -0.1px 0.1px darkslategrey;

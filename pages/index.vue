@@ -47,9 +47,9 @@ main {
   /* margin-left: var(--one-stop); */
   padding-left: calc(var(--one-stop) + var(--squish-stop));
   padding-top: var(--squish-stop);
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
   margin-top: 0.5em;
-  font-size: 1rem;
+  font-size: 1.25rem;
   z-index: 1;
   position: absolute;
   border-top-left-radius: 10px;

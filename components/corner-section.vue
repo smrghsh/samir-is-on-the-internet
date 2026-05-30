@@ -28,8 +28,8 @@
     border-right: none;
     padding-left: var(--one-stop);
     padding-top: 0.4em;
-    padding-bottom: 3em;
-    font-size: 1.5rem;
+    padding-bottom: 4.5rem;
+    font-size: 1.25rem;
     z-index: 1;
     position: absolute;
     border-top-left-radius: 10px;

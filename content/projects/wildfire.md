@@ -1,6 +1,6 @@
 ---
 title: Wildfire Resilience, XR, and AI
-year: 2026.1
+year: 2025.85
 displayYear: 2026
 thumbnail: wildfire.png
 hasMore: false

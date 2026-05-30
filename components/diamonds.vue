@@ -1,32 +1,23 @@
 <template>
-  <canvas ref="diamondsCanvas" class="diamonds-bg" />
+  <div ref="container" class="diamonds-bg" />
 </template>
 
 <script>
 export default {
   mounted() {
-    const canvas = this.$refs.diamondsCanvas;
-
-    // Load p5 dynamically
     const script = document.createElement('script');
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js';
     script.onload = () => this.initSketch();
     document.head.appendChild(script);
-
-    window.addEventListener('resize', this.onResize);
   },
   beforeUnmount() {
     if (this._p5) this._p5.remove();
-    window.removeEventListener('resize', this.onResize);
   },
   methods: {
-    onResize() {
-      if (this._p5) this._p5.resizeCanvas(window.innerWidth, window.innerHeight);
-    },
     initSketch() {
       const PARTICLES_PER_RING = 120;
       let rings = [];
-      let gemType = 'sapphire';
+      const gemType = 'sapphire';
 
       const sketch = (p) => {
         const GEM = {
@@ -61,7 +52,6 @@ export default {
               cx: p.random(-500, 500), cy: p.random(-500, 500), cz: p.random(-600, 200),
               speed: p.random(0.001, 0.004) * (p.random() > 0.5 ? 1 : -1),
               phase: p.random(p.TWO_PI),
-              gem: false,
               particles: Array.from({ length: PARTICLES_PER_RING }, (_, j) => ({
                 angle: (j / PARTICLES_PER_RING) * p.TWO_PI,
                 size: p.random(1.2, 3.8),
@@ -78,7 +68,7 @@ export default {
                 ...r,
                 cx: r.cx + p.random(-18, 18), cy: r.cy + p.random(-18, 18), cz: r.cz + p.random(-18, 18),
                 radius: r.radius + p.random(-8, 8),
-                gem: true, phase: r.phase + p.random(0.05, 0.2),
+                phase: r.phase + p.random(0.05, 0.2),
                 particles: makeGemParticles(),
               });
             }
@@ -86,12 +76,8 @@ export default {
         }
 
         p.setup = () => {
-          const cnv = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
-          cnv.parent(document.body); // temp parent, we'll move it
-          // Replace the canvas element with our ref
-          const el = cnv.elt;
-          el.className = 'diamonds-bg';
-          this.$refs.diamondsCanvas.replaceWith(el);
+          let cnv = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
+          cnv.parent(this.$refs.container);
           p.colorMode(p.HSB, 360, 100, 100, 100);
           p.frameRate(60);
           p.noStroke();
@@ -137,12 +123,18 @@ export default {
 
 <style>
 .diamonds-bg {
-  width: 100vw;
-  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  outline: none;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
+  overflow: hidden;
+}
+
+.diamonds-bg canvas {
+  display: block;
+  width: 100vw !important;
+  height: 100vh !important;
 }
 </style>

@@ -5,32 +5,35 @@
   /* cs = cardstock */
   /* bt = body text */
   /* nh = not heading */
-  /* Colors, borders, shadows */
 
-  /* Potential ideas for light */
-  /* #fff7f0 */
-  /* --dark-scene-background: rgb(30, 30, 30); */
-  --dark-scene-background: aliceblue;
+  /* ── Palette from morning-pages ── */
+  /* Dark mode */
+  --dark-scene-background: #000;
+  --dark-text-col: rgba(255, 255, 255, 0.92);
+  --dark-text-deemphasis-col: rgba(255, 255, 255, 0.45);
+  --dark-border-col: rgba(255, 255, 255, 0.25);
+  --dark-cs-border: 1px solid rgba(255, 255, 255, 0.25);
+  --dark-cs-bg-col: rgba(30, 30, 30, 0.75);
+  --dark-button-hover: rgba(255, 255, 255, 0.06);
+  --dark-link-col: #5fd49a;
+  --dark-link-hover-col: rgba(95, 212, 154, 0.8);
 
-  --light-scene-background: aliceblue;
-  --dark-border-col: rgb(67, 67, 67);
-  --light-border-col: black;
-  --dark-cs-border: 1px solid rgb(74, 74, 74);
-  --light-cs-border: 1px solid white;
-  --dark-cs-bg-col: aliceblue;
-  --light-cs-bg-col: aliceblue;
-  --time-col: grey;
-  --button-border: 1px black solid;
-  --dark-text-col: darkslategrey;
-  --light-text-col: darkslategrey;
-  --dark-button-hover: rgba(67, 67, 67, 20);
-  --light-button-hover: lightskyblue;
-  --light-text-deemphasis-col: olive;
-  --dark-text-deemphasis-col: rgb(125, 125, 125);
-  --dark-link-col: rgb(125, 148, 160);
-  --dark-link-hover-col: rgb(149, 169, 179);
-  --light-link-col: aliceblue;
-  --link-link-hover-col: blue;
+  /* Light mode */
+  --light-scene-background: #f5f3ee;
+  --light-text-col: rgba(20, 20, 20, 0.92);
+  --light-text-deemphasis-col: rgba(20, 20, 20, 0.5);
+  --light-border-col: rgba(20, 20, 20, 0.18);
+  --light-cs-border: 1px solid rgba(20, 20, 20, 0.18);
+  --light-cs-bg-col: rgba(255, 255, 255, 0.45);
+  --light-button-hover: rgba(255, 255, 255, 0.7);
+  --light-link-col: #2ea36a;
+  --light-link-hover-col: rgba(46, 163, 106, 0.8);
+
+  /* Shared */
+  --green: light-dark(#2ea36a, #5fd49a);
+  --time-col: light-dark(rgba(20, 20, 20, 0.5), rgba(255, 255, 255, 0.45));
+  --button-border: 1px solid light-dark(rgba(20, 20, 20, 0.18), rgba(255, 255, 255, 0.25));
+  --link-link-hover-col: light-dark(rgba(46, 163, 106, 0.8), rgba(95, 212, 154, 0.8));
 
   border-color: light-dark(var(--light-border-col), var(--dark-border-col));
 
@@ -53,6 +56,28 @@ body {
     var(--light-scene-background),
     var(--dark-scene-background)
   );
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Ambient blobs — gives frosted glass cards something to blur against */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(600px circle at 15% 20%, rgba(95, 212, 154, 0.06), transparent 60%),
+    radial-gradient(500px circle at 85% 80%, rgba(120, 130, 255, 0.05), transparent 60%);
+}
+
+@media (prefers-color-scheme: light) {
+  body::before {
+    background:
+      radial-gradient(600px circle at 15% 20%, rgba(95, 212, 154, 0.18), transparent 60%),
+      radial-gradient(500px circle at 85% 80%, rgba(255, 200, 130, 0.18), transparent 60%);
+  }
 }
 h1,
 h2,

@@ -26,10 +26,10 @@
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
     border-bottom: none;
     border-right: none;
-    padding-left: var(--one-stop);
+    padding-left: calc(var(--one-stop) + var(--squish-stop));
     padding-top: 0.4em;
-    padding-bottom: 3em;
-    font-size: 1.5rem;
+    padding-bottom: 4.5rem;
+    font-size: 1.25rem;
     z-index: 1;
     position: absolute;
     border-top-left-radius: 10px;
@@ -51,13 +51,16 @@
     border-width: 1px;
     border-style: solid;
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
-    background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
+    background-color: light-dark(
+        rgba(255, 255, 255, 0.72),
+        rgba(20, 20, 20, 0.65)
+    );
     padding: 0em 1em 0em 1em;
     max-width: 1000px;
     min-width: 80vw;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
-
+    box-shadow: 0 10px 40px light-dark(rgba(0,0,0,0.08), rgba(0,0,0,0.5));
 }
 
 @media (max-width: 600px) {

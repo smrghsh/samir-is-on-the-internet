@@ -14,8 +14,10 @@
         <a href="https://scholar.google.com/citations?hl=en&user=XJdXFN4AAAAJ"><img
             src="/assets/images/social-icons/googlescholar.svg" alt=""></a>
         <a href="https://orcid.org/0009-0004-4575-4954"><img src="/assets/images/social-icons/orcid.svg" alt=""></a>
+        <a href="https://vertexshader.substack.com/"><img src="/assets/images/social-icons/substack.svg" alt=""></a>
+
       </div>
-      <!-- <ColorModeSwitch /> -->
+      <ColorModeSwitch />
     </div>
 
     <div class="second-row">
@@ -36,17 +38,20 @@
 </template>
 <style>
 nav {
-  backdrop-filter: blur(10px);
-
+  background-color: light-dark(
+    rgba(245, 243, 238, 0.4),
+    rgba(0, 0, 0, 0.4)
+  );
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: none;
 }
 
 .home-link {
   text-decoration: none;
-  color: black;
-
+  color: light-dark(var(--light-text-col), var(--dark-text-col));
   flex: 0 1 auto;
   align-self: auto;
-  /* margin: 0; */
 }
 
 .home-link {
@@ -134,8 +139,27 @@ nav {
   /* Pull the icon up a bit to center it better */
 }
 
+/* Adjust Substack icon size */
+.socials>a[href*="substack.com"]>img {
+  transform: scale(0.75);
+}
+
 .socials>a>img:hover {
   opacity: 0.7;
+}
+
+@media (prefers-color-scheme: dark) {
+  .socials>a>img {
+    filter: invert(1);
+  }
+}
+
+:root.dark-mode .socials>a>img {
+  filter: invert(1);
+}
+
+:root.light-mode .socials>a>img {
+  filter: none;
 }
 
 .socials>a {
@@ -165,8 +189,7 @@ nav {
   align-content: center;
   align-items: flex-start;
   max-width: 1800px;
-  background-color: light-dark(var(--light-cs-bg-col), var(--dark-cs-bg-col));
-  backdrop-filter: blur(10px);
+  background-color: transparent;
   /* border-style: solid; */
   /* border-width: 1px; */
   /* border-color: light-dark(var(--light-border-col), var(--dark-border-col)); */

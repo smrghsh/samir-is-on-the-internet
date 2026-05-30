@@ -39,24 +39,24 @@ export default {
         if (isDarkModeOriginally) {
             checkbox.checked = true;
             window.dispatchEvent(new Event('darkMode'));
+            document.documentElement.classList.add('dark-mode');
         } else {
             checkbox.checked = false;
             window.dispatchEvent(new Event('lightMode'));
+            document.documentElement.classList.add('light-mode');
         }
         checkbox.addEventListener('change', function () {
             if (this.checked) {
-                console.log('dark mode');
                 window.dispatchEvent(new Event('darkMode'));
                 window.localStorage.setItem('darkMode', true);
+                document.documentElement.classList.add('dark-mode');
+                document.documentElement.classList.remove('light-mode');
             } else {
-                console.log('light mode');
                 window.dispatchEvent(new Event('lightMode'));
                 window.localStorage.setItem('darkMode', false);
-
-
-
+                document.documentElement.classList.add('light-mode');
+                document.documentElement.classList.remove('dark-mode');
             }
-
         });
     }
 }
@@ -65,10 +65,13 @@ export default {
 /* adapted from Uiverse.io by andrew-demchenk0 */
 .switch {
     font-size: 17px;
-    position: relative;
+    position: fixed;
+    top: 16px;
+    right: 16px;
     display: inline-block;
     width: 64px;
     height: 34px;
+    z-index: 100;
 }
 
 .switch input {
@@ -119,46 +122,6 @@ export default {
     z-index: 1;
     width: 24px;
     height: 24px;
-}
-
-/* .switch:hover */
-.sun svg {
-    animation: rotate 15s linear infinite;
-}
-
-@keyframes rotate {
-
-    0% {
-        transform: rotate(0);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* .switch:hover */
-.moon svg {
-    animation: tilt 5s linear infinite;
-}
-
-@keyframes tilt {
-
-    0% {
-        transform: rotate(0deg);
-    }
-
-    25% {
-        transform: rotate(-10deg);
-    }
-
-    75% {
-        transform: rotate(10deg);
-    }
-
-    100% {
-        transform: rotate(0deg);
-    }
 }
 
 .input:checked+.slider {

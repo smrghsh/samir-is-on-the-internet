@@ -45,7 +45,7 @@ export default {
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     });
     window.addEventListener("darkMode", () => {
-      scene.background = new THREE.Color("rgb(30, 30, 30)");
+      scene.background = new THREE.Color("#000000");
       console.log("changing scene background")
       document.querySelectorAll('*').forEach(
         (el) => {
@@ -54,7 +54,7 @@ export default {
 
     });
     window.addEventListener("lightMode", () => {
-      scene.background = new THREE.Color("rgb(255, 253, 241)");
+      scene.background = new THREE.Color("#f5f3ee");
       document.querySelectorAll('*').forEach(
         (el) => {
           el.style["color-scheme"] = 'light';
@@ -65,7 +65,7 @@ export default {
 
     //Palette
     // const backgroundColor = new THREE.Color("AliceBlue");
-    const backgroundColor = isDarkModeOriginally ? new THREE.Color("aliceblue") : new THREE.Color("aliceblue");
+    const backgroundColor = isDarkModeOriginally ? new THREE.Color("#000000") : new THREE.Color("#f5f3ee");
 
     /**
      * Base

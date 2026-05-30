@@ -65,10 +65,13 @@ export default {
 /* adapted from Uiverse.io by andrew-demchenk0 */
 .switch {
     font-size: 17px;
-    position: relative;
+    position: fixed;
+    top: 16px;
+    right: 16px;
     display: inline-block;
     width: 64px;
     height: 34px;
+    z-index: 100;
 }
 
 .switch input {

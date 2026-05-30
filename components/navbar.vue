@@ -17,7 +17,7 @@
         <a href="https://vertexshader.substack.com/"><img src="/assets/images/social-icons/substack.svg" alt=""></a>
 
       </div>
-      <!-- <ColorModeSwitch /> -->
+      <ColorModeSwitch />
     </div>
 
     <div class="second-row">

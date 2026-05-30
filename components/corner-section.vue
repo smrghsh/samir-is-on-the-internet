@@ -29,7 +29,8 @@
     padding-left: var(--one-stop);
     padding-top: 0.4em;
     padding-bottom: 3em;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: 100;
     z-index: 1;
     position: absolute;
     border-top-left-radius: 10px;

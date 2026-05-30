@@ -1,5 +1,5 @@
 <template>
-  <canvas ref="canvas" class="diamonds-bg" />
+  <div />
 </template>
 
 <script>
@@ -9,6 +9,7 @@ export default {
   },
   beforeUnmount() {
     if (this._p5) this._p5.remove();
+    if (this._el && this._el.parentNode) this._el.parentNode.removeChild(this._el);
   },
   methods: {
     loadP5(cb) {
@@ -19,9 +20,9 @@ export default {
       document.head.appendChild(s);
     },
     initSketch() {
-      const container = this.$refs.canvas.parentNode;
       const PARTICLES_PER_RING = 120;
       let rings = [];
+      const self = this;
 
       const sketch = (p) => {
         function makeGemParticles() {
@@ -31,7 +32,6 @@ export default {
             hue: p.random(210, 240),
             sat: p.random(70, 95),
             bri: p.random(75, 100),
-            isOpal: false,
             flickerSpeed: p.random(0.02, 0.09),
             flickerPhase: p.random(p.TWO_PI),
           }));
@@ -58,18 +58,22 @@ export default {
             };
             rings.push(r);
             if (i % 3 === 0) {
-              rings.push({ ...r, cx: r.cx + p.random(-18, 18), cy: r.cy + p.random(-18, 18),
-                radius: r.radius + p.random(-8, 8), phase: r.phase + p.random(0.05, 0.2),
-                particles: makeGemParticles() });
+              rings.push({ ...r,
+                cx: r.cx + p.random(-18, 18), cy: r.cy + p.random(-18, 18),
+                radius: r.radius + p.random(-8, 8),
+                phase: r.phase + p.random(0.05, 0.2),
+                particles: makeGemParticles(),
+              });
             }
           }
         }
 
         p.setup = () => {
           let cnv = p.createCanvas(p.windowWidth, p.windowHeight, p.WEBGL);
-          // Replace our placeholder canvas with the p5 canvas
-          this.$refs.canvas.replaceWith(cnv.elt);
-          cnv.elt.className = 'diamonds-bg';
+          // Mount directly to body, same as twist canvas
+          document.body.appendChild(cnv.elt);
+          self._el = cnv.elt;
+          cnv.elt.style.cssText = 'position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;display:block;outline:none;';
           p.colorMode(p.HSB, 360, 100, 100, 100);
           p.frameRate(60);
           p.noStroke();
@@ -109,16 +113,3 @@ export default {
   },
 };
 </script>
-
-<style>
-.diamonds-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  display: block;
-  outline: none;
-}
-</style>

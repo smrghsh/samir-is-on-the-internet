@@ -43,24 +43,29 @@
 }
 
 .corner-heading>.not-the-heading>.text {
-    font-size: 1.2em;
+    font-size: 1rem;
     font-weight: 300;
-    margin-top: 3em;
-    margin-left: var(--three-stop);
-    border-radius: 10px;
+    margin-top: 0.5em;
+    margin-left: var(--one-stop);
+    border-top-left-radius: 10px;
     border-width: 1px;
     border-style: solid;
     border-color: light-dark(var(--light-border-col), var(--dark-border-col));
+    border-right: none;
+    border-bottom: none;
     background-color: light-dark(
         rgba(255, 255, 255, 0.72),
         rgba(20, 20, 20, 0.65)
     );
-    padding: 0em 1em 0em 1em;
+    padding-left: calc(var(--one-stop) + var(--squish-stop));
+    padding-top: var(--squish-stop);
+    padding-bottom: 2em;
+    padding-right: 2em;
     max-width: 1000px;
-    min-width: 80vw;
+    min-width: var(--section-seperator-width);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    filter: drop-shadow(5px 5px 4px rgba(0, 0, 0, 0.25));
+    box-shadow: 2px 2px 2px darkslategrey, -0.1px -0.1px 0.1px darkslategrey;
 }
 
 @media (max-width: 600px) {

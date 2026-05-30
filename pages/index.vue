@@ -49,7 +49,8 @@ main {
   padding-top: var(--squish-stop);
   padding-bottom: 2em;
   margin-top: 0.5em;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: 100;
   z-index: 1;
   position: absolute;
   border-top-left-radius: 10px;

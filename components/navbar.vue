@@ -148,6 +148,20 @@ nav {
   opacity: 0.7;
 }
 
+@media (prefers-color-scheme: dark) {
+  .socials>a>img {
+    filter: invert(1);
+  }
+}
+
+:root.dark-mode .socials>a>img {
+  filter: invert(1);
+}
+
+:root.light-mode .socials>a>img {
+  filter: none;
+}
+
 .socials>a {
   flex: 0 1 auto;
   align-self: auto;

@@ -39,24 +39,24 @@ export default {
         if (isDarkModeOriginally) {
             checkbox.checked = true;
             window.dispatchEvent(new Event('darkMode'));
+            document.documentElement.classList.add('dark-mode');
         } else {
             checkbox.checked = false;
             window.dispatchEvent(new Event('lightMode'));
+            document.documentElement.classList.add('light-mode');
         }
         checkbox.addEventListener('change', function () {
             if (this.checked) {
-                console.log('dark mode');
                 window.dispatchEvent(new Event('darkMode'));
                 window.localStorage.setItem('darkMode', true);
+                document.documentElement.classList.add('dark-mode');
+                document.documentElement.classList.remove('light-mode');
             } else {
-                console.log('light mode');
                 window.dispatchEvent(new Event('lightMode'));
                 window.localStorage.setItem('darkMode', false);
-
-
-
+                document.documentElement.classList.add('light-mode');
+                document.documentElement.classList.remove('dark-mode');
             }
-
         });
     }
 }

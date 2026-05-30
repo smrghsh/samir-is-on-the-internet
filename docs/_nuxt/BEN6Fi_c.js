@@ -1,1 +1,0 @@
-import{_ as o}from"./DlAUqK2U.js";import{o as r,c as n,r as t}from"./DWNJEP24.js";const c={},s={class:"corner-heading"};function _(e,a){return r(),n("div",s,[t(e.$slots,"default")])}const i=o(c,[["render",_]]);export{i as _};

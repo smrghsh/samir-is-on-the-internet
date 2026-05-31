@@ -38,12 +38,7 @@
 </template>
 <style>
 nav {
-  background-color: light-dark(
-    rgba(245, 243, 238, 0.4),
-    rgba(0, 0, 0, 0.4)
-  );
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  background-color: transparent;
   border-bottom: none;
 }
 

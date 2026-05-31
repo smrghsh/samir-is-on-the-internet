@@ -1,5 +1,5 @@
 <template>
-  <twist />
+  <topo />
   <div class="front-layer">
     <navbar />
     <corner-section>
@@ -53,6 +53,5 @@ main {
   z-index: 1;
   position: absolute;
   border-top-left-radius: 10px;
-  backdrop-filter: blur(10px);
 }
 </style>

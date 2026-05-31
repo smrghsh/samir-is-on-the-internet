@@ -33,7 +33,6 @@
     z-index: 1;
     position: absolute;
     border-top-left-radius: 10px;
-    backdrop-filter: blur(15px);
 }
 
 .corner-heading>.not-the-heading {

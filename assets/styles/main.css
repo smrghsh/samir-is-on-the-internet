@@ -1,9 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-:root {
-  color-scheme: light dark;
-}
-:root.dark-mode  { color-scheme: dark; }
-:root.light-mode { color-scheme: light; }
+/* Fonts, color-scheme, and theme classes now live ONLY in v8-tokens.css
+   (mirroring the reference's single site.css). This file keeps just the legacy
+   --*-col / --*-stop / --card-* vars still referenced by subpage chrome
+   (corner-section, navbar, Return) + a couple of base content rules. */
 
 :root {
   /* fg = frosted glass */
@@ -51,80 +49,19 @@
   --card-min-height: 420px;
   --section-seperator-width: calc(var(--card-min-width) + var(--two-stop));
 }
-* {
-  font-family: "Nunito Sans", sans-serif;
-  color: light-dark(var(--light-text-col), var(--dark-text-col));
-}
+/* Removed to mirror the reference (single site.css):
+   - the universal `* { font-family; color }` rule (it leaked into lil-gui and
+     fought v8-tokens; body inheritance handles text now),
+   - `body { background-color }` (v8-tokens forces transparent so the canvas
+     shows through — the opaque cream was dead code),
+   - the full-viewport `body::before` ambient-blob overlay (redundant with the
+     live WebGL terrain),
+   - the h1-h3 font overrides (v8-tokens.css owns heading type).
+   Theme color-scheme + tokens are v8-tokens.css's job. */
+body { overflow-x: hidden; }
 
-body {
-  background-color: light-dark(
-    var(--light-scene-background),
-    var(--dark-scene-background)
-  );
-  min-height: 100vh;
-  overflow-x: hidden;
-}
-
-/* Ambient blobs — gives frosted glass cards something to blur against */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(600px circle at 15% 20%, rgba(95, 212, 154, 0.06), transparent 60%),
-    radial-gradient(500px circle at 85% 80%, rgba(120, 130, 255, 0.05), transparent 60%);
-}
-
-@media (prefers-color-scheme: light) {
-  body::before {
-    background:
-      radial-gradient(600px circle at 15% 20%, rgba(95, 212, 154, 0.18), transparent 60%),
-      radial-gradient(500px circle at 85% 80%, rgba(255, 200, 130, 0.18), transparent 60%);
-  }
-}
-h1,
-h2,
-h3 {
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 100;
-  color: light-dark(var(--light-text-col), var(--dark-text-col));
-}
-
-/* h2,
-h3 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 100;
-  color: light-dark(var(--light-text-col), var(--dark-text-col));
-} */
-h1 {
-  font-size: 4rem;
-  font-weight: 200;
-  margin: 0.2rem;
-}
-
-p,
-ul,
-li {
-  font-size: 1rem;
-  font-weight: 300;
-}
-ul {
-  /* margin-left: var(--one-stop); */
-  padding-inline-start: 0%;
-}
-li {
-  /* margin-left: var(--one-stop); */
-  margin-bottom: 0.5em;
-  /* line-height: 0.95rem; */
-}
-/* on mobile, h1 is 2em */
-@media (max-width: 600px) {
-  h1 {
-    font-size: 4rem;
-  }
-  p {
-    font-size: 0.9em;
-  }
-}
+/* Removed for reference parity: global `p,ul,li { font-size:1rem }`,
+   `ul { padding-inline-start:0 }`, `li { margin-bottom:0.5em }`, and the
+   `@media(max-width:600px){ h1; p }` overrides. The reference (single site.css)
+   has none of these — UA sizing + body weight 300 is the baseline, and the hero
+   name uses clamp() for responsive sizing. */

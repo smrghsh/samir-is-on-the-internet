@@ -201,9 +201,9 @@ watch([model, words], () => {
   z-index: -1;
   inset: 3vh -2rem 2vh -140px;
   background: linear-gradient(95deg,
-    rgba(245, 243, 238, 0.42) 0%,
-    rgba(245, 243, 238, 0.40) 55%,
-    rgba(245, 243, 238, 0.20) 78%,
+    rgba(245, 243, 238, 0.5) 0%,
+    rgba(245, 243, 238, 0.48) 55%,
+    rgba(245, 243, 238, 0.28) 78%,
     rgba(245, 243, 238, 0) 100%);
   filter: blur(14px);
   pointer-events: none;

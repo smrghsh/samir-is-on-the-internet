@@ -13,3 +13,4 @@ This is the eighth major version of a site I've been iterating on for more than 
 This website uses [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) and [Raleway](https://fonts.google.com/specimen/Raleway), designed to be legible across 2D and XR devices.
 
 The [source code](https://github.com/smrghsh/samir-is-on-the-internet) is on GitHub. Built with Vue.js + Vite via [Nuxt](https://nuxt.com/), hosted on Cloudflare Pages. (Thanks for the config help, [Leo](https://github.com/TheInnerParty).)
+s

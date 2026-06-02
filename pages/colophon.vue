@@ -16,7 +16,6 @@
            to change copy. -->
       <div class="prose-body glass">
         <ContentDoc :head="false" path="/colophon" />
-        <p class="sig">samir.tech · v8 · the terrain is a live three.js contour map — open the panel and play.</p>
       </div>
     </div>
   </div>
@@ -56,14 +55,21 @@
   font-size: 1.12rem; line-height: 1.7; font-weight: 300; color: var(--text);
   margin: 0 0 1.3rem; max-width: 60ch;
 }
-.prose-body :deep(strong) {
+/* big Raleway statement line — scoped to a <strong> that IS its own paragraph
+   (`<p><strong>…</strong></p>`), so the bold lead-ins inside list items render
+   as normal bold instead of inheriting this outsized treatment. */
+.prose-body :deep(p > strong) {
   font-family: 'Raleway', sans-serif; font-weight: 300; font-size: 1.32rem;
   color: var(--text); display: inline-block; margin: 0.4rem 0;
 }
+/* horizontal rule from `---` — a quiet contour-colored divider, not the UA default. */
+.prose-body :deep(hr) { border: none; border-top: 1px solid var(--contour-minor); margin: 1.8rem 0; }
 .prose-body :deep(ul) { list-style: none; padding: 0; margin: 0 0 1.6rem; display: flex; flex-direction: column; gap: 0.9rem; }
 .prose-body :deep(li) {
   position: relative; padding-left: 1.6rem; font-size: 1.05rem; line-height: 1.6;
-  color: var(--text-dim); max-width: 58ch;
+  /* light mode reads fine at the dim value; dark mode at 0.55 white is too
+     murky on the glass card, so lighten just the dark side to 0.82. */
+  color: light-dark(rgba(20, 24, 22, 0.55), rgba(255, 255, 255, 0.82)); max-width: 58ch;
 }
 /* contour-tick bullet, echoing the map motif */
 .prose-body :deep(li)::before {
@@ -72,11 +78,6 @@
 }
 .prose-body :deep(a) { color: var(--link); text-underline-offset: 3px; }
 .prose-body :deep(a:hover) { text-decoration-thickness: 2px; }
-
-.sig {
-  font-family: ui-monospace, monospace; font-size: 0.74rem; color: var(--text-faint);
-  letter-spacing: 0.06em; border-top: 1px solid var(--contour-minor); padding-top: 1.2rem; margin-top: 1rem;
-}
 </style>
 
 <!-- Light-mode overrides as GLOBAL `:root.theme-light` rules in an UNSCOPED

@@ -55,7 +55,10 @@ main {
 
 .bio {
   max-width: 880px;
-  margin-bottom: 7vh;
+  /* small gap clear of the hero's light-mode paper scrim (it bleeds ~2.4rem
+     below the hero) without floating too far from it. */
+  margin-top: 1.2rem;
+  margin-bottom: 3.5vh;
 }
 .bio-card { border-radius: 16px; }
 /* mirror the project cards' uniform inset (.card { padding: 0.9rem }) on every

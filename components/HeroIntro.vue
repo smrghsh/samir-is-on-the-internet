@@ -4,7 +4,8 @@
       <p class="kicker mono">// hello world</p>
       <h1 class="name">Samir Ghosh</h1>
       <p class="tagline thesis">
-        I research <em>spatial tools</em> for working with complex, spatial data.
+        I research <em>spatial tools</em> for complex 3D data, and develop <em>immersive XR</em> for cutting-edge
+        products and creative works.
       </p>
       <SocialRow class="hero-socials" />
       <MainNav />
@@ -20,12 +21,18 @@
 
 <style scoped>
 .hero {
-  min-height: 52vh;
-  display: flex;
-  align-items: center;
-  padding: 5.5vh 0 2vh var(--three);
+  /* No min-height / flex-centering. Those forced the hero to 52vh; at narrow
+     widths the content is far shorter than that, so the surplus height became a
+     huge gap between the nav and "about me." Just pad it and let it hug its
+     content — identical rhythm at every width. (At full width the content is
+     already ~viewport-tall on its own, so nothing visibly changes there.) */
+  padding: 2.75vh 0 2vh var(--three);
 }
-.hero-inner { max-width: 660px; position: relative; }
+
+.hero-inner {
+  max-width: 660px;
+  position: relative;
+}
 
 .kicker {
   font-size: 0.95rem;
@@ -33,6 +40,7 @@
   letter-spacing: 0.04em;
   margin: 0 0 0.4rem;
 }
+
 .name {
   font-family: 'Raleway', sans-serif;
   font-weight: 100;
@@ -42,6 +50,7 @@
   line-height: 0.96;
   color: var(--text);
 }
+
 .tagline.thesis {
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
@@ -50,14 +59,20 @@
   line-height: 1.32;
   max-width: 600px;
   text-wrap: balance;
-  margin: 1rem 0 1.6rem;
+  margin: 1rem 0 0.8rem;
 }
-.tagline.thesis em { font-style: normal; color: var(--link); }
+
+.tagline.thesis em {
+  font-style: normal;
+  color: var(--link);
+}
 
 /* NB: do NOT set `display` here — this class lands on SocialRow's root <nav>,
    and `display: block` would override SocialRow's own `.socials { display: flex }`
    (same element, equal specificity), stacking the icons vertically. */
-.hero-socials { margin-bottom: 1.8rem; }
+.hero-socials {
+  margin-bottom: 0.9rem;
+}
 
 /* ── light mode ─────────────────────────────────────────────────────
    The prototype put a blurred "paper scrim" behind the hero for legibility.

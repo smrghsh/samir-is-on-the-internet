@@ -205,7 +205,7 @@ export class TopoTerrain {
 
     const renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true })
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-    renderer.setSize(sizes.w, sizes.h)
+    renderer.setSize(sizes.w, sizes.h, false) // false: don't overwrite the canvas's CSS size (100lvh) with a px value — let CSS own the display box, size only the buffer
     this.renderer = renderer
 
     const scene = new THREE.Scene()
@@ -327,7 +327,7 @@ export class TopoTerrain {
       const w = this.canvas.clientWidth || window.innerWidth, h = this.canvas.clientHeight || window.innerHeight
       this.camera.aspect = w / h
       this.camera.updateProjectionMatrix()
-      this.renderer.setSize(w, h)
+      this.renderer.setSize(w, h, false) // keep CSS (100lvh) as the display size
       this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     }
     window.addEventListener('resize', this._onResize)

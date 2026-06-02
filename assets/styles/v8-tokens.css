@@ -88,6 +88,13 @@ html, body {
   text-size-adjust: 100%;
 }
 
+/* Solid mode-matched backdrop behind the fixed WebGL canvas: body stays
+   transparent so the terrain shows through, but html carries --bg so any strip
+   the canvas doesn't cover on iOS (the bottom toolbar / safe area) blends to
+   cream (light) / black (dark) instead of flashing white. Also kills the white
+   load-flash before the canvas paints. */
+html { background-color: var(--bg); }
+
 h1, h2, h3, h4, .display {
   font-family: "Raleway", sans-serif;
   font-weight: 100;                 /* Raleway Thin */

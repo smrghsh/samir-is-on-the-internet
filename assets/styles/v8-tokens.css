@@ -1,0 +1,178 @@
+/* v8-tokens.css — global design tokens for samir.tech v8 "Instrument".
+   Register in nuxt.config.ts AFTER normalize.css and main.css:
+     css: ['assets/styles/normalize.css', 'assets/styles/main.css', 'assets/styles/v8-tokens.css']
+   These vars are namespaced to not clash with the existing --*-col vars in
+   main.css. Day/night is driven by .theme-dark / .theme-light on <html>
+   (set by Topo.vue), which flips color-scheme so light-dark() resolves. */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..900;1,6..12,200..900&family=Raleway:ital,wght@0,100..800;1,100..800&display=swap");
+
+:root {
+  color-scheme: light dark;
+
+  /* ── Dark mode ── */
+  --dark-bg:            #000000;
+  --dark-text:          rgba(255, 255, 255, 0.92);
+  --dark-text-dim:      rgba(255, 255, 255, 0.55);
+  --dark-text-faint:    rgba(255, 255, 255, 0.38);
+  --dark-border:        rgba(255, 255, 255, 0.22);
+  --dark-glass:         rgba(18, 22, 24, 0.55);
+  --dark-glass-strong:  rgba(14, 18, 20, 0.72);
+  --dark-glass-border:  rgba(255, 255, 255, 0.16);
+  --dark-glass-sheen:   rgba(255, 255, 255, 0.28);
+  --dark-link:          #7fd49a;
+  --dark-contour-index: rgba(155, 232, 184, 0.85);
+  --dark-contour-minor: rgba(95, 212, 154, 0.40);
+
+  /* ── Light mode ── */
+  --light-bg:           #f5f3ee;
+  --light-text:         rgba(20, 24, 22, 0.92);
+  --light-text-dim:     rgba(20, 24, 22, 0.55);
+  --light-text-faint:   rgba(20, 24, 22, 0.4);
+  --light-border:       rgba(20, 40, 30, 0.18);
+  --light-glass:        rgba(255, 255, 255, 0.42);
+  --light-glass-strong: rgba(255, 255, 255, 0.6);
+  --light-glass-border: rgba(255, 255, 255, 0.7);
+  --light-glass-sheen:  rgba(255, 255, 255, 0.85);
+  --light-link:         #2e7a4d;
+  --light-contour-index:rgba(26, 74, 48, 0.8);
+  --light-contour-minor:rgba(46, 122, 77, 0.45);
+
+  /* ── Resolved via light-dark() ── */
+  --bg:            light-dark(var(--light-bg), var(--dark-bg));
+  --text:          light-dark(var(--light-text), var(--dark-text));
+  --text-dim:      light-dark(var(--light-text-dim), var(--dark-text-dim));
+  --text-faint:    light-dark(var(--light-text-faint), var(--dark-text-faint));
+  --border:        light-dark(var(--light-border), var(--dark-border));
+  --glass:         light-dark(var(--light-glass), var(--dark-glass));
+  --glass-strong:  light-dark(var(--light-glass-strong), var(--dark-glass-strong));
+  --glass-border:  light-dark(var(--light-glass-border), var(--dark-glass-border));
+  --glass-sheen:   light-dark(var(--light-glass-sheen), var(--dark-glass-sheen));
+  --link:          light-dark(var(--light-link), var(--dark-link));
+  --contour-index: light-dark(var(--light-contour-index), var(--dark-contour-index));
+  --contour-minor: light-dark(var(--light-contour-minor), var(--dark-contour-minor));
+
+  /* spacing scale */
+  --squish: 0.35em;
+  --one:    0.7em;
+  --two:    1.4em;
+  --three:  2.1em;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root.theme-dark  { color-scheme: dark; }
+:root.theme-light { color-scheme: light; }
+
+/* parity with the reference's site.css — without this, padded/bordered boxes
+   (.card width+padding, .glass, .card-body padding) compute wider than the
+   reference and shift the layout. */
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;          /* WebGL canvas (Topo.vue) shows through */
+  color: var(--text);
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .display {
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;                 /* Raleway Thin */
+  letter-spacing: 0.01em;
+  margin: 0;
+  color: var(--text);
+}
+
+a { color: var(--link); }
+.mono { font-family: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace; }
+
+/* ── Liquid glass panel ──────────────────────────────────────────── */
+.glass {
+  position: relative;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(var(--gblur, 16px)) saturate(1.35);
+  backdrop-filter: blur(var(--gblur, 16px)) saturate(1.35);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  box-shadow:
+    0 18px 50px light-dark(rgba(20,40,30,0.12), rgba(0,0,0,0.55)),
+    inset 0 1px 0 var(--glass-sheen),
+    inset 0 0 0 0.5px light-dark(rgba(255,255,255,0.3), rgba(255,255,255,0.05));
+}
+.glass-strong { background: var(--glass-strong); }
+/* specular top edge — the "liquid glass" catch-light */
+.glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg,
+      var(--glass-sheen) 0%, transparent 30%, transparent 70%,
+      light-dark(rgba(255,255,255,0.4), rgba(255,255,255,0.08)) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.9; /* specular sheen — full strength in dark mode */
+}
+/* Light mode: dim the sheen so glass reads softer. This MUST be a global rule
+   (not a per-component `:global(.theme-light) .card::after`): Vue scoped CSS
+   mis-applied that opacity onto <html class="theme-light"> itself, dropping the
+   whole page to 40% opacity in light mode — that was the "white sheet". */
+:root.theme-light .glass::after { opacity: 0.4; }
+/* Soft card/bio-card border in light mode (reference page rule) instead of the
+   bright-white --glass-border, so the outline doesn't glare over the terrain.
+   GLOBAL rule, not a Vue-scoped :global() one. */
+:root.theme-light .card,
+:root.theme-light .bio-card { border-color: rgba(20, 40, 30, 0.10); }
+/* Hero name a touch heavier in light mode for legibility. Global rule, NOT a
+   Vue-scoped :global() one (same mis-scoping hazard as the sheen above). */
+:root.theme-light .hero-inner .name { font-weight: 200; }
+
+/* Light-mode "paper scrim" behind the hero column — a single soft wash for
+   legibility over the terrain, flush to the left window edge and fading right
+   (verbatim values from the reference's lib/site.css). MUST be a GLOBAL rule:
+   as a Vue-scoped `:global(.theme-light) .hero-inner::before { filter: blur }`
+   it was mis-applied onto <html class="theme-light"> and blurred the whole
+   page. Global keeps filter:blur on the pseudo-element where it belongs. */
+:root.theme-light .hero-inner { position: relative; }
+:root.theme-light .hero-inner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2.4rem -2rem -2.4rem -140px;
+  background: linear-gradient(95deg,
+    rgba(245, 243, 238, 0.42) 0%,
+    rgba(245, 243, 238, 0.4) 55%,
+    rgba(245, 243, 238, 0.2) 78%,
+    rgba(245, 243, 238, 0) 100%);
+  filter: blur(14px);
+  border-radius: 0;
+  pointer-events: none;
+}
+
+/* ── Contour-bracket motif ───────────────────────────────────────────
+   High-contrast "index" line at the corner with parallel "minor" contour
+   lines stepping inward — reads as a contour map, not a stray border.
+   Apply .contour-frame to any block you want bracketed (e.g. a section
+   heading wrapper). */
+.contour-frame {
+  position: relative;
+  border-top: 1.5px solid var(--contour-index);
+  border-left: 1.5px solid var(--contour-index);
+  border-top-left-radius: 14px;
+  box-shadow:
+    inset 8px 8px 0 -7px var(--contour-minor),
+    inset 15px 15px 0 -14px var(--contour-minor),
+    inset 22px 22px 0 -21px var(--contour-minor);
+}
+.contour-frame-br {
+  border-bottom: 1.5px solid var(--contour-index);
+  border-right: 1.5px solid var(--contour-index);
+  border-bottom-right-radius: 14px;
+}

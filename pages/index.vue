@@ -1,57 +1,83 @@
 <template>
-  <topo />
-  <div class="front-layer">
-    <navbar />
-    <corner-section>
-      <h1>hello world!</h1>
-      <div class="not-the-heading">
-        <ContentDoc :head="false" class="text" path="/hello-world">
-        </ContentDoc>
-        <main>
-          <h3 class="project-demarcator">Selected Projects</h3>
-          <ProjectsContainer />
-        </main>
-      </div>
+  <div>
+    <!-- living contour-map backdrop (z-index 0) -->
+    <Topo />
 
-    </corner-section>
+    <!-- the "open me!" lil-gui panel: night toggle + terrain params -->
+    <ClientOnly>
+      <SceneControls />
+    </ClientOnly>
+
+    <!-- content (z-index 2) -->
+    <div class="front-layer">
+      <HeroIntro />
+      <main>
+        <section class="bio">
+          <p class="section-label">about me</p>
+          <div class="glass bio-card">
+            <div class="card-body prose">
+              <ContentDoc :head="false" path="/hello-world" />
+            </div>
+          </div>
+        </section>
+
+        <ProjectsContainer />
+      </main>
+    </div>
   </div>
-
 </template>
 
-<style>
+<script setup lang="ts">
+// Homepage composition for v8 "Instrument".
+// Topo + SceneControls are client-side (WebGL / lil-gui); ContentDoc pulls
+// the bio copy from content/hello-world.md, unchanged.
+</script>
+
+<style scoped>
 .front-layer {
-  width: 100vw;
-  position: absolute;
+  position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 main {
-  position: relative;
-  padding-left: var(--one-stop);
+  padding: 0 var(--three) 12vh;
 }
 
-/* media query for small devices 600px */
-/* @media (max-width: 600px) {
-  main {
-    padding-left: var(--squish-stop);
-  }
-} */
-
-.project-demarcator {
-  width: var(--section-seperator-width);
-  border-width: 1px;
-  border-style: solid;
-  border-color: light-dark(var(--light-border-col), var(--dark-border-col));
-  border-right: none;
-  border-bottom: none;
-  /* margin-left: var(--one-stop); */
-  padding-left: calc(var(--one-stop) + var(--squish-stop));
-  padding-top: var(--squish-stop);
-  padding-bottom: 2rem;
-  margin-top: 0.5em;
-  font-size: 1.25rem;
-  z-index: 1;
-  position: absolute;
-  border-top-left-radius: 10px;
+.section-label {
+  font-family: ui-monospace, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin: 0 0 1rem 0.2rem;
 }
+
+.bio {
+  max-width: 880px;
+  margin-bottom: 7vh;
+}
+.bio-card { border-radius: 16px; }
+/* mirror the project cards' uniform inset (.card { padding: 0.9rem }) on every
+   side, so the about-me text sits the same distance from each glass edge as the
+   card content does — no oversized top/bottom gaps. */
+.bio .card-body { padding: 0.9rem; }
+.bio :deep(p) {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0 0 0.9rem;
+}
+.bio :deep(p:last-child) { margin-bottom: 0; }
+.bio :deep(a) { color: var(--link); text-underline-offset: 3px; }
+.bio :deep(a:hover) { text-decoration-thickness: 2px; }
+</style>
+
+<!-- Light-mode legibility nudge for the section labels (they sit over the
+     terrain). GLOBAL `:root.theme-light` rule in an UNSCOPED block — never a
+     Vue-scoped `:global(.theme-light)` (that mis-scopes onto <html>). One rule
+     covers this page's "about me" and ProjectsContainer's "selected projects"
+     (same .section-label class). -->
+<style>
+:root.theme-light .section-label { color: rgba(20, 24, 22, 0.62); }
 </style>

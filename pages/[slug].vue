@@ -30,13 +30,11 @@ const { slug } = useRoute().params
         <template #not-found>
           <header class="intro">
             <p class="kicker">// 404</p>
-            <h1 class="name glitch" aria-label="Page not found">P̛̞͉̹̩̹̰̺̱̩a͇ͅg̼̮͙̦̪̘͞e̦̫͕͖͇͝͞ ͙̮̲͕̼̖͙n͏͙̝̭̟̰͖ọ̘̟͙̦̮t͏̙͔̟̝̣̼͝
-                    ҉̦̮͔F̱̀o̧͈̬͖͔̠̬͎͓u̥̩̗͓̦̗n̨̻̯̖̜̗̮̭̠͢d̡̰̺͎̤</h1>
+            <h1 class="name">Page not found</h1>
           </header>
           <article class="prose-body glass">
-            <p>That project isn't here — it may have moved, or never existed.
-              <NuxtLink to="/">← back to samir.tech</NuxtLink>
-            </p>
+            <p>That project isn't here — it may have moved, or never existed.</p>
+            <p><NuxtLink to="/">← back to samir.tech</NuxtLink></p>
           </article>
         </template>
       </ContentDoc>
@@ -66,8 +64,6 @@ const { slug } = useRoute().params
   font-family: 'Raleway', sans-serif; font-weight: 100;
   font-size: clamp(2.4rem, 5.5vw, 3.6rem); line-height: 1.02; margin: 0;
 }
-/* 404 easter egg: let the zalgo combining marks breathe + wrap */
-.name.glitch { line-height: 1.6; word-break: break-word; }
 .lede {
   font-family: ui-monospace, monospace; font-size: 0.82rem; color: var(--text-faint);
   letter-spacing: 0.06em; margin: 0.6rem 0 0;

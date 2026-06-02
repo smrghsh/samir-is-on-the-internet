@@ -36,7 +36,7 @@ onMounted(async () => {
 
   gui = new GUI({ title: 'open me!' })
 
-  gui.add(p, 'night').name('🌙 night mode').onChange((v: boolean) => {
+  gui.add(p, 'night').name('🌙 night/☀️day mode!?').onChange((v: boolean) => {
     setMode(scene.value, v)
     // reflect the mode-default amp/contour back into the panel
     p.amp = scene.value.amp
@@ -66,7 +66,9 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-.scene-controls-host { display: none; }
+.scene-controls-host {
+  display: none;
+}
 </style>
 
 <style>
@@ -75,7 +77,10 @@ onBeforeUnmount(() => {
    (the prototype targeted the old 0.19 `.root`). */
 /* z-index 1000 (was the prototype's 60) so the panel always sits on top and
    stays clickable — nothing should be able to overlay it. */
-.lil-gui.lil-root { z-index: 1000; --width: 286px; }
+.lil-gui.lil-root {
+  z-index: 1000;
+  --width: 286px;
+}
 
 /* main.css has a global `* { color; font-family }` that leaks the page's text
    color (dark, in light mode) and font onto lil-gui's labels + folder names —
@@ -83,7 +88,8 @@ onBeforeUnmount(() => {
    own dark-grey theme, so re-assert lil-gui's own light text/font inside it.
    lil-gui's higher-specificity input/button rules still win, so widget colors
    are preserved. */
-.lil-gui, .lil-gui * {
+.lil-gui,
+.lil-gui * {
   color: var(--text-color);
   font-family: var(--font-family);
 }

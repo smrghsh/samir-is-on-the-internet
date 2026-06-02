@@ -80,9 +80,17 @@ onBeforeUnmount(() => {
 <style scoped>
 .topo-bg {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100vw;
+  /* iOS: with `inset:0`/`100vh` the fixed canvas stopped at the visible
+     viewport bottom (above the translucent toolbar / home-indicator) while page
+     content scrolled under it. Fill the LARGE viewport so the terrain covers
+     under the bottom bar; `100vh` is the fallback. terrain.js sizes the
+     renderer off this canvas's own clientHeight, so the render scales to match
+     — no stretch. */
   height: 100vh;
+  height: 100lvh;
   z-index: 0;
   pointer-events: none;
 }

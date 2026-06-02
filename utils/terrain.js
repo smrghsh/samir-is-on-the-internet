@@ -197,7 +197,10 @@ export class TopoTerrain {
 
   _initThree() {
     const o = this.opts
-    const sizes = { w: window.innerWidth, h: window.innerHeight }
+    // Size off the canvas's own box (it fills the large viewport via CSS), not
+    // window.innerHeight — on iOS innerHeight is the SMALL height when the
+    // toolbar shows, which left the terrain short of the bottom bar + stretched.
+    const sizes = { w: this.canvas.clientWidth || window.innerWidth, h: this.canvas.clientHeight || window.innerHeight }
     const p = this._pal()
 
     const renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true })
@@ -321,7 +324,7 @@ export class TopoTerrain {
   _bind() {
     const o = this.opts
     this._onResize = () => {
-      const w = window.innerWidth, h = window.innerHeight
+      const w = this.canvas.clientWidth || window.innerWidth, h = this.canvas.clientHeight || window.innerHeight
       this.camera.aspect = w / h
       this.camera.updateProjectionMatrix()
       this.renderer.setSize(w, h)

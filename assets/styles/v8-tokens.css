@@ -77,6 +77,15 @@ html, body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
+  /* iOS fixes:
+     - overflow-x on the ROOT (not just body) clips the scrim's off-screen left
+       bleed, killing the side-to-side scroll/rubber-band.
+     - text-size-adjust:100% disables Safari's automatic text inflation, which
+       was rendering the section labels at different sizes in their different-
+       width containers (the CSS is identical). */
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 h1, h2, h3, h4, .display {
@@ -147,9 +156,9 @@ a { color: var(--link); }
   z-index: -1;
   inset: -2.4rem -2rem -2.4rem -140px;
   background: linear-gradient(95deg,
-    rgba(245, 243, 238, 0.42) 0%,
-    rgba(245, 243, 238, 0.4) 55%,
-    rgba(245, 243, 238, 0.2) 78%,
+    rgba(245, 243, 238, 0.5) 0%,
+    rgba(245, 243, 238, 0.48) 55%,
+    rgba(245, 243, 238, 0.28) 78%,
     rgba(245, 243, 238, 0) 100%);
   filter: blur(14px);
   border-radius: 0;

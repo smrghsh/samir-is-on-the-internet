@@ -29,6 +29,13 @@
   padding: 2.75vh 0 2vh var(--three);
 }
 
+/* On phones the collapsed "open me!" panel (fixed top-right) crowds the top of
+   the hero; nudge it down ~1rem so "// hello world" clears the panel. Desktop
+   is unaffected. */
+@media (max-width: 600px) {
+  .hero { padding-top: calc(2.75vh + 1rem); }
+}
+
 .hero-inner {
   max-width: 660px;
   position: relative;

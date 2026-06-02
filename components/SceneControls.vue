@@ -58,6 +58,10 @@ onMounted(async () => {
   ff.add(p, 'fogFar', 16, 60, 0.5).name('far').onChange((v: number) => (scene.value.fogFar = v))
 
   gui.add(p, 'regenerate').name('↻ regenerate terrain')
+
+  // Boot collapsed: the panel shows just its "open me!" title bar (that's the
+  // joke — and it keeps mobile uncluttered). Click the title to expand.
+  gui.close()
 })
 
 onBeforeUnmount(() => {

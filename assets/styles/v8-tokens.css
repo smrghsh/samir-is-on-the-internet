@@ -78,15 +78,26 @@ html, body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   /* iOS fixes:
-     - overflow-x on the ROOT (not just body) clips the scrim's off-screen left
-       bleed, killing the side-to-side scroll/rubber-band.
-     - text-size-adjust:100% disables Safari's automatic text inflation, which
-       was rendering the section labels at different sizes in their different-
-       width containers (the CSS is identical). */
-  overflow-x: hidden;
+     - overflow-x: CLIP (not hidden) clips the scrim's off-screen left bleed
+       (kills the side-to-side scroll) WITHOUT making the root a scroll
+       container. `hidden` coerces overflow-y to `auto`, turning html/body into a
+       scroller — and on iOS a fixed element inside a scroll-container root gets
+       clipped to the visible viewport (above the bottom toolbar), which is why
+       the fixed terrain canvas couldn't paint under the bar while scrolling
+       content could. `clip` is non-scrolling, so the canvas is free to fill
+       under the toolbar.
+     - text-size-adjust:100% disables Safari's automatic text inflation. */
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+
+/* Solid mode-matched backdrop behind the fixed WebGL canvas: body stays
+   transparent so the terrain shows through, but html carries --bg so any strip
+   the canvas doesn't cover on iOS (the bottom toolbar / safe area) blends to
+   cream (light) / black (dark) instead of flashing white. Also kills the white
+   load-flash before the canvas paints. */
+html { background-color: var(--bg); }
 
 h1, h2, h3, h4, .display {
   font-family: "Raleway", sans-serif;

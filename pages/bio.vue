@@ -2,7 +2,6 @@
   <div>
     <!-- shared backdrop + panel, same as the homepage -->
     <Topo />
-    <ClientOnly><SceneControls /></ClientOnly>
 
     <div class="bio-page">
       <NuxtLink class="back" to="/">← back to samir.tech</NuxtLink>
@@ -175,6 +174,20 @@ watch([model, words], () => {
 .bio-card p:last-child { margin-bottom: 0; }
 .bio-card.swapping p { opacity: 0; }
 .bio-card :deep(a) { color: var(--link); }
+
+/* ── mobile: make the instrument fit ──────────────────────────────────
+   The two fields stack (instr-row already wraps); each spans the full
+   column. The 4-button segmented control can't shrink below its labels,
+   so on phones it becomes a 2×2 grid that fills the width, and the length
+   slider drops its fixed 180px/240px sizing to stretch instead. */
+@media (max-width: 600px) {
+  .instr-row { gap: 1.1rem; }
+  .field { width: 100%; }
+  .seg { display: grid; grid-template-columns: 1fr 1fr; width: 100%; }
+  .seg button { justify-content: center; padding: 0.5rem 0.4rem; }
+  .len { width: 100%; min-width: 0; }
+  .len input[type='range'] { width: auto; flex: 1; min-width: 0; }
+}
 </style>
 
 <!-- Light-mode overrides as GLOBAL `:root.theme-light` rules in an UNSCOPED

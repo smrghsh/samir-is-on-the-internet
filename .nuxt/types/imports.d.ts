@@ -4,10 +4,6 @@ declare global {
   const BIO_COPY: typeof import('../../utils/bioCopy')['BIO_COPY']
   const BIO_LENGTHS: typeof import('../../utils/bioCopy')['BIO_LENGTHS']
   const BIO_MODELS: typeof import('../../utils/bioCopy')['BIO_MODELS']
-  const DAY_DEFAULTS: typeof import('../../composables/useScene')['DAY_DEFAULTS']
-  const NIGHT_DEFAULTS: typeof import('../../composables/useScene')['NIGHT_DEFAULTS']
-  const PALETTES: typeof import('../../utils/terrain')['PALETTES']
-  const TopoTerrain: typeof import('../../utils/terrain')['TopoTerrain']
   const abortNavigation: typeof import('../../node_modules/nuxt/dist/app/composables/router')['abortNavigation']
   const addRouteMiddleware: typeof import('../../node_modules/nuxt/dist/app/composables/router')['addRouteMiddleware']
   const callOnce: typeof import('../../node_modules/nuxt/dist/app/composables/once')['callOnce']
@@ -91,7 +87,6 @@ declare global {
   const requestIdleCallback: typeof import('../../node_modules/nuxt/dist/app/compat/idle-callback')['requestIdleCallback']
   const resolveComponent: typeof import('../../node_modules/vue')['resolveComponent']
   const setInterval: typeof import('../../node_modules/nuxt/dist/app/compat/interval')['setInterval']
-  const setMode: typeof import('../../composables/useScene')['setMode']
   const setPageLayout: typeof import('../../node_modules/nuxt/dist/app/composables/router')['setPageLayout']
   const setResponseStatus: typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['setResponseStatus']
   const shallowReactive: typeof import('../../node_modules/vue')['shallowReactive']
@@ -140,7 +135,6 @@ declare global {
   const useRoute: typeof import('../../node_modules/nuxt/dist/app/composables/router')['useRoute']
   const useRouter: typeof import('../../node_modules/nuxt/dist/app/composables/router')['useRouter']
   const useRuntimeConfig: typeof import('../../node_modules/nuxt/dist/app/nuxt')['useRuntimeConfig']
-  const useScene: typeof import('../../composables/useScene')['useScene']
   const useSeoMeta: typeof import('../../node_modules/@unhead/vue')['useSeoMeta']
   const useServerHead: typeof import('../../node_modules/@unhead/vue')['useServerHead']
   const useServerHeadSafe: typeof import('../../node_modules/@unhead/vue')['useServerHeadSafe']
@@ -167,9 +161,6 @@ declare global {
   export type { Component, ComponentPublicInstance, ComputedRef, ExtractPropTypes, ExtractPublicPropTypes, InjectionKey, PropType, Ref, MaybeRef, MaybeRefOrGetter, VNode } from '../../node_modules/vue'
   import('../../node_modules/vue')
   // @ts-ignore
-  export type { SceneState } from '../../composables/useScene'
-  import('../../composables/useScene')
-  // @ts-ignore
   export type { BioModel } from '../../utils/bioCopy'
   import('../../utils/bioCopy')
 }
@@ -180,10 +171,6 @@ declare module 'vue' {
     readonly BIO_COPY: UnwrapRef<typeof import('../../utils/bioCopy')['BIO_COPY']>
     readonly BIO_LENGTHS: UnwrapRef<typeof import('../../utils/bioCopy')['BIO_LENGTHS']>
     readonly BIO_MODELS: UnwrapRef<typeof import('../../utils/bioCopy')['BIO_MODELS']>
-    readonly DAY_DEFAULTS: UnwrapRef<typeof import('../../composables/useScene')['DAY_DEFAULTS']>
-    readonly NIGHT_DEFAULTS: UnwrapRef<typeof import('../../composables/useScene')['NIGHT_DEFAULTS']>
-    readonly PALETTES: UnwrapRef<typeof import('../../utils/terrain')['PALETTES']>
-    readonly TopoTerrain: UnwrapRef<typeof import('../../utils/terrain')['TopoTerrain']>
     readonly abortNavigation: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['abortNavigation']>
     readonly addRouteMiddleware: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['addRouteMiddleware']>
     readonly callOnce: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/once')['callOnce']>
@@ -267,7 +254,6 @@ declare module 'vue' {
     readonly requestIdleCallback: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/idle-callback')['requestIdleCallback']>
     readonly resolveComponent: UnwrapRef<typeof import('../../node_modules/vue')['resolveComponent']>
     readonly setInterval: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/interval')['setInterval']>
-    readonly setMode: UnwrapRef<typeof import('../../composables/useScene')['setMode']>
     readonly setPageLayout: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['setPageLayout']>
     readonly setResponseStatus: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['setResponseStatus']>
     readonly shallowReactive: UnwrapRef<typeof import('../../node_modules/vue')['shallowReactive']>
@@ -316,7 +302,6 @@ declare module 'vue' {
     readonly useRoute: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['useRouter']>
     readonly useRuntimeConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useRuntimeConfig']>
-    readonly useScene: UnwrapRef<typeof import('../../composables/useScene')['useScene']>
     readonly useSeoMeta: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useSeoMeta']>
     readonly useServerHead: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useServerHead']>
     readonly useServerHeadSafe: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useServerHeadSafe']>
@@ -343,10 +328,6 @@ declare module '@vue/runtime-core' {
     readonly BIO_COPY: UnwrapRef<typeof import('../../utils/bioCopy')['BIO_COPY']>
     readonly BIO_LENGTHS: UnwrapRef<typeof import('../../utils/bioCopy')['BIO_LENGTHS']>
     readonly BIO_MODELS: UnwrapRef<typeof import('../../utils/bioCopy')['BIO_MODELS']>
-    readonly DAY_DEFAULTS: UnwrapRef<typeof import('../../composables/useScene')['DAY_DEFAULTS']>
-    readonly NIGHT_DEFAULTS: UnwrapRef<typeof import('../../composables/useScene')['NIGHT_DEFAULTS']>
-    readonly PALETTES: UnwrapRef<typeof import('../../utils/terrain')['PALETTES']>
-    readonly TopoTerrain: UnwrapRef<typeof import('../../utils/terrain')['TopoTerrain']>
     readonly abortNavigation: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['abortNavigation']>
     readonly addRouteMiddleware: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['addRouteMiddleware']>
     readonly callOnce: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/once')['callOnce']>
@@ -430,7 +411,6 @@ declare module '@vue/runtime-core' {
     readonly requestIdleCallback: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/idle-callback')['requestIdleCallback']>
     readonly resolveComponent: UnwrapRef<typeof import('../../node_modules/vue')['resolveComponent']>
     readonly setInterval: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/compat/interval')['setInterval']>
-    readonly setMode: UnwrapRef<typeof import('../../composables/useScene')['setMode']>
     readonly setPageLayout: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['setPageLayout']>
     readonly setResponseStatus: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/ssr')['setResponseStatus']>
     readonly shallowReactive: UnwrapRef<typeof import('../../node_modules/vue')['shallowReactive']>
@@ -479,7 +459,6 @@ declare module '@vue/runtime-core' {
     readonly useRoute: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['useRoute']>
     readonly useRouter: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/composables/router')['useRouter']>
     readonly useRuntimeConfig: UnwrapRef<typeof import('../../node_modules/nuxt/dist/app/nuxt')['useRuntimeConfig']>
-    readonly useScene: UnwrapRef<typeof import('../../composables/useScene')['useScene']>
     readonly useSeoMeta: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useSeoMeta']>
     readonly useServerHead: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useServerHead']>
     readonly useServerHeadSafe: UnwrapRef<typeof import('../../node_modules/@unhead/vue')['useServerHeadSafe']>

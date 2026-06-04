@@ -1,7 +1,6 @@
 <template>
   <div>
     <Topo />
-    <ClientOnly><SceneControls /></ClientOnly>
 
     <div class="cv-page">
       <NuxtLink class="back" to="/">← back to samir.tech</NuxtLink>
@@ -43,7 +42,7 @@
 // PDFs live in /public (served at root), same as the original page's hrefs.
 const docs = [
   { title: 'Resume', file: 'Resume_Samir_Ghosh-Oct-2025.pdf', pages: '1 page' },
-  { title: 'Curriculum Vitae', file: 'CV_Samir_Ghosh-Oct-2025.pdf', pages: '6 pages' },
+  { title: 'Curriculum Vitae', file: 'CV_Samir_Ghosh-Jun-2026.pdf', pages: '6 pages' },
 ]
 </script>
 

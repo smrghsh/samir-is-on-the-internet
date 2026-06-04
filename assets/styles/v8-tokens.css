@@ -78,12 +78,16 @@ html, body {
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
   /* iOS fixes:
-     - overflow-x on the ROOT (not just body) clips the scrim's off-screen left
-       bleed, killing the side-to-side scroll/rubber-band.
-     - text-size-adjust:100% disables Safari's automatic text inflation, which
-       was rendering the section labels at different sizes in their different-
-       width containers (the CSS is identical). */
-  overflow-x: hidden;
+     - overflow-x: CLIP (not hidden) clips the scrim's off-screen left bleed
+       (kills the side-to-side scroll) WITHOUT making the root a scroll
+       container. `hidden` coerces overflow-y to `auto`, turning html/body into a
+       scroller — and on iOS a fixed element inside a scroll-container root gets
+       clipped to the visible viewport (above the bottom toolbar), which is why
+       the fixed terrain canvas couldn't paint under the bar while scrolling
+       content could. `clip` is non-scrolling, so the canvas is free to fill
+       under the toolbar.
+     - text-size-adjust:100% disables Safari's automatic text inflation. */
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }

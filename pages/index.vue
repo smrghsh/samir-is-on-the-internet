@@ -1,12 +1,8 @@
 <template>
   <div>
-    <!-- living contour-map backdrop (z-index 0) -->
+    <!-- living contour-map backdrop (z-index 0); also mounts the "open me!"
+         lil-gui panel via the Experience's Debug util -->
     <Topo />
-
-    <!-- the "open me!" lil-gui panel: night toggle + terrain params -->
-    <ClientOnly>
-      <SceneControls />
-    </ClientOnly>
 
     <!-- content (z-index 2) -->
     <div class="front-layer">
@@ -29,7 +25,7 @@
 
 <script setup lang="ts">
 // Homepage composition for v8 "Instrument".
-// Topo + SceneControls are client-side (WebGL / lil-gui); ContentDoc pulls
+// Topo is client-side (WebGL / lil-gui live under ~/Experience); ContentDoc pulls
 // the bio copy from content/hello-world.md, unchanged.
 </script>
 

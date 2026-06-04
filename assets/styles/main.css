@@ -60,6 +60,14 @@
    Theme color-scheme + tokens are v8-tokens.css's job. */
 body { overflow-x: hidden; }
 
+/* lil-gui renders itself to <body>, so its overrides live here (global).
+   Installed lil-gui is 0.21 → root class is `.lil-root`. z-index keeps the
+   "open me!" panel on top and clickable. */
+.lil-gui.lil-root {
+  z-index: 1000;
+  --width: 286px;
+}
+
 /* Removed for reference parity: global `p,ul,li { font-size:1rem }`,
    `ul { padding-inline-start:0 }`, `li { margin-bottom:0.5em }`, and the
    `@media(max-width:600px){ h1; p }` overrides. The reference (single site.css)

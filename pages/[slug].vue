@@ -9,7 +9,6 @@ const { slug } = useRoute().params
 <template>
   <div>
     <Topo />
-    <ClientOnly><SceneControls /></ClientOnly>
 
     <div class="doc-page">
       <NuxtLink class="back" to="/">← back to samir.tech</NuxtLink>

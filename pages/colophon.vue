@@ -1,7 +1,6 @@
 <template>
   <div>
     <Topo />
-    <ClientOnly><SceneControls /></ClientOnly>
 
     <div class="colophon-page">
       <NuxtLink class="back" to="/">← back to samir.tech</NuxtLink>

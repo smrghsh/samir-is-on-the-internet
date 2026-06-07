@@ -42,7 +42,7 @@
 // PDFs live in /public (served at root), same as the original page's hrefs.
 const docs = [
   { title: 'Resume', file: 'Resume_Samir_Ghosh-Jun-2026.pdf', pages: '1 page' },
-  { title: 'Curriculum Vitae', file: 'CV_Samir_Ghosh-Jun-2026.pdf', pages: '6 pages' },
+  { title: 'Curriculum Vitae', file: 'CV_Samir_Ghosh-Jun-2026.pdf', pages: '5 pages' },
 ]
 </script>
 

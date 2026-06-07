@@ -1,9 +1,10 @@
 ---
-title: Wildfire Resilience, XR, and AI
+title: Wildfire Mitigation
 year: 2025.85
 displayYear: 2026
 thumbnail: wildfire.png
 hasMore: false
+award: true
 ---
 <div class="links">
     <a class="button" href="https://smrghsh.github.io/wildfire">Demo</a>

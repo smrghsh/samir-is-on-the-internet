@@ -4,6 +4,7 @@ year: 2025.6
 thumbnail: ars25-placeholder.png
 displayYear: 2025
 hasMore: false
+award: true
 ---
 <div class="links">
         <a class="button" href="https://ars.electronica.art/panic/en/view/inside-the-ai-war-cloud-22638ddb450c81db89adde611f37652a/">Ars '25</a>

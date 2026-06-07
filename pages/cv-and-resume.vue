@@ -41,8 +41,8 @@
 // CV & Resume — the original simple two-link list, dressed in the v8 system.
 // PDFs live in /public (served at root), same as the original page's hrefs.
 const docs = [
-  { title: 'Resume', file: 'Resume_Samir_Ghosh-Jun-2026.pdf', pages: '? pages' },
-  { title: 'Curriculum Vitae', file: 'CV_Samir_Ghosh-Jun-2026.pdf', pages: '? pages' },
+  { title: 'Resume', file: 'Resume_Samir_Ghosh-Jun-2026.pdf', pages: '1 page' },
+  { title: 'Curriculum Vitae', file: 'CV_Samir_Ghosh-Jun-2026.pdf', pages: '5 pages' },
 ]
 </script>
 

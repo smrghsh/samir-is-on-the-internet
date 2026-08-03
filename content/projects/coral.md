@@ -4,6 +4,7 @@ year: 2025.9
 thumbnail: coral.png
 displayYear: ongoing
 hasMore: false
+featured: true
 ---
 <div class="links">
     <a class="button" href="https://github.com/smrghsh/coral">Source Code and Demo</a>

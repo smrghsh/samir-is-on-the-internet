@@ -51,7 +51,7 @@
    mirroring Bio's structure: header over the terrain, content in a card. */
 .prose-body { margin: 2vh 0 10vh; padding: 2.4rem 2.6rem; border-radius: 18px; }
 .prose-body :deep(p) {
-  font-size: 1.12rem; line-height: 1.7; font-weight: 300; color: var(--text);
+  font-size: 1.12rem; line-height: 1.7; font-weight: 350; color: var(--text);
   margin: 0 0 1.3rem; max-width: 60ch;
 }
 /* big Raleway statement line — scoped to a <strong> that IS its own paragraph

@@ -1,7 +1,6 @@
 <template>
   <header class="hero">
     <div class="hero-inner">
-      <p class="kicker mono">// hello world</p>
       <h1 class="name">Samir Ghosh</h1>
       <p class="tagline thesis">
         I research <em>spatial tools</em> for complex 3D data, and develop <em>immersive XR</em> for cutting-edge
@@ -30,8 +29,8 @@
 }
 
 /* On phones the collapsed "open me!" panel (fixed top-right) crowds the top of
-   the hero; nudge it down ~1rem so "// hello world" clears the panel. Desktop
-   is unaffected. */
+   the hero; nudge it down ~1rem so the name clears the panel. Desktop is
+   unaffected. */
 @media (max-width: 600px) {
   .hero { padding-top: calc(2.75vh + 1rem); }
 }
@@ -39,13 +38,6 @@
 .hero-inner {
   max-width: 660px;
   position: relative;
-}
-
-.kicker {
-  font-size: 0.95rem;
-  color: var(--text-dim);
-  letter-spacing: 0.04em;
-  margin: 0 0 0.4rem;
 }
 
 .name {
@@ -60,7 +52,7 @@
 
 .tagline.thesis {
   font-family: 'Raleway', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: clamp(1.15rem, 2vw, 1.7rem);
   color: var(--text);
   line-height: 1.32;

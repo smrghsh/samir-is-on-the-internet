@@ -2,8 +2,8 @@
   <!-- Contour-bracketed nav rows. The minor-contour hairlines + index hover
        echo the topographic map rather than reading as stray borders. -->
   <nav class="mainnav">
-    <NuxtLink v-for="(item, i) in items" :key="item.to" :to="item.to">
-      <span class="idx">{{ String(i + 1).padStart(2, '0') }}</span> {{ item.label }}
+    <NuxtLink v-for="item in items" :key="item.to" :to="item.to">
+      {{ item.label }}
     </NuxtLink>
   </nav>
 </template>
@@ -12,6 +12,7 @@
 const items = [
   { label: 'Bio', to: '/bio' },
   { label: 'CV, Resume', to: '/cv-and-resume' },
+  { label: 'All Projects', to: '/projects' },
   { label: 'Colophon', to: '/colophon' },
 ]
 </script>
@@ -27,9 +28,11 @@ const items = [
   text-decoration: none;
   color: var(--text);
   font-family: 'Raleway', sans-serif;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 1.35rem;
-  padding: 0.7rem 0.2rem 0.7rem 1.1rem;
+  /* left inset mirrors the about-me card's text edge exactly: 1px glass
+     border + 0.9rem card-body padding (verified to 0.0px in Blink + WebKit) */
+  padding: 0.7rem 0.2rem 0.7rem calc(0.9rem + 1px);
   border-bottom: 1px solid var(--contour-minor);
   display: flex;
   align-items: baseline;
@@ -37,10 +40,5 @@ const items = [
   transition: padding-left 240ms var(--ease), color 200ms var(--ease);
 }
 .mainnav a:first-child { border-top: 1px solid var(--contour-minor); }
-.mainnav a .idx {
-  font-family: ui-monospace, monospace;
-  font-size: 0.7rem;
-  color: var(--text-faint);
-}
-.mainnav a:hover { padding-left: 1.7rem; color: var(--link); }
+.mainnav a:hover { padding-left: calc(1.5rem + 1px); color: var(--link); }
 </style>

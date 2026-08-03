@@ -104,7 +104,7 @@ watch([model, words], () => {
   font-size: clamp(2.6rem, 6vw, 4rem); line-height: 0.98; margin: 0;
 }
 .lede {
-  font-family: 'Raleway', sans-serif; font-weight: 200;
+  font-family: 'Raleway', sans-serif; font-weight: 300;
   font-size: clamp(1.05rem, 1.7vw, 1.35rem); color: var(--text-dim);
   margin: 0.7rem 0 0; max-width: 600px;
 }
@@ -168,7 +168,7 @@ watch([model, words], () => {
 /* ── reading card ─────────────────────────────────────────────────── */
 .bio-card { padding: 2.4rem 2.6rem; border-radius: 18px; margin-bottom: 8vh; }
 .bio-card p {
-  font-size: 1.18rem; line-height: 1.66; font-weight: 300; margin: 0 0 1.15rem;
+  font-size: 1.18rem; line-height: 1.66; font-weight: 350; margin: 0 0 1.15rem;
   transition: opacity 220ms var(--ease);
 }
 .bio-card p:last-child { margin-bottom: 0; }
@@ -224,6 +224,6 @@ watch([model, words], () => {
 
 /* light mode: the provenance line floats over the terrain between the two
    glass panels — nudge it a touch darker for legibility (no scrim). */
-:root.theme-light .bio-page .provenance { color: rgba(20, 24, 22, 0.72); }
-:root.theme-light .bio-page .provenance .reading { color: rgba(20, 24, 22, 0.55); }
+:root.theme-light .bio-page .provenance { color: rgba(20, 24, 22, 0.85); }
+:root.theme-light .bio-page .provenance .reading { color: rgba(20, 24, 22, 0.68); }
 </style>

@@ -1,3 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-aria-label="Orcid" role="img"
-viewBox="0 0 512 512"><circle cx="256" cy="256" r="192" fill="#2F4F4F"/><path fill="#fff" d="m167 148a15 15 0 110 2m3 33V343h23V183m34 0h63c115 0 112 160 0 160h-63m23-20h38c83 0 88-120-2-120h-36"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" aria-label="ORCID" role="img" viewBox="0 0 512 512">
+  <!-- Glyph-only (no filled disc): these icons render through a CSS mask in
+       SocialRow, so any solid background circle becomes an opaque blob. The
+       ring + iD are the positive shapes. -->
+  <path fill="#000" fill-rule="evenodd" d="M256 16C123.5 16 16 123.5 16 256s107.5 240 240 240 240-107.5 240-240S388.5 16 256 16zm0 42c109.4 0 198 88.6 198 198s-88.6 198-198 198S58 365.4 58 256 146.6 58 256 58z"/>
+  <path fill="#000" d="M182 133a19 19 0 1 0 0 38 19 19 0 0 0 0-38zm-13 60v186h26V193h-26zm60 0v186h77c60 0 97-42 97-93s-37-93-97-93h-77zm26 24h49c46 0 72 31 72 69s-26 69-72 69h-49V217z"/>
+</svg>

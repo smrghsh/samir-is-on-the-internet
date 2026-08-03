@@ -18,7 +18,8 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   app: {
     head: {
-      // dark is the SSR default so there's no light flash before hydration
+      // dark is the SSR default (more legible over the terrain) — no light
+      // flash before hydration
       htmlAttrs: { class: 'theme-dark' },
       meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' }],
     },

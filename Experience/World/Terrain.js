@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import Experience from '../Experience.js'
-import { PALETTES, NIGHT_DEFAULTS } from '../palettes.js'
+import { PALETTES, NIGHT_DEFAULTS, DAY_DEFAULTS } from '../palettes.js'
 import vertexShader from '../shaders/terrain/vertex.glsl'
 import fragmentShader from '../shaders/terrain/fragment.glsl'
 
@@ -19,12 +19,13 @@ export default class Terrain {
       dark: PALETTES.darkClassic, darkBottom: PALETTES.darkAbyss,
     }
 
+    const defaults = this.isDark ? NIGHT_DEFAULTS : DAY_DEFAULTS
     this.params = {
-      amp: NIGHT_DEFAULTS.amp,
-      contourEvery: NIGHT_DEFAULTS.contourEvery,
+      amp: defaults.amp,
+      contourEvery: defaults.contourEvery,
       indexEvery: 5.0,
       lineWidth: 1.05,
-      lineStrength: NIGHT_DEFAULTS.lineStrength,
+      lineStrength: defaults.lineStrength,
       fogNear: 14,
       fogFar: 38,
       seed: 0,
@@ -66,6 +67,14 @@ export default class Terrain {
       uC4: { value: new THREE.Color(p.c4) },
       uLine: { value: new THREE.Color(p.line) },
       uIndexLine: { value: new THREE.Color(p.indexLine) },
+      // landscape features — strengths start at 0; the Rivers/Meadows World
+      // scripts fade them in after load. The water level scales with amplitude.
+      uTime: { value: 0 },
+      uWaterCol: { value: new THREE.Color(p.water) },
+      uMeadowCol: { value: new THREE.Color(p.meadow) },
+      uWaterLevel: { value: -0.40 * o.amp },
+      uWaterStrength: { value: 0 },
+      uMeadowStrength: { value: 0 },
     }
 
     this.material = new THREE.ShaderMaterial({
@@ -94,6 +103,8 @@ export default class Terrain {
     u.uC4.value.copy(mix('c4'))
     u.uLine.value.copy(mix('line'))
     u.uIndexLine.value.copy(mix('indexLine'))
+    u.uWaterCol.value.copy(mix('water'))
+    u.uMeadowCol.value.copy(mix('meadow'))
     u.uShadeLow.value = this.isDark ? 0.55 : 0.70
     u.uShadeHigh.value = this.isDark ? 1.15 : 1.10
 
@@ -109,7 +120,11 @@ export default class Terrain {
   setParams(partial = {}) {
     const u = this.uniforms
     Object.assign(this.params, partial)
-    if (partial.amp !== undefined) u.uAmp.value = partial.amp
+    if (partial.amp !== undefined) {
+      u.uAmp.value = partial.amp
+      // the water level tracks the relief height
+      u.uWaterLevel.value = -0.40 * partial.amp
+    }
     if (partial.contourEvery !== undefined) u.uContourEvery.value = partial.contourEvery
     if (partial.indexEvery !== undefined) u.uIndexEvery.value = partial.indexEvery
     if (partial.lineWidth !== undefined) u.uLineWidth.value = partial.lineWidth
@@ -126,6 +141,7 @@ export default class Terrain {
   // palette tracks scroll, so re-resolve it each frame
   update() {
     this.applyPalette()
+    this.uniforms.uTime.value = this.experience.time.elapsed * 0.001
   }
 
   destroy() {

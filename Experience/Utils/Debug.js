@@ -18,6 +18,8 @@ export default class Debug {
     const terrain = this.experience.world.terrain
     terrain.setParams(night ? NIGHT_DEFAULTS : DAY_DEFAULTS)
     terrain.setMode(night)
+    this.experience.isDark = night
+    this.experience.world.setMode(night)
   }
 
   async init() {

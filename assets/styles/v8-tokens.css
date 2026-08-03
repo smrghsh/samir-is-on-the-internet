@@ -12,9 +12,9 @@
 
   /* ── Dark mode ── */
   --dark-bg:            #000000;
-  --dark-text:          rgba(255, 255, 255, 0.92);
-  --dark-text-dim:      rgba(255, 255, 255, 0.55);
-  --dark-text-faint:    rgba(255, 255, 255, 0.38);
+  --dark-text:          rgba(255, 255, 255, 0.94);
+  --dark-text-dim:      rgba(255, 255, 255, 0.68);
+  --dark-text-faint:    rgba(255, 255, 255, 0.5);
   --dark-border:        rgba(255, 255, 255, 0.22);
   --dark-glass:         rgba(18, 22, 24, 0.55);
   --dark-glass-strong:  rgba(14, 18, 20, 0.72);
@@ -26,12 +26,12 @@
 
   /* ── Light mode ── */
   --light-bg:           #f5f3ee;
-  --light-text:         rgba(20, 24, 22, 0.92);
-  --light-text-dim:     rgba(20, 24, 22, 0.55);
-  --light-text-faint:   rgba(20, 24, 22, 0.4);
-  --light-border:       rgba(20, 40, 30, 0.18);
-  --light-glass:        rgba(255, 255, 255, 0.42);
-  --light-glass-strong: rgba(255, 255, 255, 0.6);
+  --light-text:         rgba(15, 19, 17, 0.95);
+  --light-text-dim:     rgba(20, 24, 22, 0.7);
+  --light-text-faint:   rgba(20, 24, 22, 0.55);
+  --light-border:       rgba(20, 40, 30, 0.22);
+  --light-glass:        rgba(255, 255, 255, 0.55);
+  --light-glass-strong: rgba(255, 255, 255, 0.7);
   --light-glass-border: rgba(255, 255, 255, 0.7);
   --light-glass-sheen:  rgba(255, 255, 255, 0.85);
   --light-link:         #2e7a4d;
@@ -75,7 +75,10 @@ html, body {
   background: transparent;          /* WebGL canvas (Topo.vue) shows through */
   color: var(--text);
   font-family: "Nunito Sans", sans-serif;
-  font-weight: 300;
+  /* slightly thicker + bigger body type (variable font: 350 sits between
+     Light and Regular) — readability feedback from SIGGRAPH */
+  font-weight: 350;
+  font-size: 1.0625rem;
   -webkit-font-smoothing: antialiased;
   /* iOS fixes:
      - overflow-x: CLIP (not hidden) clips the scrim's off-screen left bleed

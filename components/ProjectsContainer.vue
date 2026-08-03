@@ -1,6 +1,6 @@
 <template>
   <section class="projects">
-    <p class="section-label">selected projects</p>
+    <p v-if="label" class="section-label">{{ label }}</p>
     <ContentList :query="query" path="/projects" v-slot="{ list }">
       <div class="cards">
         <template v-for="project in list" :key="project._path">
@@ -46,13 +46,24 @@
         </template>
       </div>
     </ContentList>
+    <NuxtLink v-if="featured" class="all-link" to="/projects">see all projects →</NuxtLink>
   </section>
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue'
 import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
-// Sort newest-first, exactly as the original.
-const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
+
+// featured: homepage mode — only the top-three `featured: true` projects plus
+// an "all projects →" link. Otherwise the full newest-first list (/projects).
+const props = defineProps<{ featured?: boolean; label?: string }>()
+
+const label = computed(() => props.label ?? (props.featured ? 'selected projects' : 'all projects'))
+const query = computed<QueryBuilderParams>(() => ({
+  path: '/projects',
+  sort: [{ year: -1 }],
+  ...(props.featured ? { where: [{ featured: true }] } : {}),
+}))
 </script>
 
 <style scoped>
@@ -106,4 +117,21 @@ const query: QueryBuilderParams = { path: '/projects', sort: [{ year: -1 }] }
   margin-top: 0.5rem;
   display: inline-block;
 }
+
+/* the deliberate, can't-miss route to the archive */
+.all-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.6rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+  transition: gap 200ms var(--ease), text-decoration-thickness 200ms var(--ease);
+}
+.all-link:hover { gap: 0.9rem; text-decoration-thickness: 2.5px; }
 </style>

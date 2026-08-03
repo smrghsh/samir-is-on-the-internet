@@ -4,6 +4,7 @@ year: 2025.88
 displayYear: ongoing
 thumbnail: VRSS2.png
 hasMore: false
+featured: true
 # slug: VRSS
 # draft: true
 ---

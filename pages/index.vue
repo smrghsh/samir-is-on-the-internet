@@ -17,7 +17,7 @@
           </div>
         </section>
 
-        <ProjectsContainer />
+        <ProjectsContainer featured />
       </main>
     </div>
   </div>
@@ -64,7 +64,7 @@ main {
 .bio :deep(p) {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 350;
   margin: 0 0 0.9rem;
 }
 .bio :deep(p:last-child) { margin-bottom: 0; }
@@ -78,5 +78,5 @@ main {
      covers this page's "about me" and ProjectsContainer's "selected projects"
      (same .section-label class). -->
 <style>
-:root.theme-light .section-label { color: rgba(20, 24, 22, 0.62); }
+:root.theme-light .section-label { color: rgba(20, 24, 22, 0.78); }
 </style>

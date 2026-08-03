@@ -4,6 +4,7 @@ year: 2025.6
 thumbnail: ars25-placeholder.png
 displayYear: 2025
 hasMore: false
+featured: true
 award: true
 ---
 <div class="links">

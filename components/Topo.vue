@@ -3,32 +3,20 @@
 </template>
 
 <script setup lang="ts">
-// Topo.vue — the living contour-map backdrop. Bootstraps the WebGL Experience
-// (Bruno-Simon style: Experience → World → Terrain) onto its canvas and tears
-// it down on unmount. All scene logic lives under ~/Experience.
+// The fixed WebGL backdrop: the domain-warp shader (~/Experience/DomainWarp.js)
+// plus its "open me!" lil-gui panel. The canvas's fixed positioning is
+// .topo-bg in site.css.
 import { onMounted, onBeforeUnmount, ref } from 'vue'
-import Experience from '~/Experience/Experience.js'
+import DomainWarp from '~/Experience/DomainWarp.js'
 
 const canvasEl = ref<HTMLCanvasElement | null>(null)
-let experience: any = null
+let warp: any = null
 
 onMounted(() => {
-  experience = new Experience(canvasEl.value)
+  warp = new DomainWarp(canvasEl.value)
 })
 
 onBeforeUnmount(() => {
-  experience?.destroy()
+  warp?.destroy()
 })
 </script>
-
-<style scoped>
-.topo-bg {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  pointer-events: none;
-}
-</style>

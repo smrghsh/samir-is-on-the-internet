@@ -3,7 +3,7 @@ title: Minerva
 year: 2021
 displayYear: 2021
 thumbnail: minerva.png
-draft: true
+# draft: true
 
 ---
 <div class="links">

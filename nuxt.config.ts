@@ -7,20 +7,16 @@ export default defineNuxtConfig({
   },
   modules: ['@nuxt/content'],
   build: {
-    transpile: ['three', 'meshline', 'lil-gui'],
+    transpile: ['three', 'lil-gui'],
   },
   content: {
     contentHead: false,
   },
-  css: ['assets/styles/normalize.css', 'assets/styles/main.css', 'assets/styles/v8-tokens.css'],
-  // DevTools overlay disabled: its z-index 2147483647 rendered as a white sheet
-  // over the page in light mode and covered the lil-gui panel.
+  css: ['assets/styles/site.css'],
+  // DevTools overlay disabled: its z-index 2147483647 covers the lil-gui panel.
   devtools: { enabled: false },
   app: {
     head: {
-      // dark is the SSR default (more legible over the terrain) — no light
-      // flash before hydration
-      htmlAttrs: { class: 'theme-dark' },
       meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' }],
     },
   },

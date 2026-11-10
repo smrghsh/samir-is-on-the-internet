@@ -3,7 +3,7 @@ title: Colocated XR physiological signals
 year: 2024.5
 displayYear: 2024
 thumbnail: physiochi24.jpeg
-draft: true
+# draft: true
 
 ---
 <div class="links">

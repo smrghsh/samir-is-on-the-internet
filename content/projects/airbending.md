@@ -2,7 +2,8 @@
 title: Airbending
 year: 2015
 displayYear: 2015
-draft: true
+thumbnail: airbending.jpg
+# draft: true
 ---
 My first generative art piece! Airbending was an installation piece displaying a particle swarm controlled by a viewer’s arm movements. 
 

@@ -1,1 +1,0 @@
-{"parsed":{"_path":"/bio","_dir":"","_draft":false,"_partial":false,"_locale":"","title":"Bio","description":"","body":{"type":"root","children":[],"toc":{"title":"","searchDepth":2,"depth":2,"links":[]}},"_type":"markdown","_id":"content:bio.md","_source":"content","_file":"bio.md","_extension":"md"},"hash":"DwjENcHNhI"}

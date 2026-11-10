@@ -2,15 +2,12 @@ Personal websites are modern calling cards, places for expression and flair.
 
 **Like self-realization, it is a constant work in progress.**
 
-This is the eighth major version of a site I've been iterating on for more than a decade. It exists for three reasons:
+This is the tenth major version of a site that I've been iterating on for more than a decade. Shifting from the 8th and 9th versions of the site whose aesthetic and function were heavily set by LLM code-assistants, this version of the site represents my current philosophy of making sure my human craft shines in design and expression -- rather than getting smothered the normative aesthetics and reductive techniques from massive LLMs. After all, these technologies are trained on and tuned to norms of what already exists -- and humans cannot and should not be removed from having a say on what could be. In essence, I'm responding to ways AI and LLMs software development has scaled but also temporarily limited the contemporary design of immersive technology. Through iterating on this personal website, I've been contemplating the idea of the [Reverse Centaur by Cory Doctorow](https://us.macmillan.com/books/9780374621568/thereversecentaursguidetolifeafterai/), a metaphor for wrestling with AI to ensure that we are augmented rather than degraded. After all, AI tools have helped me build incredibly complex scientific simulations across VR devices, creating stunning internationally exhibited works, and greatly increased my capacity for work. At the same time, I have to be even more vigilant in writing code by hand from time-to-time or studying recent developments to prevent my skills from atrophying.
 
-- **A convenient place to share** — CV, bio, links, projects. The stuff people are usually trying to find.
-- **A bridge between two worlds** — My research and development sit at the intersection of WebXR, Three.js, and scientific visualization. But those skills were built on a foundation of creative coders, artists, and open source generosity. The terrain on the landing page — fractal brownian motion, scroll-driven — is my way of honoring that lineage while pointing toward where I'm at: working with real spatial data in three dimensions.
-- **One link for everything** — My XR and 2D demos, all in one place. Useful when you're handing someone a device and don't want to type.
+In this iteration, the sketch in the background comes from my recent media arts exhibition at a Santa Cruz music venue. It uses Domain Warping, a shader technique that creates organic forms, popularized by Inigo Quilez. For the astute and curious, parameters tucked into the top left allow for some play and interactivity! I also finally have linked my sketchbook where I compile a variety of sketches (a mix of handwritten, AI written, and hybrid graphical ideas.) I also used to hide a lot of projects from my All Projects page, because I'm feeling very lucky and fortunate to have had a prolific first decade as a technologist and collaborator.
 
 ---
 
 This website uses [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) and [Raleway](https://fonts.google.com/specimen/Raleway), designed to be legible across 2D and XR devices.
 
 The [source code](https://github.com/smrghsh/samir-is-on-the-internet) is on GitHub. Built with Vue.js + Vite via [Nuxt](https://nuxt.com/), hosted on Cloudflare Pages. (Thanks for the config help, [Leo](https://github.com/TheInnerParty).)
-s

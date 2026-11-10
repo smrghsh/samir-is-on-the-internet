@@ -1,0 +1,198 @@
+/* site.css — the one stylesheet for samir.tech.
+   Order: fonts → tokens → reset → base type → shared chrome (page, back link,
+   intro header, glass, prose, labels) → third-party.
+   One colour scheme (dark, turquoise accent). Page-specific rules stay in each
+   page's <style scoped>. */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..900;1,6..12,200..900&family=Raleway:ital,wght@0,100..800;1,100..800&display=swap");
+
+/* ── Tokens ──────────────────────────────────────────────────────── */
+:root {
+  color-scheme: dark;
+
+  --bg:            #000000;
+  --text:          rgba(255, 255, 255, 0.94);
+  --text-dim:      rgba(255, 255, 255, 0.68);
+  --text-faint:    rgba(255, 255, 255, 0.5);
+  --border:        rgba(255, 255, 255, 0.22);
+  --glass:         rgba(18, 22, 24, 0.55);
+  --glass-strong:  rgba(14, 18, 20, 0.72);
+  --glass-border:  rgba(255, 255, 255, 0.16);
+  --glass-sheen:   rgba(255, 255, 255, 0.28);
+  --link:          #40e0d0;                   /* the accent: turquoise */
+  --contour-index: rgba(140, 238, 226, 0.85);
+  --contour-minor: rgba(64, 224, 208, 0.40);
+
+  --gutter: 2.1em;                  /* horizontal inset of every page column */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --sans: "Nunito Sans", sans-serif;
+  --serif-display: "Raleway", sans-serif;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+}
+
+/* ── Reset ───────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img, svg { max-width: 100%; }
+button, input { font: inherit; color: inherit; }
+
+/* ── Base ────────────────────────────────────────────────────────── */
+html {
+  background-color: var(--bg);      /* backdrop for any strip the canvas misses (iOS toolbar) */
+  color: var(--text);
+  font-family: var(--sans);
+  font-weight: 350;                 /* variable font: between Light and Regular */
+  font-size: 1.0625rem;
+  -webkit-font-smoothing: antialiased;
+  /* `clip` not `hidden`: hidden would make html a scroll container and iOS
+     then clips the fixed terrain canvas above the bottom toolbar. */
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body { background: transparent; }  /* WebGL canvas shows through */
+
+h1, h2, h3, h4 {
+  font-family: var(--serif-display);
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  margin: 0;
+  color: var(--text);
+}
+a { color: var(--link); }
+.mono { font-family: var(--mono); }
+
+/* ── Page shell (layouts/default.vue) ────────────────────────────── */
+.topo-bg {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+}
+.page {
+  position: relative;
+  z-index: 2;                       /* above the canvas */
+  width: 100%;
+  padding: 0 var(--gutter);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 2.4rem 0 0;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: gap 200ms var(--ease), color 200ms var(--ease);
+}
+.back:hover { gap: 0.8rem; color: var(--link); }
+
+/* ── Subpage intro header ────────────────────────────────────────── */
+/* centred, with the same headspace on every page: back link + 5vh above the
+   h1 (the homepage hero matches it — see HeroIntro.vue) */
+.intro { position: relative; padding: 5vh 0 2vh; text-align: center; }
+.intro .kicker {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin: 0 0 0.5rem;
+}
+.intro .name {
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  line-height: 0.98;
+}
+.intro .lede {
+  font-family: var(--serif-display);
+  font-weight: 300;
+  font-size: clamp(1.05rem, 1.7vw, 1.35rem);
+  line-height: 1.4;
+  color: var(--text-dim);
+  margin: 0.8rem auto 0;            /* auto: centre the capped paragraph, not just its text */
+  max-width: 600px;
+  text-wrap: balance;
+}
+.intro .lede em { font-style: normal; color: var(--link); }
+
+/* small uppercase mono label above a section ("about me", "selected projects") */
+.section-label {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin: 0 0 1rem 0.2rem;
+}
+
+/* ── Liquid glass panel ──────────────────────────────────────────── */
+.glass {
+  position: relative;
+  background: var(--glass);
+  -webkit-backdrop-filter: blur(16px) saturate(1.35);
+  backdrop-filter: blur(16px) saturate(1.35);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  box-shadow:
+    0 18px 50px rgba(0,0,0,0.55),
+    inset 0 1px 0 var(--glass-sheen),
+    inset 0 0 0 0.5px rgba(255,255,255,0.05);
+}
+/* specular top edge — the "liquid glass" catch-light */
+.glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg,
+      var(--glass-sheen) 0%, transparent 30%, transparent 70%,
+      rgba(255,255,255,0.08) 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0.9;
+}
+/* glass reading card: markdown prose in a panel */
+.reading { margin: 2vh 0 10vh; padding: 2.4rem 2.6rem; }
+
+/* ── Prose (rendered markdown) ───────────────────────────────────── */
+.prose p {
+  font-size: 1.08rem;
+  line-height: 1.7;
+  margin: 0 0 1.2rem;
+}
+.prose p:last-child { margin-bottom: 0; }
+.prose a { text-underline-offset: 3px; }
+.prose a:hover { text-decoration-thickness: 2px; }
+.prose h2, .prose h3 { font-weight: 300; line-height: 1.2; margin: 1.8rem 0 0.6rem; }
+.prose h2 { font-size: 1.5rem; }
+.prose h3 { font-size: 1.2rem; }
+.prose img { height: auto; border-radius: 12px; display: block; margin: 1.6rem 0; }
+.prose ul { padding-left: 1.2rem; margin: 0 0 1.2rem; }
+.prose li { margin: 0 0 0.4rem; }
+.prose hr { border: none; border-top: 1px solid var(--contour-minor); margin: 1.8rem 0; }
+
+/* the <div class="links"><a class="button"> rows inside project markdown */
+.links { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.55rem 0; }
+.links a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.28rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: background 200ms var(--ease), border-color 200ms var(--ease), color 200ms var(--ease);
+}
+.links a:hover { background: var(--glass-strong); border-color: var(--link); color: var(--link); }
+.prose .links { gap: 0.5rem; margin: 0 0 1.6rem; }
+.prose .links a { font-size: 0.85rem; padding: 0.4rem 0.8rem; }
+
+/* ── Third-party ─────────────────────────────────────────────────── */
+/* lil-gui mounts itself on <body>; keep the "open me!" panel on top */
+.lil-gui.lil-root { z-index: 1000; --width: 286px; }

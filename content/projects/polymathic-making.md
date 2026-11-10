@@ -5,7 +5,7 @@ displayYear: 2019-2022
 thumbnail: arduino.jpeg
 slug: polymathic-making
 
-draft: true
+# draft: true
 ---
 <div class="links">
     <a class="button" href="https://polymathic.usc.edu/series/workshop/fall-2019">Fall 2019</a>

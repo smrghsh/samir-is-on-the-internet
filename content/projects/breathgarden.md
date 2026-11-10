@@ -3,17 +3,17 @@ title: Breath Garden
 year: 2021
 displayYear: 2021
 thumbnail: breathgarden.png
-draft: true   
+# draft: true   
 
 # hasMore: true
 ---
-<div class="links">
+<!-- <div class="links">
     <a class="button" href="https://itch.io/jam/xr-brain-jam/rate/1103372">Itch.io</a>
 <a class="button" href="https://www.instagram.com/reel/CTUua4jBUhQ/">Video</a>
 <a class="button" href="https://brainsatplay.com/">Brains@Play</a>
-</div>
+</div> -->
 
-Breath Garden is a WebXR based immersive environment linked to breathing exercises integrated with a BCI platform. It was built for the 2021 XR Brain Jam. The flow of a river moves to guided breathing exercises or data from heart rate sensors, hemoencephalography (HEG), or electroencephalography (EEG). I wrote the graphics code for this environment and worked with an interdisciplinary team to design the experience.
+Breath Garden was a WebXR based immersive environment linked to breathing exercises integrated with a BCI platform. It was built for the 2021 XR Brain Jam. The flow of a river moves to guided breathing exercises or data from heart rate sensors, hemoencephalography (HEG), or electroencephalography (EEG). I wrote the graphics code for this environment and worked with an interdisciplinary team to design the experience.
 
 <!--more--> 
 

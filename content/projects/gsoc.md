@@ -5,7 +5,7 @@ displayYear: 2023
 thumbnail: p5xr.png
 hasMore: true
 slug: gsoc
-draft: true
+# draft: true
 
 ---
 

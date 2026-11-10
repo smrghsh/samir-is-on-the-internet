@@ -5,7 +5,7 @@ displayYear: 2024
 thumbnail: hawaii-tourism-ar.png
 display: false
 slug: hawaiiAR
-draft: true
+# draft: true
 ---
 <div class="links">
     <a class="button" href="https://arxiv.org/abs/2404.15610">CHI '24 Workshop Paper</a>

@@ -2,10 +2,7 @@
   <header class="hero">
     <div class="hero-inner">
       <h1 class="name">Samir Ghosh</h1>
-      <p class="tagline thesis">
-        I research <em>spatial tools</em> for complex 3D data, and develop <em>immersive XR</em> for cutting-edge
-        products and creative works.
-      </p>
+      <p class="tagline">virtual reality research and creative code</p>
       <SocialRow class="hero-socials" />
       <MainNav />
     </div>
@@ -13,74 +10,52 @@
 </template>
 
 <script setup lang="ts">
-// HeroIntro.vue — name-led hero; the thesis sentence carries the voice.
-// In light mode a soft, full-bleed-left "paper scrim" sits behind the column
-// for legibility over the terrain (no per-glyph halo — see ::before below).
+// Name-led hero: the h1 and a one-line tagline.
 </script>
 
 <style scoped>
+/* No min-height: the hero hugs its content so the rhythm is identical at
+   every width. Horizontal inset comes from .page. */
 .hero {
-  /* No min-height / flex-centering. Those forced the hero to 52vh; at narrow
-     widths the content is far shorter than that, so the surplus height became a
-     huge gap between the nav and "about me." Just pad it and let it hug its
-     content — identical rhythm at every width. (At full width the content is
-     already ~viewport-tall on its own, so nothing visibly changes there.) */
-  padding: 2.75vh 0 2vh var(--three);
-}
-
-/* On phones the collapsed "open me!" panel (fixed top-right) crowds the top of
-   the hero; nudge it down ~1rem so the name clears the panel. Desktop is
-   unaffected. */
-@media (max-width: 600px) {
-  .hero { padding-top: calc(2.75vh + 1rem); }
+  /* same headspace as the subpages: their back link occupies ~3.4rem
+     (2.4rem margin + its line), then .intro adds 5vh above the h1 */
+  padding: calc(3.4rem + 5vh) 0 2vh;
 }
 
 .hero-inner {
-  max-width: 660px;
+  /* max-width: 660px; */
   position: relative;
 }
 
 .name {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-  letter-spacing: 0.01em;
-  margin: 0;
-  font-size: clamp(2.6rem, 5.6vw, 4.4rem);
-  line-height: 0.96;
-  color: var(--text);
+  font-size: clamp(2.6rem, 9vw, 4rem);
+  line-height: 0.98;
 }
 
-.tagline.thesis {
-  font-family: 'Raleway', sans-serif;
+.tagline {
+  font-family: var(--serif-display);
   font-weight: 300;
-  font-size: clamp(1.15rem, 2vw, 1.7rem);
-  color: var(--text);
-  line-height: 1.32;
-  max-width: 600px;
-  text-wrap: balance;
-  margin: 1rem 0 0.8rem;
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.3;
+  color: var(--text-dim);
+  margin: 0.6rem 0 1.1rem;
 }
 
-.tagline.thesis em {
-  font-style: normal;
-  color: var(--link);
-}
-
-/* NB: do NOT set `display` here — this class lands on SocialRow's root <nav>,
-   and `display: block` would override SocialRow's own `.socials { display: flex }`
-   (same element, equal specificity), stacking the icons vertically. */
+/* NB: no `display` here — this class lands on SocialRow's root <nav> and would
+   override its grid. */
 .hero-socials {
   margin-bottom: 0.9rem;
 }
 
-/* ── light mode ─────────────────────────────────────────────────────
-   The prototype put a blurred "paper scrim" behind the hero for legibility.
-   Every way of expressing it caused trouble in this Nuxt DOM: the original
-   `::before { position:absolute; z-index:-1; filter:blur() }` leaked and
-   blurred/blocked the whole page (panel became unclickable); a strong full
-   -height background read as a white veil over everything. In light mode the
-   text is near-black on the pale "sage-on-paper" terrain and already has
-   solid contrast, so there's no wash for now. If a line ever gets lost over
-   busy terrain, add a SUBTLE low-opacity background on .hero-inner (sized to
-   the text, never a filtered/absolute pseudo). */
+/* centred layout: name, tagline, socials grid and nav all sit on the centre line */
+.hero-inner { text-align: center; }
+.hero-inner :deep(.socials) { justify-content: center; }
+.hero-inner :deep(.socials a) { margin-left: 0; }
+.hero-inner :deep(.mainnav) { margin-inline: auto; }
+.hero-inner :deep(.mainnav a),
+.hero-inner :deep(.mainnav a:hover) {
+  justify-content: center;
+  padding-inline: 0.2rem;   /* no hover slide: it would knock the label off-centre */
+}
 </style>
+

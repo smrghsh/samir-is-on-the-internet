@@ -67,7 +67,7 @@ export default class DomainWarp {
       octaves: 5,
       cycleOctaves: false,   // the sketch's slow 1→5→1 ramp instead of a fixed count
       contrast: 2.4,
-      brightness: 0.55,      // the raw sketch is 1.0 — dimmed so white text reads over it
+      brightness: 0.70,     // the raw sketch is 1.0 — dimmed so white text reads over it
     }
 
     this.renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance' })
